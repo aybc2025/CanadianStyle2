@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter - Canadian Style Learner</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/chapter.css">
+</head>
+<body class="chapter-page">
+    
+    <!-- Header -->
+    <header class="chapter-header">
+        <div class="container">
+            <button onclick="window.location.href='dashboard.html'" class="btn btn-secondary btn-back">
+                ← Back to Dashboard
+            </button>
+            <div class="chapter-info">
+                <div class="chapter-badge" id="chapterBadge">1</div>
+                <div class="chapter-title-area">
+                    <h1 id="chapterTitle">Loading...</h1>
+                    <p id="chapterDescription"></p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Progress Bar -->
+    <div class="chapter-progress-bar">
+        <div class="container">
+            <div class="progress-info">
+                <span id="progressText">Section 1 of 17</span>
+                <span id="progressPercent">0%</span>
+            </div>
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="chapterProgressBar" style="width: 0%"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Tabs -->
+    <nav class="section-nav" id="sectionNav">
+        <div class="container">
+            <div class="nav-tabs" id="navTabs">
+                <!-- Tabs will be loaded here -->
+            </div>
+        </div>
+    </nav>
+
+    <!-- Content Area -->
+    <main class="chapter-content">
+        <div class="container">
+            <article id="contentArea">
+                <!-- Content will be loaded here -->
+            </article>
+            
+            <div class="content-navigation">
+                <button id="prevBtn" class="btn btn-secondary" style="display: none;">← Previous Section</button>
+                <button id="nextBtn" class="btn btn-primary">Next Section →</button>
+                <button id="quizBtn" class="btn btn-primary" style="display: none;">Take Quiz →</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/auth.js"></script>
+    <script src="js/chapter.js"></script>
+</body>
+</html>

@@ -1,0 +1,384 @@
+/* ===================================
+   Chapter Page Styles
+   =================================== */
+
+.chapter-page {
+    background-color: var(--light-gray);
+}
+
+/* === CHAPTER HEADER === */
+.chapter-header {
+    background: linear-gradient(135deg, var(--primary-red) 0%, #B82419 100%);
+    color: white;
+    padding: var(--spacing-xl) 0;
+}
+
+.chapter-header .container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+.btn-back {
+    align-self: flex-start;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    border-color: white;
+}
+
+.btn-back:hover {
+    background-color: white;
+    color: var(--primary-red);
+}
+
+.chapter-info {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-lg);
+}
+
+.chapter-badge {
+    background-color: white;
+    color: var(--primary-red);
+    font-family: var(--font-sans);
+    font-weight: 700;
+    font-size: 2rem;
+    width: 70px;
+    height: 70px;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.chapter-title-area h1 {
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-sm);
+    color: white;
+}
+
+.chapter-title-area p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    margin: 0;
+}
+
+/* === PROGRESS BAR === */
+.chapter-progress-bar {
+    background-color: white;
+    padding: var(--spacing-md) 0;
+    border-bottom: 1px solid var(--border-gray);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.progress-info {
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    margin-bottom: var(--spacing-sm);
+    color: var(--dark-gray);
+}
+
+/* === SECTION NAVIGATION === */
+.section-nav {
+    background-color: white;
+    border-bottom: 2px solid var(--border-gray);
+    position: sticky;
+    top: 72px;
+    z-index: 99;
+}
+
+.nav-tabs {
+    display: flex;
+    gap: var(--spacing-sm);
+    overflow-x: auto;
+    padding: var(--spacing-sm) 0;
+    scrollbar-width: thin;
+}
+
+.nav-tabs::-webkit-scrollbar {
+    height: 4px;
+}
+
+.nav-tabs::-webkit-scrollbar-thumb {
+    background-color: var(--border-gray);
+    border-radius: 2px;
+}
+
+.nav-tab {
+    font-family: var(--font-sans);
+    padding: var(--spacing-sm) var(--spacing-md);
+    background-color: transparent;
+    border: none;
+    border-bottom: 3px solid transparent;
+    cursor: pointer;
+    white-space: nowrap;
+    color: var(--medium-gray);
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.nav-tab:hover {
+    color: var(--dark-gray);
+    background-color: var(--light-gray);
+}
+
+.nav-tab.active {
+    color: var(--primary-red);
+    border-bottom-color: var(--primary-red);
+    font-weight: 600;
+}
+
+.nav-tab.completed::after {
+    content: ' ✓';
+    color: var(--success-green);
+}
+
+/* === CONTENT AREA === */
+.chapter-content {
+    padding: var(--spacing-xxl) 0;
+}
+
+.chapter-content .container {
+    max-width: 800px;
+}
+
+#contentArea {
+    background-color: white;
+    padding: var(--spacing-xxl);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    margin-bottom: var(--spacing-xl);
+}
+
+/* === SECTION CONTENT === */
+.section-header {
+    border-bottom: 3px solid var(--primary-red);
+    padding-bottom: var(--spacing-md);
+    margin-bottom: var(--spacing-xl);
+}
+
+.section-number {
+    font-family: var(--font-sans);
+    color: var(--primary-red);
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.section-title {
+    font-size: 2rem;
+    color: var(--dark-gray);
+    margin-top: var(--spacing-sm);
+}
+
+/* === KEY PRINCIPLE BOX === */
+.key-principle {
+    background: linear-gradient(135deg, var(--secondary-blue), #0052A3);
+    color: white;
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-md);
+    margin: var(--spacing-xl) 0;
+    border-left: 5px solid #003D7A;
+}
+
+.key-principle h4 {
+    font-family: var(--font-sans);
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-md);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.key-principle h4::before {
+    content: '💡';
+    font-size: 1.5rem;
+}
+
+.key-principle p {
+    margin: 0;
+    line-height: 1.7;
+}
+
+.key-principle ul {
+    margin: var(--spacing-md) 0 0 var(--spacing-lg);
+}
+
+.key-principle li {
+    margin-bottom: var(--spacing-sm);
+}
+
+/* === WARNING BOX === */
+.warning-box {
+    background-color: var(--warning-yellow);
+    border: 1px solid var(--warning-border);
+    border-left: 5px solid var(--warning-text);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-md);
+    margin: var(--spacing-xl) 0;
+}
+
+.warning-box h4 {
+    font-family: var(--font-sans);
+    color: var(--warning-text);
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-md);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.warning-box h4::before {
+    content: '⚠️';
+    font-size: 1.5rem;
+}
+
+.warning-box ul {
+    margin: var(--spacing-md) 0 0 var(--spacing-lg);
+    color: var(--dark-gray);
+}
+
+.warning-box li {
+    margin-bottom: var(--spacing-sm);
+}
+
+/* === EXAMPLE BOX === */
+.example-box {
+    background-color: #F8F9FA;
+    border-left: 4px solid var(--medium-gray);
+    padding: var(--spacing-lg);
+    margin: var(--spacing-lg) 0;
+    border-radius: var(--radius-sm);
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+}
+
+.example-correct {
+    border-left-color: var(--success-green);
+}
+
+.example-incorrect {
+    border-left-color: var(--error-red);
+}
+
+.example-label {
+    font-family: var(--font-sans);
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    margin-bottom: var(--spacing-sm);
+    color: var(--medium-gray);
+}
+
+.example-correct .example-label {
+    color: var(--success-green);
+}
+
+.example-incorrect .example-label {
+    color: var(--error-red);
+}
+
+/* === LISTS === */
+#contentArea ul,
+#contentArea ol {
+    margin: var(--spacing-lg) 0;
+    padding-left: var(--spacing-xl);
+}
+
+#contentArea li {
+    margin-bottom: var(--spacing-md);
+    line-height: 1.8;
+}
+
+#contentArea ul li::marker {
+    color: var(--primary-red);
+}
+
+/* === TABLES === */
+#contentArea table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: var(--spacing-xl) 0;
+}
+
+#contentArea th,
+#contentArea td {
+    padding: var(--spacing-md);
+    text-align: left;
+    border-bottom: 1px solid var(--border-gray);
+}
+
+#contentArea th {
+    background-color: var(--light-gray);
+    font-family: var(--font-sans);
+    font-weight: 600;
+    color: var(--dark-gray);
+}
+
+#contentArea tr:hover {
+    background-color: var(--light-gray);
+}
+
+/* === CONTENT NAVIGATION === */
+.content-navigation {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--spacing-md);
+    padding: var(--spacing-xl) 0;
+}
+
+.content-navigation .btn {
+    flex: 1;
+    max-width: 250px;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+    .chapter-title-area h1 {
+        font-size: 1.75rem;
+    }
+    
+    .chapter-badge {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+    
+    #contentArea {
+        padding: var(--spacing-xl);
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    .content-navigation {
+        flex-direction: column;
+    }
+    
+    .content-navigation .btn {
+        max-width: 100%;
+    }
+    
+    .section-nav {
+        top: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    #contentArea {
+        padding: var(--spacing-lg);
+    }
+    
+    .key-principle,
+    .warning-box {
+        padding: var(--spacing-lg);
+    }
+}

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz - Canadian Style Learner</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/quiz.css">
+</head>
+<body class="quiz-page">
+    
+    <!-- Header -->
+    <header class="quiz-header">
+        <div class="container">
+            <div class="quiz-info">
+                <div class="chapter-badge" id="chapterBadge">1</div>
+                <div class="quiz-title-area">
+                    <h1 id="quizTitle">Chapter 1 Quiz: Abbreviations</h1>
+                    <p id="quizDescription">Test your knowledge with 10 questions</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Quiz Container -->
+    <main class="quiz-container">
+        <div class="container">
+            
+            <!-- Start Screen -->
+            <div id="startScreen" class="quiz-screen">
+                <div class="quiz-card">
+                    <div class="quiz-intro">
+                        <h2>Ready to Test Your Knowledge?</h2>
+                        <p>This quiz contains <strong id="totalQuestions">10</strong> questions about abbreviations in Canadian English writing.</p>
+                        
+                        <div class="quiz-details">
+                            <div class="detail-item">
+                                <span class="detail-icon">📝</span>
+                                <div>
+                                    <strong>Question Types</strong>
+                                    <p>Single choice, multiple choice, and true/false</p>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-icon">⏱️</span>
+                                <div>
+                                    <strong>No Time Limit</strong>
+                                    <p>Take your time and think through each answer</p>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-icon">✅</span>
+                                <div>
+                                    <strong>Immediate Feedback</strong>
+                                    <p>See correct answers and explanations after each question</p>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-icon">🎯</span>
+                                <div>
+                                    <strong>Passing Score</strong>
+                                    <p>Score 70% or higher to complete the chapter</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button id="startQuizBtn" class="btn btn-primary btn-large">Start Quiz</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Question Screen -->
+            <div id="questionScreen" class="quiz-screen" style="display: none;">
+                <div class="quiz-progress">
+                    <div class="progress-text">
+                        Question <span id="currentQuestionNum">1</span> of <span id="totalQuestionsNum">10</span>
+                    </div>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" id="quizProgressBar" style="width: 10%"></div>
+                    </div>
+                </div>
+                
+                <div class="quiz-card">
+                    <div class="question-area" id="questionArea">
+                        <!-- Question content will be loaded here -->
+                    </div>
+                    
+                    <div class="feedback-area" id="feedbackArea" style="display: none;">
+                        <!-- Feedback will be shown here -->
+                    </div>
+                    
+                    <div class="quiz-actions">
+                        <button id="submitAnswerBtn" class="btn btn-primary">Submit Answer</button>
+                        <button id="nextQuestionBtn" class="btn btn-primary" style="display: none;">Next Question →</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Results Screen -->
+            <div id="resultsScreen" class="quiz-screen" style="display: none;">
+                <div class="quiz-card">
+                    <div class="results-content">
+                        <div class="results-header">
+                            <div class="score-circle" id="scoreCircle">
+                                <div class="score-number" id="finalScore">0</div>
+                                <div class="score-label">Score</div>
+                            </div>
+                            <h2 id="resultsTitle">Quiz Complete!</h2>
+                            <p id="resultsMessage"></p>
+                        </div>
+                        
+                        <div class="results-stats">
+                            <div class="stat-item">
+                                <div class="stat-value" id="correctAnswers">0</div>
+                                <div class="stat-label">Correct</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value" id="incorrectAnswers">0</div>
+                                <div class="stat-label">Incorrect</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value" id="scorePercent">0%</div>
+                                <div class="stat-label">Percentage</div>
+                            </div>
+                        </div>
+                        
+                        <div class="results-details" id="resultsDetails">
+                            <!-- Question-by-question breakdown will be shown here -->
+                        </div>
+                        
+                        <div class="results-actions">
+                            <button id="retakeQuizBtn" class="btn btn-secondary">Retake Quiz</button>
+                            <button id="completeChapterBtn" class="btn btn-primary">Complete Chapter →</button>
+                            <button onclick="window.location.href='dashboard.html'" class="btn btn-secondary">Back to Dashboard</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </main>
+
+    <script src="js/auth.js"></script>
+    <script src="js/quiz.js"></script>
+</body>
+</html>

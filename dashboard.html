@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Canadian Style Learner</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body class="dashboard">
+    
+    <!-- Header -->
+    <header class="dashboard-header">
+        <div class="container">
+            <div class="header-left">
+                <div class="header-logo">
+                    <svg width="50" height="50" viewBox="0 0 60 60">
+                        <circle cx="30" cy="30" r="28" fill="white"/>
+                        <path d="M30 15 L32 25 L35 20 L33 28 L38 26 L34 30 L40 32 L33 33 L35 38 L30 34 L25 38 L27 33 L20 32 L26 30 L22 26 L27 28 L25 20 L28 25 Z" fill="#D52B1E"/>
+                    </svg>
+                </div>
+                <div class="header-title">
+                    <h1>The Canadian Style</h1>
+                    <p>Interactive Canadian English Style Guide</p>
+                </div>
+            </div>
+            <div class="header-right">
+                <div class="user-info">
+                    <div class="user-name" id="userName">Loading...</div>
+                    <div class="user-email" id="userEmail"></div>
+                </div>
+                <button id="logoutBtn" class="btn btn-logout">Sign Out</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="dashboard-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Master Canadian Writing Standards</h2>
+                <p>Learn proper Canadian English conventions through interactive lessons, practical exercises, and comprehensive style guidelines. Based on the official government publication.</p>
+                
+                <div class="progress-overview">
+                    <div class="progress-stat">
+                        <span class="stat-number" id="chaptersCompleted">0</span>
+                        <span class="stat-label">Chapters Completed</span>
+                    </div>
+                    <div class="progress-stat">
+                        <span class="stat-number" id="sectionsCompleted">0</span>
+                        <span class="stat-label">Sections Completed</span>
+                    </div>
+                    <div class="progress-stat">
+                        <span class="stat-number" id="quizzesTaken">0</span>
+                        <span class="stat-label">Quizzes Taken</span>
+                    </div>
+                </div>
+                
+                <div class="overall-progress">
+                    <h3>Overall Progress</h3>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" id="overallProgressBar" style="width: 0%">0%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modules Section -->
+    <section class="modules-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Learning Modules</h2>
+                <div class="filter-tabs">
+                    <button class="filter-tab active" data-category="all">All Chapters</button>
+                    <button class="filter-tab" data-category="basics">Fundamentals</button>
+                    <button class="filter-tab" data-category="typography">Typography</button>
+                    <button class="filter-tab" data-category="style">Style & Usage</button>
+                </div>
+            </div>
+            
+            <div class="modules-grid" id="modulesGrid">
+                <!-- Modules will be loaded here by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <script src="js/auth.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

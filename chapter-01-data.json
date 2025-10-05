@@ -1,0 +1,588 @@
+{
+  "id": 1,
+  "number": "1",
+  "title": "Abbreviations",
+  "description": "Learn the proper use of abbreviations in Canadian government writing",
+  "sections": [
+    {
+      "id": "1.01",
+      "title": "Introduction",
+      "content": {
+        "text": "Abbreviations save space and time in writing, but they must be used carefully to maintain clarity. This chapter covers Canadian government standards for creating and using abbreviations effectively.",
+        "keyPrinciple": {
+          "title": "Key Principle",
+          "content": "Use abbreviations sparingly in formal writing. When in doubt, spell it out completely."
+        },
+        "warningBox": {
+          "title": "When to Use Abbreviations",
+          "items": [
+            "In technical documents where space is limited",
+            "For widely recognized terms (e.g., etc., i.e., e.g.)",
+            "For units of measurement in scientific contexts",
+            "In tables, charts, and reference lists",
+            "When the abbreviation is more familiar than the full form"
+          ]
+        },
+        "avoidBox": {
+          "title": "Avoid Abbreviations When:",
+          "items": [
+            "Writing for a general audience",
+            "The abbreviation appears only once",
+            "It creates ambiguity or confusion",
+            "Starting a sentence (unless unavoidable)"
+          ]
+        }
+      }
+    },
+    {
+      "id": "1.02",
+      "title": "General Principles",
+      "content": {
+        "text": "Follow these fundamental principles when using abbreviations:",
+        "principles": [
+          "Always define an abbreviation on first use, unless it is extremely well known",
+          "Be consistent—once you choose an abbreviation, use it throughout the document",
+          "Consider your audience when deciding whether to abbreviate",
+          "Avoid using too many abbreviations in a single document"
+        ],
+        "examples": [
+          {
+            "type": "correct",
+            "text": "The Canadian Broadcasting Corporation (CBC) announced new programming. The CBC will focus on..."
+          },
+          {
+            "type": "incorrect",
+            "text": "The CBC announced new programming. (Without first defining it)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "1.03",
+      "title": "Sentence Capitals",
+      "content": {
+        "text": "Generally, do not begin a sentence with an abbreviation. If you must, spell out the word or restructure the sentence.",
+        "examples": [
+          {
+            "type": "incorrect",
+            "text": "Dr. Smith will speak at the conference."
+          },
+          {
+            "type": "correct",
+            "text": "Doctor Smith will speak at the conference."
+          },
+          {
+            "type": "correct",
+            "text": "The conference will feature Dr. Smith as a speaker."
+          }
+        ],
+        "note": "Exceptions exist for titles that are always abbreviated (Mr., Mrs., Dr.) when restructuring would be awkward."
+      }
+    },
+    {
+      "id": "1.04",
+      "title": "Periods and Spacing",
+      "content": {
+        "text": "The use of periods in abbreviations follows specific rules:",
+        "rules": [
+          {
+            "rule": "Use periods after abbreviations for single words",
+            "examples": ["Mr.", "Jr.", "Ltd.", "misc.", "pp.", "Nos."]
+          },
+          {
+            "rule": "Use periods after each abbreviated word in multi-word terms",
+            "examples": ["Rev. ed.", "R.I.P.", "Ph. D."]
+          },
+          {
+            "rule": "Use periods after initials in personal names",
+            "examples": ["Thelonius S. Monk", "H. E. Hughes"]
+          }
+        ],
+        "keyPrinciple": {
+          "title": "Spacing Rule",
+          "content": "Include a space between initials and following names, but not between initials themselves when they form an acronym."
+        }
+      }
+    },
+    {
+      "id": "1.05",
+      "title": "Plurals of Abbreviations",
+      "content": {
+        "text": "Form plurals of abbreviations according to these guidelines:",
+        "rules": [
+          {
+            "rule": "Add 's' (no apostrophe) for most abbreviations",
+            "examples": ["ADMs", "PCBs", "CAs", "MPs", "747s", "BMWs"]
+          },
+          {
+            "rule": "Use apostrophe + s for numerical aircraft names ending in a single letter",
+            "examples": ["727-100C's", "747B's", "727-100's"]
+          },
+          {
+            "rule": "Use apostrophe + s when confusion might arise",
+            "examples": ["c.o.d.'s", "Q's and A's", "SIN's"]
+          },
+          {
+            "rule": "Add apostrophe + s for abbreviations with multiple periods",
+            "examples": ["G.M.'s", "Gens.", "pts."]
+          }
+        ],
+        "specialCases": [
+          {
+            "singular": "Mr.",
+            "plural": "Messrs."
+          },
+          {
+            "singular": "Mrs.",
+            "plural": "Mmes."
+          },
+          {
+            "singular": "p. (page)",
+            "plural": "pp. (pages)"
+          },
+          {
+            "singular": "f. (and the one following)",
+            "plural": "ff. (and those following)"
+          }
+        ],
+        "note": "SI/metric symbols maintain the same form for both singular and plural and are written without periods, except at the end of a sentence."
+      }
+    },
+    {
+      "id": "1.06",
+      "title": "Titles with Personal Names",
+      "content": {
+        "text": "Use the following abbreviations for non-military titles preceding or following personal names:",
+        "titles": [
+          "Mr., Mrs., Ms., Messrs., Mmes.",
+          "Dr., Hon., Rt. Hon.",
+          "Msgr., St., Prof., Rev.",
+          "Esq., Jr., Sr."
+        ],
+        "keyPrinciple": {
+          "title": "Usage of Ms.",
+          "content": "Use Ms. when referring to a woman unless a preference for Mrs. has been indicated. Although not an abbreviation, Ms. is written with a period, by analogy with Mr. and Mrs. Note that Miss is not an abbreviation and does not take a period."
+        },
+        "warningBox": {
+          "title": "Important Rule",
+          "content": "Do not use Mr., Mrs., Ms., Dr. or Esq. with any other abbreviated title or with an abbreviation for an academic degree."
+        },
+        "examples": [
+          {
+            "type": "incorrect",
+            "text": "Dr. John Smith, Ph.D."
+          },
+          {
+            "type": "correct",
+            "text": "Dr. John Smith or John Smith, Ph.D."
+          },
+          {
+            "type": "incorrect",
+            "text": "Mr. William Jones, Esq."
+          },
+          {
+            "type": "correct",
+            "text": "Mr. William Jones or William Jones, Esq."
+          }
+        ]
+      }
+    },
+    {
+      "id": "1.07",
+      "title": "Military Abbreviations",
+      "content": {
+        "text": "Military ranks and titles follow specific abbreviation conventions:",
+        "ranks": [
+          "Gen. (General)",
+          "Lt. (Lieutenant)",
+          "Col. (Colonel)",
+          "Maj. (Major)",
+          "Capt. (Captain)",
+          "Sgt. (Sergeant)",
+          "Cpl. (Corporal)",
+          "Pte. (Private)"
+        ],
+        "note": "In formal military documents, consult the appropriate military style guide for complete lists and usage rules."
+      }
+    },
+    {
+      "id": "1.08",
+      "title": "Geographical Names",
+      "content": {
+        "text": "Abbreviate geographical terms according to these guidelines:",
+        "rules": [
+          "Generally spell out names of countries, provinces, and territories in text",
+          "Abbreviate in addresses, lists, and when space is limited",
+          "Use standard postal abbreviations for provinces and territories"
+        ],
+        "provinces": [
+          "AB (Alberta)",
+          "BC (British Columbia)",
+          "MB (Manitoba)",
+          "NB (New Brunswick)",
+          "NL (Newfoundland and Labrador)",
+          "NS (Nova Scotia)",
+          "NT (Northwest Territories)",
+          "NU (Nunavut)",
+          "ON (Ontario)",
+          "PE (Prince Edward Island)",
+          "QC (Quebec)",
+          "SK (Saskatchewan)",
+          "YT (Yukon)"
+        ],
+        "keyPrinciple": {
+          "title": "In Formal Text",
+          "content": "Spell out province and territory names in formal documents and running text. Use abbreviations primarily in addresses and tables."
+        }
+      }
+    },
+    {
+      "id": "1.09",
+      "title": "Latin Abbreviations",
+      "content": {
+        "text": "Common Latin abbreviations used in English writing:",
+        "abbreviations": [
+          {
+            "abbr": "e.g.",
+            "full": "exempli gratia",
+            "meaning": "for example",
+            "usage": "Use in parenthetical material; spell out 'for example' in main text"
+          },
+          {
+            "abbr": "i.e.",
+            "full": "id est",
+            "meaning": "that is",
+            "usage": "Use in parenthetical material; spell out 'that is' in main text"
+          },
+          {
+            "abbr": "etc.",
+            "full": "et cetera",
+            "meaning": "and so forth",
+            "usage": "Acceptable in all contexts, but avoid overuse"
+          },
+          {
+            "abbr": "cf.",
+            "full": "confer",
+            "meaning": "compare",
+            "usage": "Used primarily in scholarly writing"
+          },
+          {
+            "abbr": "et al.",
+            "full": "et alii",
+            "meaning": "and others",
+            "usage": "Used in citations with multiple authors"
+          },
+          {
+            "abbr": "viz.",
+            "full": "videlicet",
+            "meaning": "namely",
+            "usage": "Formal and scholarly writing"
+          }
+        ],
+        "warningBox": {
+          "title": "Avoid Overuse",
+          "content": "In formal writing, prefer English equivalents. Reserve Latin abbreviations for parenthetical material and scholarly contexts."
+        }
+      }
+    },
+    {
+      "id": "1.10",
+      "title": "Time and Date Abbreviations",
+      "content": {
+        "text": "Abbreviate time and date expressions as follows:",
+        "timeAbbreviations": [
+          "a.m. (ante meridiem - before noon)",
+          "p.m. (post meridiem - after noon)",
+          "EST (Eastern Standard Time)",
+          "PST (Pacific Standard Time)",
+          "GMT (Greenwich Mean Time)"
+        ],
+        "dateAbbreviations": [
+          "Jan., Feb., Mar., Apr., May, June, July, Aug., Sept., Oct., Nov., Dec.",
+          "Mon., Tues., Wed., Thurs., Fri., Sat., Sun."
+        ],
+        "keyPrinciple": {
+          "title": "In Formal Writing",
+          "content": "Spell out months and days of the week in formal text. Use abbreviations in tables, lists, and when space is constrained."
+        },
+        "examples": [
+          {
+            "type": "correct",
+            "text": "The meeting is scheduled for 2:00 p.m. on Tuesday, March 15."
+          },
+          {
+            "type": "acceptable",
+            "text": "Meeting: 2:00 p.m., Tues., Mar. 15 (in a calendar or schedule)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "1.11",
+      "title": "Business and Organization Names",
+      "content": {
+        "text": "Guidelines for abbreviating business and organization names:",
+        "rules": [
+          "Use the organization's preferred abbreviation or acronym",
+          "Define acronyms on first use unless extremely well known",
+          "Respect the organization's capitalization and spacing preferences"
+        ],
+        "commonAbbreviations": [
+          "Ltd. (Limited)",
+          "Inc. (Incorporated)",
+          "Corp. (Corporation)",
+          "Co. (Company)",
+          "Bros. (Brothers)",
+          "& (and - in business names only)"
+        ],
+        "examples": [
+          {
+            "type": "correct",
+            "text": "The Canadian Broadcasting Corporation (CBC) will air the documentary. CBC representatives confirmed..."
+          },
+          {
+            "type": "correct",
+            "text": "Smith & Sons Ltd. announced new products."
+          }
+        ]
+      }
+    },
+    {
+      "id": "1.12",
+      "title": "Academic Degrees",
+      "content": {
+        "text": "Abbreviate academic degrees as follows:",
+        "degrees": [
+          "B.A. (Bachelor of Arts)",
+          "B.Sc. (Bachelor of Science)",
+          "M.A. (Master of Arts)",
+          "M.Sc. (Master of Science)",
+          "M.B.A. (Master of Business Administration)",
+          "Ph.D. (Doctor of Philosophy)",
+          "LL.B. (Bachelor of Laws)",
+          "LL.M. (Master of Laws)",
+          "M.D. (Doctor of Medicine)"
+        ],
+        "keyPrinciple": {
+          "title": "Placement",
+          "content": "Academic degrees follow the person's name and are set off by commas. Do not use a title (Dr., Mr., etc.) with a degree."
+        },
+        "examples": [
+          {
+            "type": "correct",
+            "text": "Jane Smith, Ph.D., will lead the research."
+          },
+          {
+            "type": "correct",
+            "text": "Dr. Jane Smith will lead the research."
+          },
+          {
+            "type": "incorrect",
+            "text": "Dr. Jane Smith, Ph.D., will lead the research."
+          }
+        ]
+      }
+    },
+    {
+      "id": "1.13",
+      "title": "Units of Measurement",
+      "content": {
+        "text": "SI/metric units and their abbreviations:",
+        "keyPrinciple": {
+          "title": "Critical Rules for SI Symbols",
+          "content": "SI symbols are not abbreviations. They are never followed by periods (except at the end of a sentence) and never take a plural 's'."
+        },
+        "lengthUnits": [
+          "mm (millimetre)",
+          "cm (centimetre)",
+          "m (metre)",
+          "km (kilometre)"
+        ],
+        "massUnits": [
+          "mg (milligram)",
+          "g (gram)",
+          "kg (kilogram)",
+          "t (tonne)"
+        ],
+        "volumeUnits": [
+          "mL (millilitre)",
+          "L (litre)",
+          "m³ (cubic metre)"
+        ],
+        "examples": [
+          {
+            "type": "correct",
+            "text": "The box measures 5 cm by 10 cm."
+          },
+          {
+            "type": "correct",
+            "text": "Add 250 mL of water."
+          },
+          {
+            "type": "incorrect",
+            "text": "The box measures 5 cms. by 10 cms."
+          }
+        ]
+      }
+    },
+    {
+      "id": "1.14",
+      "title": "Symbols and Signs",
+      "content": {
+        "text": "Common symbols and when to use them:",
+        "symbols": [
+          {
+            "symbol": "&",
+            "name": "Ampersand",
+            "usage": "Use only in official business names and in certain established phrases. Otherwise, spell out 'and'."
+          },
+          {
+            "symbol": "%",
+            "name": "Percent",
+            "usage": "Acceptable in technical and statistical contexts. In formal writing, spell out 'percent' after the number."
+          },
+          {
+            "symbol": "$",
+            "name": "Dollar sign",
+            "usage": "Place before the number with no space: $50, $1,000"
+          },
+          {
+            "symbol": "#",
+            "name": "Number sign",
+            "usage": "Avoid in formal writing. Use 'No.' or spell out 'number'."
+          },
+          {
+            "symbol": "@",
+            "name": "At sign",
+            "usage": "Acceptable in email addresses and informal contexts only."
+          }
+        ],
+        "examples": [
+          {
+            "type": "correct",
+            "text": "The budget increased by 15 percent (or 15% in technical writing)."
+          },
+          {
+            "type": "correct",
+            "text": "AT&T Corp. (official business name)"
+          },
+          {
+            "type": "incorrect",
+            "text": "The research & development team met yesterday."
+          }
+        ]
+      }
+    },
+    {
+      "id": "1.15",
+      "title": "Government Bodies",
+      "content": {
+        "text": "Abbreviating names of government departments and agencies:",
+        "rules": [
+          "Use full name on first reference",
+          "Follow with abbreviation in parentheses",
+          "Use abbreviation in subsequent references",
+          "Capitalize all letters in most federal abbreviations"
+        ],
+        "examples": [
+          {
+            "type": "correct",
+            "text": "The Department of National Defence (DND) announced new policies. DND will implement..."
+          },
+          {
+            "type": "correct",
+            "text": "Statistics Canada (StatCan) released new data."
+          },
+          {
+            "type": "correct",
+            "text": "The Canada Revenue Agency (CRA) updated its guidelines."
+          }
+        ],
+        "note": "Some departments have official short forms that may differ from strict abbreviations. Use the department's preferred form."
+      }
+    },
+    {
+      "id": "1.16",
+      "title": "Acronyms and Initialisms",
+      "content": {
+        "text": "Understanding the difference and proper usage:",
+        "definitions": [
+          {
+            "term": "Acronym",
+            "definition": "An abbreviation pronounced as a word (e.g., NATO, radar, scuba)"
+          },
+          {
+            "term": "Initialism",
+            "definition": "An abbreviation pronounced letter by letter (e.g., FBI, CBC, HTML)"
+          }
+        ],
+        "capitalizationRules": [
+          "Acronyms of five letters or fewer: usually all capitals (NATO, RCMP)",
+          "Acronyms of six letters or more: may be written with initial capital only (Unicef, Nato) when well established",
+          "Initialisms: always all capitals (CBC, UN, MP)"
+        ],
+        "keyPrinciple": {
+          "title": "First Use Rule",
+          "content": "Always provide the full term on first use, followed by the acronym/initialism in parentheses, unless the abbreviation is more familiar than the full form."
+        },
+        "exceptions": [
+          "Very well-known acronyms (NATO, UN, FBI) may not need definition",
+          "Common technology terms (DVD, USB, CD) are often used without definition"
+        ],
+        "examples": [
+          {
+            "type": "correct",
+            "text": "The North Atlantic Treaty Organization (NATO) held a summit. NATO members agreed..."
+          },
+          {
+            "type": "correct",
+            "text": "Insert the USB drive. (No definition needed - universally known)"
+          }
+        ]
+      }
+    },
+    {
+      "id": "1.17",
+      "title": "Common Errors to Avoid",
+      "content": {
+        "text": "Frequent mistakes when using abbreviations:",
+        "errors": [
+          {
+            "error": "Using apostrophes incorrectly in plurals",
+            "incorrect": "The MP's voted on the bill.",
+            "correct": "The MPs voted on the bill.",
+            "explanation": "Only use apostrophes for possessives, not plurals"
+          },
+          {
+            "error": "Mixing abbreviation styles",
+            "incorrect": "The report includes data from N.A.T.O. and NATO.",
+            "correct": "The report includes data from NATO.",
+            "explanation": "Be consistent within a document"
+          },
+          {
+            "error": "Over-abbreviating",
+            "incorrect": "The dept. rep. met w/ the govt. off. re: the proj.",
+            "correct": "The department representative met with the government official regarding the project.",
+            "explanation": "Too many abbreviations reduce readability"
+          },
+          {
+            "error": "Periods with SI symbols",
+            "incorrect": "The package weighs 5 kg.",
+            "correct": "The package weighs 5 kg",
+            "explanation": "SI symbols never take periods except at sentence end"
+          },
+          {
+            "error": "Starting sentences with abbreviations",
+            "incorrect": "Dept. officials confirmed the policy.",
+            "correct": "Department officials confirmed the policy.",
+            "explanation": "Spell out abbreviations at the start of sentences"
+          }
+        ],
+        "warningBox": {
+          "title": "Remember",
+          "content": "When in doubt about an abbreviation, spell it out. Clarity should always take precedence over brevity."
+        }
+      }
+    }
+  ]
+}
