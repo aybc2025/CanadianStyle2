@@ -679,7 +679,995 @@ function getSectionContent(sectionId) {
                 <div class="example-label">✓ Correct</div>
                 Smith & Sons Ltd. announced new products.
             </div>
-        `
+        `,
+
+"1.16": `
+    <p>An acronym is a word formed from the initial letters or groups of letters of words in a set phrase or series of words. It is pronounced as a word:</p>
+    
+    <ul>
+        <li><strong>NATO</strong> - North Atlantic Treaty Organization</li>
+        <li><strong>radar</strong> - radio detecting and ranging</li>
+        <li><strong>scuba</strong> - self-contained underwater breathing apparatus</li>
+        <li><strong>laser</strong> - light amplification by stimulated emission of radiation</li>
+    </ul>
+    
+    <p>An initialism is a group of initial letters used as an abbreviation for a name or expression. Each letter is pronounced separately:</p>
+    
+    <ul>
+        <li><strong>CBC</strong> - Canadian Broadcasting Corporation</li>
+        <li><strong>RCMP</strong> - Royal Canadian Mounted Police</li>
+        <li><strong>GDP</strong> - gross domestic product</li>
+        <li><strong>VIP</strong> - very important person</li>
+    </ul>
+    
+    <div class="key-principle">
+        <h4>Capitalization Rules</h4>
+        <p>Use upper-case letters for acronyms or initialisms in their entirety, even if some of the component words or their parts are not normally capitalized—unless the organization concerned prefers lower case.</p>
+    </div>
+    
+    <div class="example-box example-correct">
+        <div class="example-label">✓ Examples</div>
+        <strong>CAA</strong> - Canadian Automobile Association<br>
+        <strong>FORTRAN</strong> - formula translation<br>
+        <strong>CISTI</strong> - Canada Institute for Scientific and Technical Information
+    </div>
+    
+    <h4>Special Cases</h4>
+    
+    <p><strong>Company acronyms:</strong> Acronyms of company names formed by using more than the initial letters usually have only the first letter capitalized:</p>
+    
+    <div class="example-box example-correct">
+        <div class="example-label">✓ Correct</div>
+        <strong>Alcan</strong> - Aluminum Company of Canada<br>
+        <strong>Inco</strong> - International Nickel Company<br>
+        <strong>Nabisco</strong> - National Biscuit Company<br>
+        <strong>Nortel</strong> - Northern Telecom Ltd.<br>
+        <strong>Stelco</strong> - Steel Company of Canada Ltd.
+    </div>
+    
+    <p><strong>Common-noun acronyms:</strong> Acronyms treated as full-fledged words are written entirely in lower case without periods:</p>
+    
+    <div class="example-box example-correct">
+        <div class="example-label">✓ Examples</div>
+        radar, laser, scuba, sonar
+    </div>
+    
+    <div class="warning-box">
+        <div class="warning-label">⚠ Important</div>
+        <p>When using acronyms or initialisms such as <strong>SIN</strong> (social insurance number), <strong>PIN</strong> (personal identification number) or <strong>ISBN</strong> (International Standard Book Number), do not repeat the word "number".</p>
+    </div>
+    
+    <div class="example-box example-incorrect">
+        <div class="example-label">✗ Incorrect</div>
+        Enter your SIN number
+    </div>
+    
+    <div class="example-box example-correct">
+        <div class="example-label">✓ Correct</div>
+        Enter your SIN<br>
+        Enter your social insurance number
+    </div>
+`,
+
+"1.17": `
+    <h4>Number Symbol</h4>
+    
+    <p>When abbreviating the words "number" or "numbers" within the body of a text, use <strong>No.</strong> or <strong>Nos.</strong> but not the symbol <strong>#</strong>, which is generally reserved for tabular and statistical material.</p>
+    
+    <div class="example-box example-correct">
+        <div class="example-label">✓ Correct</div>
+        Nos. 56-86 are missing.
+    </div>
+    
+    <div class="example-box example-incorrect">
+        <div class="example-label">✗ Incorrect</div>
+        #56-86 are missing. (in running text)
+    </div>
+    
+    <h4>Percent Symbol</h4>
+    
+    <p>Use the percent sign (%) in economic, financial, statistical or other documents where figures are abundant. In material of a general nature containing isolated references to percentages, the term is usually written out, except when used adjectivally.</p>
+    
+    <div class="key-principle">
+        <h4>When to Use %</h4>
+        <ul>
+            <li>Technical and statistical documents</li>
+            <li>Financial reports</li>
+            <li>Economic analyses</li>
+            <li>When used adjectivally (no space between numeral and %)</li>
+        </ul>
+    </div>
+    
+    <div class="example-box example-correct">
+        <div class="example-label">✓ Examples</div>
+        <strong>General text:</strong> The rate increased by 15 percent<br>
+        <strong>Adjectival use:</strong> a 15% bond<br>
+        <strong>Technical context:</strong> Growth rate: 3.5%
+    </div>
+    
+    <div class="warning-box">
+        <div class="warning-label">⚠ Note</div>
+        <p>When using the % symbol, there is no space between the numeral and the symbol: <strong>15%</strong> not <strong>15 %</strong></p>
+    </div>
+`,
+
+"1.18": `
+    <p>The ampersand (&) is properly used only when it forms part of a corporate name.</p>
+    
+    <div class="key-principle">
+        <h4>Critical Rule</h4>
+        <p>Use the ampersand ONLY in official company names where it appears as part of the legal name. Otherwise, always spell out "and".</p>
+    </div>
+    
+    <div class="example-box example-correct">
+        <div class="example-label">✓ Correct - Corporate Names</div>
+        The publisher was Ginn & Co.<br>
+        The case is being defended by Collins, Smith, White & Jones.<br>
+        AT&T Corp. announced new services.
+    </div>
+    
+    <h4>Government Departments</h4>
+    
+    <p>Do NOT use the ampersand in federal department legal or applied titles:</p>
+    
+    <div class="example-box example-correct">
+        <div class="example-label">✓ Correct</div>
+        The Department of Public Works and Government Services<br>
+        The Department of Indian Affairs and Northern Development
+    </div>
+    
+    <div class="example-box example-incorrect">
+        <div class="example-label">✗ Incorrect</div>
+        The Department of Public Works & Government Services<br>
+        The Department of Indian Affairs & Northern Development
+    </div>
+    
+    <div class="warning-box">
+        <div class="warning-label">⚠ Common Mistakes</div>
+        <ul>
+            <li>Using & in general writing: "research & development" ✗</li>
+            <li>Using & in government documents ✗</li>
+            <li>Using & instead of "and" for convenience ✗</li>
+        </ul>
+    </div>
+`,
+
+"1.19": `
+    <p>When it is necessary to distinguish dollar amounts in one currency from those in another, use the appropriate symbol with the figure in question.</p>
+    
+    <div class="key-principle">
+        <h4>Currency Symbols</h4>
+        <p>Use standard currency codes to distinguish between different dollar currencies:</p>
+        <ul>
+            <li><strong>C$</strong> or <strong>CAN$</strong> - Canadian dollars</li>
+            <li><strong>US$</strong> - United States dollars</li>
+            <li><strong>A$</strong> or <strong>AUD$</strong> - Australian dollars</li>
+            <li><strong>NZ$</strong> - New Zealand dollars</li>
+        </ul>
+    </div>
+    
+    <div class="example-box example-correct">
+        <div class="example-label">✓ Examples</div>
+        The loan will be repaid in eighty instalments of C$650 (or CAN$650) each.<br><br>
+        Please enclose a cheque in the amount of US$100.<br><br>
+        The price is A$50 for Australian customers.
+    </div>
+    
+    <h4>General Dollar Symbol</h4>
+    
+    <p>When the currency is clear from context (e.g., in Canadian documents discussing Canadian amounts), use the simple $ symbol:</p>
+    
+    <div class="example-box example-correct">
+        <div class="example-label">✓ Example</div>
+        The total cost is $5,250.
+    </div>
+    
+    <div class="note-box">
+        <div class="note-label">📝 Note</div>
+        <p>See sections 5.11 and 5.26 for further information on representing monetary units and amounts.</p>
+    </div>
+`,
+
+"1.20": `
+    <h4>Months</h4>
+    
+    <p>Always spell out the names of the months in the body of your text and in footnotes.</p>
+    
+    <div class="key-principle">
+        <h4>When to Abbreviate Months</h4>
+        <p>Months may be abbreviated ONLY in:</p>
+        <ul>
+            <li>Tabular matter</li>
+            <li>Citations and references</li>
+            <li>Forms</li>
+            <li>Sidenotes</li>
+        </ul>
+    </div>
+    
+    <div class="warning-box">
+        <div class="warning-label">⚠ Special Rules</div>
+        <ul>
+            <li><strong>May</strong> should not be abbreviated</li>
+            <li><strong>June</strong> and <strong>July</strong> are shortened only in military writing</li>
+        </ul>
+    </div>
+    
+    <div class="example-box example-correct">
+        <div class="example-label">✓ Correct - Body Text</div>
+        The meeting was held on September 15, 2024.<br>
+        We received the report in January.
+    </div>
+    
+    <div class="example-box example-correct">
+        <div class="example-label">✓ Correct - Tables/Forms</div>
+        Jan., Feb., Mar., Apr., May, Jun. (military only), Jul. (military only), Aug., Sept., Oct., Nov., Dec.
+    </div>
+    
+    <h4>Days of the Week</h4>
+    
+    <p>The names of the days of the week are not abbreviated, except in tables.</p>
+    
+    <div class="example-box example-correct">
+        <div class="example-label">✓ Correct - Running Text</div>
+        The conference begins on Monday and ends on Friday.
+    </div>
+    
+    <div class="example-box example-correct">
+        <div class="example-label">✓ Correct - Tables Only</div>
+        Mon., Tue., Wed., Thu., Fri., Sat., Sun.
+    </div>
+`,
+
+"1.21": `
+    <h4>Time of Day</h4>
+    
+    <p>Present exact time as follows:</p>
+    
+    <div class="example-box example-correct">
+        <div class="example-label">✓ Correct Formats</div>
+        11 a.m. or 11:00 a.m.<br>
+        1 p.m. or 1:00 p.m.<br>
+        3:30 p.m.<br>
+        8:05 a.m.
+    </div>
+    
+    <div class="key-principle">
+        <h4>Formatting Rules</h4>
+        <ul>
+            <li>Use lowercase letters with periods: a.m., p.m.</li>
+            <li>Include a space before a.m./p.m.</li>
+            <li>For on-the-hour times, you may omit ":00"</li>
+            <li>Always use colons between hours and minutes</li>
+        </ul>
+    </div>
+    
+    <h4>Elapsed Time</h4>
+    
+    <p>For elapsed time, use colons, periods and no spaces:</p>
+    
+    <div class="example-box example-correct">
+        <div class="example-label">✓ Correct Format</div>
+        2:30:21.65<br>
+        <em>(hours:minutes:seconds.tenths.hundredths)</em>
+    </div>
+    
+    <div class="example-box example-correct">
+        <div class="example-label">✓ Examples</div>
+        The race was completed in 1:45:32.18<br>
+        Total elapsed time: 3:22:15
+    </div>
+    
+    <div class="note-box">
+        <div class="note-label">📝 Reference</div>
+        <p>See sections 5.12 and 5.13 for additional information on representing time.</p>
+    </div>
+`,
+
+"1.22": `
+    <p>Time zones are abbreviated when used with a specific time. Note that capitals are used, without periods. Otherwise they are written out in full.</p>
+    
+    <div class="key-principle">
+        <h4>Formatting Rules</h4>
+        <ul>
+            <li>Use ALL CAPITALS for time zone abbreviations</li>
+            <li>NO periods in abbreviations</li>
+            <li>Spell out when not used with a specific time</li>
+        </ul>
+    </div>
+    
+    <h4>Canadian Time Zones</h4>
+    
+    <div class="example-box example-correct">
+        <div class="example-label">✓ With Specific Times</div>
+        4:30 p.m. EST (Eastern Standard Time)<br>
+        7:15 a.m. MST (Mountain Standard Time)<br>
+        9:00 a.m. PST (Pacific Standard Time)<br>
+        2:30 p.m. AST (Atlantic Standard Time)<br>
+        1:00 p.m. CST (Central Standard Time)<br>
+        12:30 p.m. NST (Newfoundland Standard Time)
+    </div>
+    
+    <div class="example-box example-correct">
+        <div class="example-label">✓ Written Out</div>
+        The office operates on Pacific standard time.<br>
+        We observe daylight saving time from March to November.
+    </div>
+    
+    <h4>Daylight Saving Time</h4>
+    
+    <div class="example-box example-correct">
+        <div class="example-label">✓ Abbreviations</div>
+        EDT (Eastern Daylight Time)<br>
+        MDT (Mountain Daylight Time)<br>
+        PDT (Pacific Daylight Time)<br>
+        ADT (Atlantic Daylight Time)<br>
+        CDT (Central Daylight Time)
+    </div>
+    
+    <div class="warning-box">
+        <div class="warning-label">⚠ Note</div>
+        <p>When writing out "daylight saving time," use "saving" (singular), not "savings".</p>
+    </div>
+`,
+
+"1.23": `
+    <p>The International System of Units (SI), which has replaced other metric systems and is now used in Canada and many other countries, is a decimal-based system that includes units for physical quantities.</p>
+    
+    <h4>Seven Base Units in SI</h4>
+    
+    <div class="table-responsive">
+        <table class="content-table">
+            <thead>
+                <tr>
+                    <th>Quantity</th>
+                    <th>Unit Name</th>
+                    <th>Symbol</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>length</td>
+                    <td>metre</td>
+                    <td>m</td>
+                </tr>
+                <tr>
+                    <td>mass</td>
+                    <td>kilogram</td>
+                    <td>kg</td>
+                </tr>
+                <tr>
+                    <td>time</td>
+                    <td>second</td>
+                    <td>s</td>
+                </tr>
+                <tr>
+                    <td>electric current</td>
+                    <td>ampere</td>
+                    <td>A</td>
+                </tr>
+                <tr>
+                    <td>thermodynamic temperature</td>
+                    <td>kelvin</td>
+                    <td>K</td>
+                </tr>
+                <tr>
+                    <td>amount of substance</td>
+                    <td>mole</td>
+                    <td>mol</td>
+                </tr>
+                <tr>
+                    <td>luminous intensity</td>
+                    <td>candela</td>
+                    <td>cd</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <div class="key-principle">
+        <h4>Capitalization Rules</h4>
+        <p>When the symbol is used, its initial letter is capitalized if named after a scientist. When written in full, however, the unit name is in lower case.</p>
+        <p><strong>Exception:</strong> Celsius takes an initial capital whether written in full or as a symbol.</p>
+    </div>
+    
+    <div class="example-box example-correct">
+        <div class="example-label">✓ Examples</div>
+        H for henry (unit is lowercase, symbol is uppercase)<br>
+        F for farad (unit is lowercase, symbol is uppercase)<br>
+        °C for degree Celsius (both uppercase)
+    </div>
+    
+    <h4>Derived Units</h4>
+    
+    <div class="table-responsive">
+        <table class="content-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Symbol</th>
+                    <th>Quantity</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>coulomb</td>
+                    <td>C</td>
+                    <td>quantity of electricity, electric charge</td>
+                </tr>
+                <tr>
+                    <td>degree Celsius</td>
+                    <td>°C</td>
+                    <td>Celsius temperature</td>
+                </tr>
+                <tr>
+                    <td>farad</td>
+                    <td>F</td>
+                    <td>capacitance</td>
+                </tr>
+                <tr>
+                    <td>gray</td>
+                    <td>Gy</td>
+                    <td>absorbed dose of ionizing radiation</td>
+                </tr>
+                <tr>
+                    <td>henry</td>
+                    <td>H</td>
+                    <td>inductance</td>
+                </tr>
+                <tr>
+                    <td>hertz</td>
+                    <td>Hz</td>
+                    <td>frequency</td>
+                </tr>
+                <tr>
+                    <td>joule</td>
+                    <td>J</td>
+                    <td>energy, work, quantity of heat</td>
+                </tr>
+                <tr>
+                    <td>lumen</td>
+                    <td>lm</td>
+                    <td>luminous flux</td>
+                </tr>
+                <tr>
+                    <td>lux</td>
+                    <td>lx</td>
+                    <td>illuminance</td>
+                </tr>
+                <tr>
+                    <td>newton</td>
+                    <td>N</td>
+                    <td>force</td>
+                </tr>
+                <tr>
+                    <td>ohm</td>
+                    <td>Ω</td>
+                    <td>electric resistance</td>
+                </tr>
+                <tr>
+                    <td>pascal</td>
+                    <td>Pa</td>
+                    <td>pressure, stress</td>
+                </tr>
+                <tr>
+                    <td>radian</td>
+                    <td>rad</td>
+                    <td>plane angle</td>
+                </tr>
+                <tr>
+                    <td>siemens</td>
+                    <td>S</td>
+                    <td>electric conductance</td>
+                </tr>
+                <tr>
+                    <td>sievert</td>
+                    <td>Sv</td>
+                    <td>dose equivalent of ionizing radiation</td>
+                </tr>
+                <tr>
+                    <td>steradian</td>
+                    <td>sr</td>
+                    <td>solid angle</td>
+                </tr>
+                <tr>
+                    <td>tesla</td>
+                    <td>T</td>
+                    <td>magnetic flux density</td>
+                </tr>
+                <tr>
+                    <td>volt</td>
+                    <td>V</td>
+                    <td>electric potential, potential difference</td>
+                </tr>
+                <tr>
+                    <td>watt</td>
+                    <td>W</td>
+                    <td>power, radiant flux</td>
+                </tr>
+                <tr>
+                    <td>weber</td>
+                    <td>Wb</td>
+                    <td>magnetic flux</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <h4>Multiples and Submultiples</h4>
+    
+    <div class="table-responsive">
+        <table class="content-table">
+            <thead>
+                <tr>
+                    <th>Factor</th>
+                    <th>Prefix</th>
+                    <th>Symbol</th>
+                    <th>Factor</th>
+                    <th>Prefix</th>
+                    <th>Symbol</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>10²⁴</td>
+                    <td>yotta</td>
+                    <td>Y</td>
+                    <td>10⁻¹</td>
+                    <td>deci</td>
+                    <td>d</td>
+                </tr>
+                <tr>
+                    <td>10²¹</td>
+                    <td>zetta</td>
+                    <td>Z</td>
+                    <td>10⁻²</td>
+                    <td>centi</td>
+                    <td>c</td>
+                </tr>
+                <tr>
+                    <td>10¹⁸</td>
+                    <td>exa</td>
+                    <td>E</td>
+                    <td>10⁻³</td>
+                    <td>milli</td>
+                    <td>m</td>
+                </tr>
+                <tr>
+                    <td>10¹⁵</td>
+                    <td>peta</td>
+                    <td>P</td>
+                    <td>10⁻⁶</td>
+                    <td>micro</td>
+                    <td>μ</td>
+                </tr>
+                <tr>
+                    <td>10¹²</td>
+                    <td>tera</td>
+                    <td>T</td>
+                    <td>10⁻⁹</td>
+                    <td>nano</td>
+                    <td>n</td>
+                </tr>
+                <tr>
+                    <td>10⁹</td>
+                    <td>giga</td>
+                    <td>G</td>
+                    <td>10⁻¹²</td>
+                    <td>pico</td>
+                    <td>p</td>
+                </tr>
+                <tr>
+                    <td>10⁶</td>
+                    <td>mega</td>
+                    <td>M</td>
+                    <td>10⁻¹⁵</td>
+                    <td>femto</td>
+                    <td>f</td>
+                </tr>
+                <tr>
+                    <td>10³</td>
+                    <td>kilo</td>
+                    <td>k</td>
+                    <td>10⁻¹⁸</td>
+                    <td>atto</td>
+                    <td>a</td>
+                </tr>
+                <tr>
+                    <td>10²</td>
+                    <td>hecto</td>
+                    <td>h</td>
+                    <td>10⁻²¹</td>
+                    <td>zepto</td>
+                    <td>z</td>
+                </tr>
+                <tr>
+                    <td>10¹</td>
+                    <td>deca</td>
+                    <td>da</td>
+                    <td>10⁻²⁴</td>
+                    <td>yocto</td>
+                    <td>y</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <div class="key-principle">
+        <h4>Using Prefixes</h4>
+        <ul>
+            <li>Prefix and unit names are always spelled as one word: <strong>centimetre, kilogram, hectolitre</strong></li>
+            <li>When symbols are used, run them together: <strong>5 cm, 4 kg, 7 hL</strong></li>
+        </ul>
+    </div>
+    
+    <div class="example-box example-correct">
+        <div class="example-label">✓ Examples</div>
+        centimetre (not centi metre)<br>
+        decagram (not deca gram)<br>
+        hectolitre (not hecto litre)<br>
+        kilopascal (not kilo pascal)
+    </div>
+    
+    <h4>Spacing Rules</h4>
+    
+    <div class="warning-box">
+        <div class="warning-label">⚠ Important Spacing Rules</div>
+        <ul>
+            <li>When a symbol consists entirely of letters, leave a FULL SPACE between quantity and symbol: <strong>45 kg</strong> not 45kg</li>
+            <li>When the symbol includes a non-letter character as well as a letter, leave NO SPACE: <strong>32°C</strong> not 32° C or 32 °C</li>
+        </ul>
+    </div>
+    
+    <div class="example-box example-correct">
+        <div class="example-label">✓ Correct</div>
+        45 kg, 100 m, 250 mL (space before symbol)<br>
+        32°C, 45° (no space before degree symbol)
+    </div>
+    
+    <h4>Additional Units Approved for Use with SI</h4>
+    
+    <div class="table-responsive">
+        <table class="content-table">
+            <thead>
+                <tr>
+                    <th>Quantity</th>
+                    <th>Unit Name</th>
+                    <th>Symbol</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="4">time</td>
+                    <td>minute</td>
+                    <td>min</td>
+                </tr>
+                <tr>
+                    <td>hour</td>
+                    <td>h</td>
+                </tr>
+                <tr>
+                    <td>day</td>
+                    <td>d</td>
+                </tr>
+                <tr>
+                    <td>year</td>
+                    <td>a</td>
+                </tr>
+                <tr>
+                    <td rowspan="4">plane angle</td>
+                    <td>degree</td>
+                    <td>°</td>
+                </tr>
+                <tr>
+                    <td>minute</td>
+                    <td>'</td>
+                </tr>
+                <tr>
+                    <td>second</td>
+                    <td>"</td>
+                </tr>
+                <tr>
+                    <td>revolution</td>
+                    <td>r</td>
+                </tr>
+                <tr>
+                    <td>area</td>
+                    <td>hectare</td>
+                    <td>ha</td>
+                </tr>
+                <tr>
+                    <td>volume</td>
+                    <td>litre</td>
+                    <td>L</td>
+                </tr>
+                <tr>
+                    <td>mass</td>
+                    <td>metric ton, tonne</td>
+                    <td>t</td>
+                </tr>
+                <tr>
+                    <td>linear density</td>
+                    <td>tex</td>
+                    <td>tex</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <div class="warning-box">
+        <div class="warning-label">⚠ Note</div>
+        <p>There is no standard symbol for <strong>week</strong> or <strong>month</strong>. These units should therefore always be spelled out in technical writing.</p>
+    </div>
+    
+    <h4>Using Oblique (/) with SI Symbols</h4>
+    
+    <p>When a unit symbol is combined with a symbol for time, or with a derived unit implying a division, an oblique (/) separates the two:</p>
+    
+    <div class="example-box example-correct">
+        <div class="example-label">✓ Correct</div>
+        80 km/h (not 80 kmh or 80 kph)<br>
+        1800 r/min (not 1800 rpm)<br>
+        50 A/m (not 50 Am)<br>
+        200 J/kg (not 200 Jkg)
+    </div>
+    
+    <h4>Common Mistakes to Avoid</h4>
+    
+    <div class="example-box example-incorrect">
+        <div class="example-label">✗ Never Use These</div>
+        cc or cu. cm for cubic centimetre (use cm³)<br>
+        kilo for kilogram (use kg)<br>
+        amp for ampere (use A)<br>
+        kph for kilometres per hour (use km/h)
+    </div>
+    
+    <div class="note-box">
+        <div class="note-label">📚 Reference</div>
+        <p>More detailed information on the International System of Units (SI) can be found in the National Standard of Canada, <em>Canadian Metric Practice Guide</em> (CAN/CSA-Z234.1-89).</p>
+    </div>
+`,
+
+"1.24": `
+    <p>Abbreviations for imperial weights and measures take the same form for singular and plural. Area and volume in this system are usually expressed by means of the abbreviations <strong>sq.</strong> and <strong>cu.</strong> rather than a superscript numeral.</p>
+    
+    <div class="key-principle">
+        <h4>Spacing Rule</h4>
+        <p>Leave a space between <strong>sq.</strong> or <strong>cu.</strong> and the abbreviation that follows it.</p>
+    </div>
+    
+    <h4>Common Imperial Abbreviations</h4>
+    
+    <div class="table-responsive">
+        <table class="content-table">
+            <thead>
+                <tr>
+                    <th>Measurement</th>
+                    <th>Abbreviation</th>
+                    <th>Example</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>foot/feet</td>
+                    <td>ft.</td>
+                    <td>1 ft., 10 ft.</td>
+                </tr>
+                <tr>
+                    <td>inch/inches</td>
+                    <td>in.</td>
+                    <td>17 in.</td>
+                </tr>
+                <tr>
+                    <td>yard/yards</td>
+                    <td>yd.</td>
+                    <td>38 yd.</td>
+                </tr>
+                <tr>
+                    <td>mile/miles</td>
+                    <td>mi.</td>
+                    <td>1 mi., 100 mi.</td>
+                </tr>
+                <tr>
+                    <td>ounce/ounces</td>
+                    <td>oz.</td>
+                    <td>4 oz.</td>
+                </tr>
+                <tr>
+                    <td>pound/pounds</td>
+                    <td>lb.</td>
+                    <td>5 lb.</td>
+                </tr>
+                <tr>
+                    <td>gallon/gallons</td>
+                    <td>gal.</td>
+                    <td>4 gal.</td>
+                </tr>
+                <tr>
+                    <td>square feet</td>
+                    <td>sq. ft.</td>
+                    <td>100 sq. ft.</td>
+                </tr>
+                <tr>
+                    <td>cubic yards</td>
+                    <td>cu. yd.</td>
+                    <td>20 cu. yd.</td>
+                </tr>
+                <tr>
+                    <td>miles per hour</td>
+                    <td>mph</td>
+                    <td>55 mph</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <div class="example-box example-correct">
+        <div class="example-label">✓ Complete Examples</div>
+        The room measures 12 ft. by 15 ft.<br>
+        The package weighs 5 lb. 8 oz.<br>
+        The speed limit is 55 mph.<br>
+        We need 100 sq. ft. of carpet.<br>
+        The container holds 20 cu. yd. of material.
+    </div>
+    
+    <div class="warning-box">
+        <div class="warning-label">⚠ Important</div>
+        <p>Note that imperial abbreviations take the same form for both singular and plural: 1 ft. and 10 ft. (not 10 fts.)</p>
+    </div>
+    
+    <div class="note-box">
+        <div class="note-label">📝 Canadian Context</div>
+        <p>While Canada officially uses the metric system, imperial measurements are still commonly used in certain contexts (construction, some manufacturing, etc.). Always clarify which system you're using to avoid confusion.</p>
+    </div>
+`,
+
+"1.25": `
+    <p>Terms are often abbreviated for the purpose of conserving space in routine business correspondence. The following are common abbreviations used in tables and on business forms.</p>
+    
+    <div class="warning-box">
+        <div class="warning-label">⚠ Usage Guidelines</div>
+        <p>These abbreviations are appropriate for forms, tables, and routine business documents. In formal business writing, spell out the full terms.</p>
+    </div>
+    
+    <h4>Common Business Abbreviations</h4>
+    
+    <div class="table-responsive">
+        <table class="content-table">
+            <thead>
+                <tr>
+                    <th>Abbreviation</th>
+                    <th>Full Term</th>
+                    <th>Abbreviation</th>
+                    <th>Full Term</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>acct.</td>
+                    <td>account</td>
+                    <td>bal.</td>
+                    <td>balance</td>
+                </tr>
+                <tr>
+                    <td>Assn.</td>
+                    <td>Association</td>
+                    <td>bldg.</td>
+                    <td>building</td>
+                </tr>
+                <tr>
+                    <td>CEO</td>
+                    <td>chief executive officer</td>
+                    <td>dis.</td>
+                    <td>discount</td>
+                </tr>
+                <tr>
+                    <td>cont.</td>
+                    <td>continued</td>
+                    <td>dtd.</td>
+                    <td>dated</td>
+                </tr>
+                <tr>
+                    <td>ea.</td>
+                    <td>each</td>
+                    <td>fwd.</td>
+                    <td>forward</td>
+                </tr>
+                <tr>
+                    <td>FY</td>
+                    <td>fiscal year</td>
+                    <td>G.M.</td>
+                    <td>general manager</td>
+                </tr>
+                <tr>
+                    <td>gr.</td>
+                    <td>gross</td>
+                    <td>hdlg.</td>
+                    <td>handling</td>
+                </tr>
+                <tr>
+                    <td>ins.</td>
+                    <td>insurance</td>
+                    <td>max.</td>
+                    <td>maximum</td>
+                </tr>
+                <tr>
+                    <td>Ltd.</td>
+                    <td>Limited</td>
+                    <td>n.d.</td>
+                    <td>no date</td>
+                </tr>
+                <tr>
+                    <td>min.</td>
+                    <td>minimum</td>
+                    <td>pd.</td>
+                    <td>paid</td>
+                </tr>
+                <tr>
+                    <td>oz.</td>
+                    <td>ounce(s)</td>
+                    <td>recd.</td>
+                    <td>received</td>
+                </tr>
+                <tr>
+                    <td>qty.</td>
+                    <td>quantity</td>
+                    <td>treas.</td>
+                    <td>treasury, treasurer</td>
+                </tr>
+                <tr>
+                    <td>sec.</td>
+                    <td>secretary</td>
+                    <td>V.P.</td>
+                    <td>vice-president</td>
+                </tr>
+                <tr>
+                    <td>whsle.</td>
+                    <td>wholesale</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <h4>Usage Examples</h4>
+    
+    <div class="example-box example-correct">
+        <div class="example-label">✓ On Forms and Tables</div>
+        <strong>Invoice Details:</strong><br>
+        Qty. 100 ea. @ $5.00<br>
+        Dis. 10%<br>
+        Bal. $450.00<br>
+        Dtd. March 15, 2024
+    </div>
+    
+    <div class="example-box example-correct">
+        <div class="example-label">✓ In Business Documents</div>
+        <strong>Meeting Attendees:</strong><br>
+        J. Smith, CEO<br>
+        M. Johnson, V.P. Sales<br>
+        R. Williams, G.M.<br>
+        S. Brown, Treas.
+    </div>
+    
+    <div class="key-principle">
+        <h4>When to Use Business Abbreviations</h4>
+        <ul>
+            <li>✓ Forms and order blanks</li>
+            <li>✓ Tables and charts</li>
+            <li>✓ Internal memos (when space is limited)</li>
+            <li>✓ Financial documents and invoices</li>
+            <li>✗ Formal business letters</li>
+            <li>✗ Contracts and legal documents</li>
+            <li>✗ External communications to clients</li>
+        </ul>
+    </div>
+    
+    <div class="note-box">
+        <div class="note-label">📝 Professional Tip</div>
+        <p>When in doubt, spell it out. Abbreviations save space but can reduce clarity. Use them judiciously and only when your audience will understand them immediately.</p>
+    </div>
+`
     };
     
     return contents[sectionId] || `<p>Content for section ${sectionId} is being prepared...</p>`;
