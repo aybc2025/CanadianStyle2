@@ -19,8 +19,8 @@ const chapters = [
         title: "Hyphenation",
         category: "basics",
         description: "Master compound words and word division.",
-        sections: 15,
-        available: false
+        sections: 17,
+        available: true
     },
     {
         id: 3,
@@ -109,24 +109,24 @@ const chapters = [
         title: "Usage",
         category: "style",
         description: "Correct word usage and common mistakes.",
-        sections: 15,
+        sections: 16,
         available: false
     },
     {
         id: 13,
         number: "13",
-        title: "Plain Language",
+        title: "Letter Writing",
         category: "style",
-        description: "Write clearly and concisely for your audience.",
-        sections: 7,
+        description: "Business correspondence best practices.",
+        sections: 10,
         available: false
     },
     {
         id: 14,
         number: "14",
-        title: "Elimination of Stereotyping",
+        title: "Avoiding Stereotyping",
         category: "style",
-        description: "Inclusive and respectful writing practices.",
+        description: "Inclusive and respectful language use.",
         sections: 8,
         available: false
     },
@@ -222,67 +222,65 @@ function renderModules(filterCategory = 'all') {
     const currentUser = window.auth.getCurrentUser();
     const progress = currentUser ? window.auth.getUserProgress(currentUser.email) : null;
     
-    chapters
-        .filter(chapter => filterCategory === 'all' || chapter.category === filterCategory)
-        .forEach(chapter => {
-            const card = createModuleCard(chapter, progress);
-            grid.appendChild(card);
-        });
+    // Filter chapters by category
+    const filteredChapters = filterCategory === 'all' 
+        ? chapters 
+        : chapters.filter(c => c.category === filterCategory);
+    
+    // Render each chapter card
+    filteredChapters.forEach(chapter => {
+        const card = createChapterCard(chapter, progress);
+        grid.appendChild(card);
+    });
 }
 
-// Create module card
-function createModuleCard(chapter, progress) {
+// Create chapter card
+function createChapterCard(chapter, progress) {
     const card = document.createElement('div');
     card.className = 'module-card';
+    if (!chapter.available) {
+        card.classList.add('locked');
+    }
     
-    // Get chapter progress
+    // Calculate chapter progress
     let chapterProgress = 0;
-    let isCompleted = false;
-    
     if (progress && progress.chapters[chapter.id]) {
-        const cp = progress.chapters[chapter.id];
-        if (cp.sections) {
-            const completedSections = cp.sections.filter(s => s.completed).length;
+        const chapterData = progress.chapters[chapter.id];
+        if (chapterData.sections) {
+            const completedSections = chapterData.sections.filter(s => s.completed).length;
             chapterProgress = Math.round((completedSections / chapter.sections) * 100);
         }
-        isCompleted = cp.completed || false;
     }
     
-    if (isCompleted) {
-        card.classList.add('completed');
-    }
+    // Add completed badge if chapter is finished
+    const completedBadge = (progress && progress.chapters[chapter.id] && progress.chapters[chapter.id].completed)
+        ? '<span class="completion-badge">✓ Completed</span>'
+        : '';
     
     card.innerHTML = `
-        <div class="module-header">
-            <div class="module-number">${chapter.number}</div>
-            <div class="module-title">
-                <div class="module-category">${chapter.category}</div>
-                <h3>${chapter.title}</h3>
-            </div>
+        <div class="module-number">
+            <div class="number-badge">${chapter.number}</div>
+            <span class="category-tag">${chapter.category}</span>
         </div>
-        
+        <h3 class="module-title">${chapter.title}</h3>
         <p class="module-description">${chapter.description}</p>
-        
-        <div class="module-progress">
-            <div class="module-progress-label">
-                <span>Progress</span>
-                <span>${chapterProgress}% Complete</span>
-            </div>
-            <div class="module-progress-bar">
-                <div class="module-progress-fill" style="width: ${chapterProgress}%"></div>
-            </div>
+        <div class="module-meta">
+            <span class="meta-item">
+                <span class="icon">📖</span>
+                ${chapter.sections} sections
+            </span>
         </div>
-        
-        <div class="module-footer">
-            ${isCompleted ? `
-                <div class="completion-badge">
-                    <svg viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                    </svg>
-                    <span>Completed</span>
+        ${chapterProgress > 0 ? `
+            <div class="module-progress">
+                <div class="progress-label">${chapterProgress}% Complete</div>
+                <div class="progress-bar-container">
+                    <div class="progress-bar-fill" style="width: ${chapterProgress}%"></div>
                 </div>
-            ` : ''}
-            <button class="btn ${chapter.available ? 'btn-primary' : 'btn-secondary'}" 
+            </div>
+        ` : ''}
+        ${completedBadge}
+        <div class="module-actions">
+            <button class="${chapter.available ? 'btn-primary' : 'btn-secondary'}" 
                     onclick="startChapter(${chapter.id})"
                     ${!chapter.available ? 'disabled' : ''}>
                 ${chapterProgress > 0 ? 'Continue' : 'Start Chapter'}
