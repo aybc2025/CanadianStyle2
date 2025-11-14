@@ -1,0 +1,566 @@
+{
+  "chapterId": 2,
+  "title": "Hyphenation",
+  "questions": [
+    {
+      "id": 1,
+      "section": "2.01",
+      "type": "single",
+      "question": "What is the general trend for compound terms in English over time?",
+      "options": [
+        "They remain as two separate words",
+        "They start as two words, then become hyphenated, then become one word",
+        "They start as one word, then become hyphenated, then become two words",
+        "They always remain hyphenated"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The trend over the years has been for English compounds to begin as two separate words, then be hyphenated and finally, if there is no structural impediment to union, become a single word written without a space or hyphen."
+    },
+    {
+      "id": 2,
+      "section": "2.02",
+      "type": "single",
+      "question": "Which of the following correctly uses a hyphen to denote 'both A and B'?",
+      "options": [
+        "writer editor",
+        "writer-editor",
+        "writereditor",
+        "writer/editor"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Hyphenate two nouns representing different but equally important functions, i.e. where the hyphen denotes the relationship 'both A and B': writer-editor, soldier-statesman, city-state."
+    },
+    {
+      "id": 3,
+      "section": "2.02",
+      "type": "single",
+      "question": "How should 'car miles' be written as a compound unit of measurement?",
+      "options": [
+        "car miles",
+        "car-miles",
+        "carmiles",
+        "car/miles"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Hyphenate compound units of measurement made by combining single units that stand in a mathematical relationship to each other: car-miles, light-year, kilowatt-hours, person-day."
+    },
+    {
+      "id": 4,
+      "section": "2.02",
+      "type": "single",
+      "question": "Which family relationship term should be hyphenated?",
+      "options": [
+        "foster father",
+        "stepson",
+        "mother-in-law",
+        "godmother"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Hyphenate nouns of family relationship formed with 'great' and 'in-law': mother-in-law, great-grandfather. However, do not hyphenate: foster father, half sister, stepson, godmother."
+    },
+    {
+      "id": 5,
+      "section": "2.03",
+      "type": "single",
+      "question": "How should 'duty free goods' be written when used attributively?",
+      "options": [
+        "duty free goods",
+        "duty-free goods",
+        "dutyfree goods",
+        "duty free-goods"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Hyphenate noun-plus-adjective compounds (in that order), whether used attributively or predicatively: duty-free goods (The goods were duty-free), tax-exempt bonds (The bonds are tax-exempt)."
+    },
+    {
+      "id": 6,
+      "section": "2.03",
+      "type": "single",
+      "question": "Which of the following is an exception to the noun-plus-gerund rule and should be hyphenated?",
+      "options": [
+        "decision making",
+        "problem solving",
+        "foot-dragging",
+        "housekeeping"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Do not hyphenate noun-plus-gerund compounds: decision making, housekeeping, problem solving. However, there are exceptions including foot-dragging and gut-wrenching."
+    },
+    {
+      "id": 7,
+      "section": "2.04",
+      "type": "single",
+      "question": "Should 'cold storage vaults' be hyphenated?",
+      "options": [
+        "cold storage vaults (no hyphen)",
+        "cold-storage vaults",
+        "coldstorage vaults",
+        "cold storage-vaults"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Hyphenate adjective-plus-noun and participle-plus-noun compounds modifying another noun, when ambiguity might otherwise result: cold-storage vaults, large-scale development, special-interest groups."
+    },
+    {
+      "id": 8,
+      "section": "2.04",
+      "type": "single",
+      "question": "How should compound color adjectives be hyphenated when they do NOT have the suffix 'ish'?",
+      "options": [
+        "blue green algae",
+        "blue-green algae (hyphenated both before and after noun)",
+        "bluegreen algae",
+        "blue/green algae"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Hyphenate compound adjectives made up of two adjectives that describe a colour without the suffix 'ish', whether they are placed before or after the noun: It was covered with blue-green algae. It was blue-green."
+    },
+    {
+      "id": 9,
+      "section": "2.04",
+      "type": "single",
+      "question": "Should 'dark green paint' be hyphenated?",
+      "options": [
+        "dark-green paint",
+        "dark green paint (no hyphen)",
+        "darkgreen paint",
+        "dark/green paint"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Do not hyphenate adjectives indicating a specific shade (even if they precede the noun): dark green paint, a bright red dress, strawberry blond hair."
+    },
+    {
+      "id": 10,
+      "section": "2.04",
+      "type": "single",
+      "question": "How should 'decision making process' be written when preceding the noun?",
+      "options": [
+        "decision making process",
+        "decision-making process",
+        "decisionmaking process",
+        "decision making-process"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Hyphenate two-word compound adjectives consisting of a noun plus a gerund when they precede the noun: the decision-making process, a profit-sharing plan, a problem-solving approach."
+    },
+    {
+      "id": 11,
+      "section": "2.04",
+      "type": "multiple",
+      "question": "Which types of adjectives should NOT be hyphenated? (Select all that apply)",
+      "options": [
+        "French or foreign words used as adjectives (e.g., 'a priori reasoning')",
+        "Proper nouns used as adjectives (e.g., 'a Privy Council decision')",
+        "Chemical terms used as adjectives (e.g., 'a sodium chloride solution')",
+        "Words in quotation marks used as adjectives"
+      ],
+      "correctAnswer": [0, 1, 2, 3],
+      "explanation": "Do not hyphenate French or foreign words used as adjectives or in italics, proper nouns used as adjectives, words in quotation marks, or chemical terms used as adjectives. Example: a Privy Council decision, a pure laine Quebecker, a sodium chloride solution."
+    },
+    {
+      "id": 12,
+      "section": "2.05",
+      "type": "single",
+      "question": "How should the verb 'air condition' be written when it's in the past tense?",
+      "options": [
+        "The theatre was air conditioned.",
+        "The theatre was air-conditioned.",
+        "The theatre was airconditioned.",
+        "The theatre was air/conditioned."
+      ],
+      "correctAnswer": 1,
+      "explanation": "If the infinitive form of the verb (e.g., to air-condition) is hyphenated, retain the hyphen in all other forms: The theatre was air-conditioned. You need an air-conditioning expert."
+    },
+    {
+      "id": 13,
+      "section": "2.05",
+      "type": "single",
+      "question": "When should gerunds formed from hyphenated compound verbs be hyphenated?",
+      "options": [
+        "Always",
+        "Never",
+        "Only when followed by a noun object",
+        "Only when used as adjectives"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Hyphenate gerunds formed from hyphenated compound verbs only if they are followed by a noun object. Example: 'Dry cleaning is the simplest way to clean a sweater' (no hyphen), but 'Dry-cleaning the sweater should remove the stain' (hyphenated with object)."
+    },
+    {
+      "id": 14,
+      "section": "2.06",
+      "type": "single",
+      "question": "Should compounds in which the adverb ends in 'ly' be hyphenated?",
+      "options": [
+        "Yes, always",
+        "No, never",
+        "Only before nouns",
+        "Only after nouns"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Do not hyphenate compounds in which the adverb ends in 'ly': richly embroidered, fully employed."
+    },
+    {
+      "id": 15,
+      "section": "2.06",
+      "type": "single",
+      "question": "How should 'She is well known' be written?",
+      "options": [
+        "She is well known (no hyphen)",
+        "She is well-known",
+        "She is wellknown",
+        "She is well/known"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Do not hyphenate when the compound follows the noun or pronoun and contains a past participle: She is well known. This applicant is ill suited for the job."
+    },
+    {
+      "id": 16,
+      "section": "2.07",
+      "type": "single",
+      "question": "Should a prefix joined to a proper noun or adjective be hyphenated?",
+      "options": [
+        "No, never",
+        "Yes, always (with exceptions like 'transatlantic')",
+        "Only with the prefix 'un'",
+        "Only with three-letter prefixes"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Hyphenate a prefix joined to a proper noun or adjective: mid-July, sub-Arctic, neo-Christian, trans-Siberian, pro-Canadian, un-American. Exceptions: transatlantic and transpacific."
+    },
+    {
+      "id": 17,
+      "section": "2.07",
+      "type": "multiple",
+      "question": "Which prefixes should be hyphenated when used to form adjectives or nouns? (Select all that apply)",
+      "options": [
+        "ex (when it means 'former')",
+        "self",
+        "quasi",
+        "all"
+      ],
+      "correctAnswer": [0, 1, 2, 3],
+      "explanation": "Hyphenate expressions beginning with the prefixes 'ex' (when it means 'former'), 'self', 'quasi' and 'all', when used to form adjectives or nouns: all-inclusive, ex-wife, self-assured, quasi-judicial."
+    },
+    {
+      "id": 18,
+      "section": "2.07",
+      "type": "single",
+      "question": "How should 'recover' (get better) be distinguished from 're-cover' (cover again)?",
+      "options": [
+        "They cannot be distinguished",
+        "Use a hyphen for 're-cover' (cover again)",
+        "Use italics for different meanings",
+        "Use capital letters"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Use the hyphen to preserve a difference in meaning between the hyphenated and the solid compound: re-cover (cover again) vs. recover (get better, get back), re-create (create again) vs. recreate (take recreation)."
+    },
+    {
+      "id": 19,
+      "section": "2.08",
+      "type": "single",
+      "question": "How should 'no one' be written?",
+      "options": [
+        "no-one",
+        "no one (two words, no hyphen)",
+        "noone",
+        "no_one"
+      ],
+      "correctAnswer": 1,
+      "explanation": "When 'one' is the second element, write 'no' as a separate, unhyphenated word in all situations: No one came."
+    },
+    {
+      "id": 20,
+      "section": "2.09",
+      "type": "single",
+      "question": "When should compounds with 'like' be written as one word?",
+      "options": [
+        "Never",
+        "Always",
+        "Except where this would result in a double 'l' or where the compound is temporary",
+        "Only with common nouns"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Write compounds with 'like' as one word, except where this would result in a double 'l' and where the compound is a temporary one coined for a specific purpose: businesslike, childlike, but nut-like, petal-like."
+    },
+    {
+      "id": 21,
+      "section": "2.10",
+      "type": "single",
+      "question": "How should compound cardinal numerals from twenty-one to ninety-nine be written?",
+      "options": [
+        "Without hyphens",
+        "With hyphens",
+        "As one word",
+        "With slashes"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Hyphenate compound cardinal and ordinal numerals from twenty-one (twenty-first) to ninety-nine (ninety-ninth) when written out: There are twenty-nine members on the committee."
+    },
+    {
+      "id": 22,
+      "section": "2.10",
+      "type": "single",
+      "question": "How should 'a five kilometre trek' be written?",
+      "options": [
+        "a five kilometre trek",
+        "a five-kilometre trek",
+        "a fivekilometre trek",
+        "a 5 kilometre trek"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Hyphenate a compound adjective in which one element is a cardinal or ordinal numeral and the other a noun: a five-kilometre trek, a first-class coach, a $4-million project."
+    },
+    {
+      "id": 23,
+      "section": "2.10",
+      "type": "single",
+      "question": "Should 'one week's pay' be hyphenated?",
+      "options": [
+        "one week's pay (no hyphen)",
+        "one-week's pay",
+        "one week's-pay",
+        "one-week's-pay"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Do not hyphenate a possessive noun preceded by a numerical expression: one week's pay, three weeks' vacation, 40 hours' work."
+    },
+    {
+      "id": 24,
+      "section": "2.11",
+      "type": "single",
+      "question": "How should 'a one third share' be written?",
+      "options": [
+        "a one third share",
+        "a one-third share",
+        "a onethird share",
+        "a 1/3 share"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Hyphenate fractions used as modifiers and written in full, unless the numerator or denominator already contains a hyphen: a one-third share, twenty-fiftieths calcium, but one thirty-second (numerals are preferable in this case)."
+    },
+    {
+      "id": 25,
+      "section": "2.11",
+      "type": "single",
+      "question": "Should fractions used as nouns be hyphenated?",
+      "options": [
+        "Yes, always",
+        "No, the hyphen should not be used",
+        "Only when they contain two digits",
+        "Only in formal writing"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Usage is divided on whether fractions used as nouns should be hyphenated. The Canadian Style recommends that the hyphen not be used in such cases: Four fifths of the load was wheat, and one fifth barley."
+    },
+    {
+      "id": 26,
+      "section": "2.12",
+      "type": "single",
+      "question": "How should 'first and second class fares' be written when an element is omitted?",
+      "options": [
+        "first and second class fares",
+        "first- and second-class fares",
+        "first-and-second-class fares",
+        "first and second-class fares"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Hyphenate as follows when an element common to successive compound adjectives is omitted (suspended compound): first- and second-class fares, high- and low-pressure turbine, short- and long-term plans."
+    },
+    {
+      "id": 27,
+      "section": "2.13",
+      "type": "single",
+      "question": "How should compass directions consisting of three points be written?",
+      "options": [
+        "As one word (e.g., northnortheast)",
+        "With a hyphen after the first point (e.g., north-northeast)",
+        "With hyphens between all points (e.g., north-north-east)",
+        "As three separate words"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Write as one word compass directions consisting of two points, but use a hyphen after the first point in those compounds consisting of three points: northeast, southwest, but north-northeast, south-southwest."
+    },
+    {
+      "id": 28,
+      "section": "2.14",
+      "type": "single",
+      "question": "How should 'president elect' be written?",
+      "options": [
+        "president elect",
+        "president-elect",
+        "presidentelect",
+        "President Elect"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Hyphenate compounds with the endings 'elect' and 'designate': president-elect, minister-designate."
+    },
+    {
+      "id": 29,
+      "section": "2.14",
+      "type": "single",
+      "question": "Which of the following is an exception and should NOT be hyphenated?",
+      "options": [
+        "vice-president",
+        "Lieutenant-Governor",
+        "Governor General",
+        "Commander-in-Chief"
+      ],
+      "correctAnswer": 2,
+      "explanation": "There are many common exceptions to the hyphenation rule for titles of office: Governor General, Solicitor General, Governor in Council, Receiver General for Canada, Judge Advocate General, Viceroy."
+    },
+    {
+      "id": 30,
+      "section": "2.15",
+      "type": "single",
+      "question": "Should 'e-mail' be hyphenated?",
+      "options": [
+        "e-mail (hyphenated)",
+        "email (no hyphen)",
+        "eMail",
+        "E-Mail"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Hyphenate numerals or single letters and the words they modify: e-mail, T-shirt, S-hook, U-turn."
+    },
+    {
+      "id": 31,
+      "section": "2.15",
+      "type": "single",
+      "question": "How should 'Class II railroad' be written?",
+      "options": [
+        "Class-II railroad",
+        "Class II railroad (no hyphen)",
+        "Class-2 railroad",
+        "ClassII railroad"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Do not hyphenate a compound adjective when the second element is a letter or figure: Class II railroad, Grade A milk."
+    },
+    {
+      "id": 32,
+      "section": "2.16",
+      "type": "single",
+      "question": "What is the plural of 'attorney general'?",
+      "options": [
+        "attorney generals",
+        "attorneys general",
+        "attorneys generals",
+        "attorney-generals"
+      ],
+      "correctAnswer": 1,
+      "explanation": "In forming the plurals of compound terms, pluralize the significant word: attorneys general, brigadier-generals, courts-martial, orders-in-council."
+    },
+    {
+      "id": 33,
+      "section": "2.16",
+      "type": "single",
+      "question": "What is the plural of 'passer-by'?",
+      "options": [
+        "passer-bys",
+        "passers-by",
+        "passersby",
+        "passer-bies"
+      ],
+      "correctAnswer": 1,
+      "explanation": "When a noun is hyphenated with a preposition, the plural is formed on the noun: fillers-in, hangers-on, passers-by, makers-up."
+    },
+    {
+      "id": 34,
+      "section": "2.16",
+      "type": "single",
+      "question": "What is the plural of 'go-between'?",
+      "options": [
+        "go-betweens",
+        "goes-between",
+        "go-between",
+        "gos-between"
+      ],
+      "correctAnswer": 0,
+      "explanation": "When neither word of a compound is a noun, the plural is formed on the last word: also-rans, go-betweens, run-ins, higher-ups."
+    },
+    {
+      "id": 35,
+      "section": "2.16",
+      "type": "single",
+      "question": "What is the plural of 'teaspoonful'?",
+      "options": [
+        "teaspoonsful",
+        "teaspoonful",
+        "teaspoonfuls",
+        "teaspoonfules"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Add 's' to nouns ending in 'ful': teaspoonfuls, cupfuls, handfuls, sackfuls."
+    },
+    {
+      "id": 36,
+      "section": "2.17",
+      "type": "single",
+      "question": "Should two-letter syllables be carried over to the next line?",
+      "options": [
+        "Yes, always",
+        "No, never",
+        "Only in formal writing",
+        "Only with consonants"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Two-letter syllables should not be carried over to the next line: fil-ly, not fill-y; stricken, not strick-en. Similarly, final syllables in which a liquid 'l' is the only pronounced vowel sound should not be carried over: pas-sible, not possi-ble."
+    },
+    {
+      "id": 37,
+      "section": "2.17",
+      "type": "single",
+      "question": "Can one-letter word divisions be used?",
+      "options": [
+        "Yes, they are preferred",
+        "Yes, but only at the end of lines",
+        "No, they are not permissible",
+        "Yes, with hyphens"
+      ],
+      "correctAnswer": 2,
+      "explanation": "One-letter word divisions are not permissible. Do not divide words such as again, item, enough and even."
+    },
+    {
+      "id": 38,
+      "section": "2.17",
+      "type": "single",
+      "question": "How should compounds be divided at the end of a line?",
+      "options": [
+        "Anywhere within the compound",
+        "Only at the hyphen, if possible",
+        "Never divide compounds",
+        "At any syllable break"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Divide compounds only at the hyphen, if possible (court-martial, not court-mar-tial). A compound written as one word should be divided between its elements (hot-house, sail-boat)."
+    },
+    {
+      "id": 39,
+      "section": "2.17",
+      "type": "multiple",
+      "question": "What should NOT be divided at the end of a line? (Select all that apply)",
+      "options": [
+        "Abbreviations (e.g., UNDP)",
+        "Contractions (e.g., won't)",
+        "Numbers (e.g., 235 006)",
+        "The last word on a page"
+      ],
+      "correctAnswer": [0, 1, 2, 3],
+      "explanation": "Do not divide abbreviations, contractions and numbers (UNDP, won't, 235 006, $14.37). Abbreviations or symbols used with numerals should not be separated from the numerals (16 kg, 0°C). Do not divide the last word on a page."
+    },
+    {
+      "id": 40,
+      "section": "2.17",
+      "type": "single",
+      "question": "When a consonant is doubled before 'ing', where should the word be divided?",
+      "options": [
+        "Before the double consonant",
+        "Between the doubled consonants",
+        "After the double consonant",
+        "Words with 'ing' should never be divided"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Most words ending in 'ing' may be divided at that syllable. When the final consonant is doubled before 'ing', however, the second consonant is carried over: bid-ding, control-ling."
+    }
+  ]
+}
