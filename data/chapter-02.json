@@ -1,0 +1,554 @@
+{
+  "id": 2,
+  "number": "2",
+  "title": "Hyphenation",
+  "description": "Master compound words and word division according to Canadian government writing standards",
+  "sections": [
+    {
+      "id": "2.01",
+      "title": "Introduction",
+      "content": {
+        "text": "A compound term is a combination of two or more words that, to varying degrees, have become unified in form and meaning through frequent use together. In many cases only one syllable in the compound is stressed. The trend over the years has been for the English compound to begin as two separate words, then be hyphenated and finally, if there is no structural impediment to union, become a single word written without a space or hyphen. Whatever its form, the compound frequently serves to avoid circumlocution and create a more concise style.",
+        "keyPrinciple": {
+          "title": "Key Principle",
+          "content": "Compounds progress through three forms: two words → hyphenated → one word. The existence of three different forms leads to considerable instability and variation in presentation, making hyphenation one of the most controversial points of editorial style."
+        },
+        "additionalNotes": [
+          "Dictionaries vary widely in the forms they choose for specific compounds: 'hot-line' in the Gage Canadian Dictionary, 'hot line' in the Canadian Dictionary of the English Language and 'hotline' in The Concise Oxford Dictionary.",
+          "All authorities agree that the matter of hyphenation is one where the exercise of individual judgment is required.",
+          "Bear in mind the distinction between a compound term used before a noun (attributively) and one in some other position (predicatively). As a general rule, terms that take a hyphen when preceding a noun do not take one in other positions, but there are enough exceptions to warrant their being noted.",
+          "Although they do not form true compounds, prefixes and suffixes are treated in this chapter because they pose similar problems with respect to hyphenation.",
+          "Consult the Gage Canadian Dictionary for the form of frequently used compounds (including those based on prefixes and suffixes), and then follow the rules for those not found in Gage."
+        ]
+      }
+    },
+    {
+      "id": "2.02",
+      "title": "Compound nouns and nouns in compounds",
+      "content": {
+        "text": "This section covers how to hyphenate compound nouns and nouns used in compound expressions.",
+        "rules": [
+          "(a) Hyphenate two nouns representing different but equally important functions, i.e. where the hyphen denotes the relationship 'both A and B'",
+          "(b) Hyphenate nouns normally written as two words, when they have a modifier and when ambiguity would otherwise result",
+          "(c) Hyphenate compound units of measurement made by combining single units that stand in a mathematical relationship to each other",
+          "(d) Hyphenate compounds that include a finite verb",
+          "(e) Hyphenate nouns of family relationship formed with 'great' and 'in-law'"
+        ],
+        "examples": [
+          { "text": "soldier-statesman", "correct": true },
+          { "text": "city-state", "correct": true },
+          { "text": "tractor-trailer", "correct": true },
+          { "text": "writer-editor", "correct": true },
+          { "text": "comedy-ballet", "correct": true },
+          { "text": "dinner-dance", "correct": true },
+          { "text": "colour filter (without modifier)", "correct": true },
+          { "text": "red colour-filter (with modifier)", "correct": true },
+          { "text": "letter writers (without modifier)", "correct": true },
+          { "text": "public letter-writers (with modifier)", "correct": true },
+          { "text": "ironworker (single word)", "correct": true },
+          { "text": "structural-iron worker (with modifier)", "correct": true },
+          { "text": "housekeeper (single word)", "correct": true },
+          { "text": "lodging-house keeper (with modifier)", "correct": true },
+          { "text": "car-miles", "correct": true },
+          { "text": "light-year", "correct": true },
+          { "text": "kilowatt-hours", "correct": true },
+          { "text": "person-day", "correct": true },
+          { "text": "a has-been", "correct": true },
+          { "text": "a sing-along", "correct": true },
+          { "text": "a Johnny-come-lately", "correct": true },
+          { "text": "a stay-at-home", "correct": true },
+          { "text": "a stick-in-the-mud", "correct": true },
+          { "text": "a ne'er-do-well", "correct": true },
+          { "text": "mother-in-law", "correct": true },
+          { "text": "great-grandfather", "correct": true },
+          { "text": "foster father (no hyphen)", "correct": true },
+          { "text": "half sister (no hyphen)", "correct": true },
+          { "text": "stepson (no hyphen)", "correct": true },
+          { "text": "godmother (no hyphen)", "correct": true }
+        ]
+      }
+    },
+    {
+      "id": "2.03",
+      "title": "Nouns with adjectives and participles",
+      "content": {
+        "text": "This section covers hyphenation of noun-plus-adjective and noun-plus-participle compounds.",
+        "rules": [
+          "(a) Hyphenate noun-plus-adjective compounds (in that order), whether used attributively or predicatively",
+          "(b) Hyphenate noun-plus-participle compounds regardless of the position",
+          "(c) Do not hyphenate noun-plus-gerund compounds (present participle used as a noun); they may be written as one or as separate words"
+        ],
+        "examples": [
+          { "text": "duty-free goods", "correct": true },
+          { "text": "The goods were duty-free.", "correct": true },
+          { "text": "tax-exempt bonds", "correct": true },
+          { "text": "The bonds are tax-exempt.", "correct": true },
+          { "text": "snow-capped mountains", "correct": true },
+          { "text": "The mountains are snow-capped.", "correct": true },
+          { "text": "a time-consuming activity", "correct": true },
+          { "text": "This activity is time-consuming.", "correct": true },
+          { "text": "decision making (no hyphen)", "correct": true },
+          { "text": "housekeeping (no hyphen)", "correct": true },
+          { "text": "power sharing (no hyphen)", "correct": true },
+          { "text": "shipbuilding (no hyphen)", "correct": true },
+          { "text": "problem solving (no hyphen)", "correct": true },
+          { "text": "sightseeing (no hyphen)", "correct": true },
+          { "text": "deficit spending (no hyphen)", "correct": true },
+          { "text": "cabinetmaking (no hyphen)", "correct": true },
+          { "text": "foot-dragging (exception - hyphenated)", "correct": true },
+          { "text": "gut-wrenching (exception - hyphenated)", "correct": true }
+        ],
+        "note": "Exceptions: There are a number of them, including handmade and handwritten. See 2.04(e) for noun-plus-gerund compounds used adjectivally."
+      }
+    },
+    {
+      "id": "2.04",
+      "title": "Compound adjectives; adjectives and participles in compounds",
+      "content": {
+        "text": "This comprehensive section covers various types of compound adjectives and when to hyphenate them.",
+        "rules": [
+          "(a) Hyphenate adjective-plus-noun and participle-plus-noun compounds modifying another noun, when ambiguity might otherwise result. When the compound is used predicatively, retain the hyphen only when the expression remains adjectival.",
+          "(b) Hyphenate compound adjectives made up of two adjectives that describe a colour without the suffix 'ish', whether they are placed before or after the noun. Hyphenate compounds with the suffix only when they precede the noun. Do not hyphenate adjectives indicating a specific shade (even if they precede the noun).",
+          "(c) Hyphenate adjective-plus-participle compounds, whether used before the noun or after it.",
+          "(d) Hyphenate compounds made up of an adjective plus a noun to which the ending 'ed' has been added, in any position in the sentence.",
+          "(e) Hyphenate two-word compound adjectives consisting of a noun plus a gerund when they precede the noun.",
+          "(f) Hyphenate compound adjectives whose final constituent is an adverb of direction or place (in, out, down, up, etc.) when they precede the noun.",
+          "(g) Hyphenate compound adjectives made up of a preposition and a noun.",
+          "(h) Hyphenate a compound adjective one of whose constituents is a finite verb.",
+          "(i) Hyphenate phrases of more than two words, at least one of which is an adverb or preposition, used as attributive adjectives.",
+          "(j) Do not hyphenate French or foreign words used as adjectives or in italics, proper nouns used as adjectives, or words in quotation marks. Note that this rule does not apply to French or foreign words no longer considered as such.",
+          "(k) Do not hyphenate chemical terms used as adjectives.",
+          "(l) Hyphenate compound proper adjectives that form a true compound, but do not hyphenate those in which a proper adjective is combined with a simple modifier."
+        ],
+        "examples": [
+          { "text": "cold-storage vaults", "correct": true },
+          { "text": "large-scale development", "correct": true },
+          { "text": "crude-oil exporting countries", "correct": true },
+          { "text": "special-interest groups", "correct": true },
+          { "text": "The development was large-scale.", "correct": true },
+          { "text": "His position is full-time.", "correct": true },
+          { "text": "Development proceeded on a large scale. (no hyphen)", "correct": true },
+          { "text": "He works full time. (no hyphen)", "correct": true },
+          { "text": "It was covered with blue-green algae.", "correct": true },
+          { "text": "It was blue-green.", "correct": true },
+          { "text": "The leaves were bluish green. (no hyphen)", "correct": true },
+          { "text": "The tree had bluish-green leaves.", "correct": true },
+          { "text": "dark green paint (no hyphen)", "correct": true },
+          { "text": "a bright red dress (no hyphen)", "correct": true },
+          { "text": "strawberry blond hair (no hyphen)", "correct": true },
+          { "text": "an odd-sounding name", "correct": true },
+          { "text": "The name was rather odd-sounding.", "correct": true },
+          { "text": "a smooth-talking salesman", "correct": true },
+          { "text": "The visitor was smooth-talking.", "correct": true },
+          { "text": "able-bodied", "correct": true },
+          { "text": "many-sided", "correct": true },
+          { "text": "strong-willed", "correct": true },
+          { "text": "short-handed", "correct": true },
+          { "text": "the decision-making process", "correct": true },
+          { "text": "a profit-sharing plan", "correct": true },
+          { "text": "a problem-solving approach", "correct": true },
+          { "text": "a tape-recording session", "correct": true },
+          { "text": "a drive-by shooting", "correct": true },
+          { "text": "a built-up area", "correct": true },
+          { "text": "all-out competition", "correct": true },
+          { "text": "the trickle-down theory", "correct": true },
+          { "text": "on a per-gram basis", "correct": true },
+          { "text": "in-service courses", "correct": true },
+          { "text": "out-of-province benefits", "correct": true },
+          { "text": "after-tax income", "correct": true },
+          { "text": "a would-be writer", "correct": true },
+          { "text": "a pay-as-you-go approach", "correct": true },
+          { "text": "the cost-of-living index", "correct": true },
+          { "text": "a long-drawn-out affair", "correct": true },
+          { "text": "a subject-by-subject analysis", "correct": true },
+          { "text": "a work-to-rule campaign", "correct": true },
+          { "text": "an up-to-date approach", "correct": true },
+          { "text": "on-the-job training", "correct": true },
+          { "text": "a Privy Council decision (no hyphen)", "correct": true },
+          { "text": "a New York State chartered bank (no hyphen)", "correct": true },
+          { "text": "a pure laine Quebecker (no hyphen)", "correct": true },
+          { "text": "a dolce far niente attitude (no hyphen)", "correct": true },
+          { "text": "a priori reasoning (no hyphen)", "correct": true },
+          { "text": "a 'zero tolerance' approach (no hyphen with quotes)", "correct": true },
+          { "text": "avant-garde filmmaking (hyphenated - no longer considered foreign)", "correct": true },
+          { "text": "a laissez-faire approach (hyphenated - no longer considered foreign)", "correct": true },
+          { "text": "a sodium chloride solution (no hyphen)", "correct": true },
+          { "text": "a calcium nitrate deposit (no hyphen)", "correct": true },
+          { "text": "Anglo-Saxon period", "correct": true },
+          { "text": "Sino-Russian border", "correct": true },
+          { "text": "Austro-Hungarian Empire", "correct": true },
+          { "text": "Greco-Roman art", "correct": true },
+          { "text": "Latin American governments (no hyphen)", "correct": true },
+          { "text": "Middle Eastern affairs (no hyphen)", "correct": true },
+          { "text": "North American interests (no hyphen)", "correct": true },
+          { "text": "Central Asian republics (no hyphen)", "correct": true }
+        ]
+      }
+    },
+    {
+      "id": "2.05",
+      "title": "Verbs",
+      "content": {
+        "text": "This section covers hyphenation rules for compound verbs and their various forms.",
+        "rules": [
+          "(a) Compound verbs may be either hyphenated or written solid. The only safe rule is to check your dictionary.",
+          "(b) If the infinitive form of the verb (e.g., to air-condition) is hyphenated, retain the hyphen in all other forms, except as illustrated in (c).",
+          "(c) Hyphenate gerunds formed from hyphenated compound verbs only if they are followed by a noun object."
+        ],
+        "examples": [
+          { "text": "freeze-dry (hyphenated)", "correct": true },
+          { "text": "mass-produce (hyphenated)", "correct": true },
+          { "text": "age-harden (hyphenated)", "correct": true },
+          { "text": "spoon-feed (hyphenated)", "correct": true },
+          { "text": "bad-mouth (hyphenated)", "correct": true },
+          { "text": "extra-bill (hyphenated)", "correct": true },
+          { "text": "waterproof (solid)", "correct": true },
+          { "text": "downgrade (solid)", "correct": true },
+          { "text": "sidetrack (solid)", "correct": true },
+          { "text": "proofread (solid)", "correct": true },
+          { "text": "The theatre was air-conditioned.", "correct": true },
+          { "text": "You need an air-conditioning expert.", "correct": true },
+          { "text": "Please double-space the letter.", "correct": true },
+          { "text": "Dry cleaning is the simplest way to clean a sweater. (no hyphen)", "correct": true },
+          { "text": "Dry-cleaning the sweater should remove the stain. (hyphenated with object)", "correct": true },
+          { "text": "Air conditioning is sometimes needed in summer. (no hyphen)", "correct": true },
+          { "text": "Consider the cost in deciding whether air-conditioning the building is feasible. (hyphenated with object)", "correct": true }
+        ]
+      }
+    },
+    {
+      "id": "2.06",
+      "title": "Adverbs in compounds",
+      "content": {
+        "text": "Adverb-plus-participle compounds are among the most troublesome hyphenation cases.",
+        "rules": [
+          "(a) Do not hyphenate compounds in which the adverb ends in 'ly'. In other cases, hyphenate before the noun. Do not hyphenate when the compound follows the noun or pronoun and contains a past participle. When the compound follows the noun or pronoun and contains a present participle, do not hyphenate if the participle has a verbal function, but hyphenate if it is adjectival in nature.",
+          "(b) Do not hyphenate compounds consisting of an adverb or adverbial phrase plus an adjective (in that order) unless there is a danger of misreading."
+        ],
+        "examples": [
+          { "text": "richly embroidered (no hyphen)", "correct": true },
+          { "text": "fully employed (no hyphen)", "correct": true },
+          { "text": "far-reaching events", "correct": true },
+          { "text": "ill-educated person", "correct": true },
+          { "text": "ever-changing tides", "correct": true },
+          { "text": "well-fed cattle", "correct": true },
+          { "text": "She is well known. (no hyphen after noun)", "correct": true },
+          { "text": "This applicant is ill suited for the job. (no hyphen after noun)", "correct": true },
+          { "text": "The narrative is fast-moving. (adjectival)", "correct": true },
+          { "text": "The narrative is fast moving toward a climax. (verbal - no hyphen)", "correct": true },
+          { "text": "equally productive means (no hyphen)", "correct": true },
+          { "text": "a reasonably tall tree (no hyphen)", "correct": true },
+          { "text": "an all too complacent attitude (no hyphen)", "correct": true }
+        ]
+      }
+    },
+    {
+      "id": "2.07",
+      "title": "Prefixes",
+      "content": {
+        "text": "This section provides comprehensive rules for hyphenating prefixes.",
+        "rules": [
+          "(a) Hyphenate a prefix joined to a proper noun or adjective. Exceptions: transatlantic and transpacific.",
+          "(b) Hyphenate expressions beginning with the prefixes 'ex' (when it means 'former'), 'self', 'quasi' and 'all', when used to form adjectives or nouns, and those beginning with 'quasi' when used to form adjectives. However, when 'self' is the base word to which a suffix is added, do not hyphenate.",
+          "(c) Most words beginning with these prefixes are written as one word: after, ante, anti, bi, co, counter, de, down, extra, infra, inter, intra, iso, macro, micro, multi, over, photo, poly, post, pre, pro, pseudo, re, retro, semi, stereo, sub, super, trans, tri, ultra, un, under and up. However, there are many exceptions.",
+          "(d) Write SI/metric unit compounds as one word.",
+          "(e) Hyphenate chemical terms preceded by an italicized prefix."
+        ],
+        "examples": [
+          { "text": "mid-July", "correct": true },
+          { "text": "sub-Arctic", "correct": true },
+          { "text": "neo-Christian", "correct": true },
+          { "text": "trans-Siberian", "correct": true },
+          { "text": "pro-Canadian", "correct": true },
+          { "text": "un-American", "correct": true },
+          { "text": "transatlantic (exception - no hyphen)", "correct": true },
+          { "text": "transpacific (exception - no hyphen)", "correct": true },
+          { "text": "all-inclusive", "correct": true },
+          { "text": "all-powerful", "correct": true },
+          { "text": "ex-wife", "correct": true },
+          { "text": "ex-premier Getty", "correct": true },
+          { "text": "quasi-judicial", "correct": true },
+          { "text": "quasi-stellar", "correct": true },
+          { "text": "self-assured", "correct": true },
+          { "text": "self-control", "correct": true },
+          { "text": "selfish (no hyphen when self is base word)", "correct": true },
+          { "text": "selfhood (no hyphen when self is base word)", "correct": true },
+          { "text": "selfsame (no hyphen when self is base word)", "correct": true },
+          { "text": "selfless (no hyphen when self is base word)", "correct": true },
+          { "text": "pre-eminent (use hyphen when same vowel)", "correct": true },
+          { "text": "co-opt (use hyphen when same vowel)", "correct": true },
+          { "text": "co-author (use hyphen when same vowel)", "correct": true },
+          { "text": "re-educate (use hyphen when same vowel)", "correct": true },
+          { "text": "semi-invalid (use hyphen when same vowel)", "correct": true },
+          { "text": "de-icing (use hyphen when same vowel)", "correct": true },
+          { "text": "re-cover (cover again) vs. recover (get better)", "correct": true },
+          { "text": "re-create (create again) vs. recreate (take recreation)", "correct": true },
+          { "text": "re-solve (solve again) vs. resolve (settle)", "correct": true },
+          { "text": "re-sign (sign again) vs. resign (quit a job)", "correct": true },
+          { "text": "centimetre (SI unit - no hyphen)", "correct": true },
+          { "text": "gigagram (SI unit - no hyphen)", "correct": true },
+          { "text": "kilokelvin (SI unit - no hyphen)", "correct": true },
+          { "text": "milliampere (SI unit - no hyphen)", "correct": true },
+          { "text": "cis-dimethylethylene (chemical with italicized prefix)", "correct": true },
+          { "text": "β-lactose (chemical with italicized prefix)", "correct": true }
+        ],
+        "note": "Check the Gage Canadian Dictionary when in doubt. Use a hyphen when the word following the prefix begins with the same vowel as the one with which the prefix ends and when the compound's appearance would be confusing without the hyphen."
+      }
+    },
+    {
+      "id": "2.08",
+      "title": "Any, every, no and some",
+      "content": {
+        "text": "The words any, every, no and some form solid compounds when combined with body, thing and where.",
+        "rules": [
+          "Form solid compounds with body, thing, and where",
+          "When 'one' is the second element, write 'no' as a separate, unhyphenated word in all situations",
+          "Write 'any' and 'every' as separate, unhyphenated words if 'one' is followed by a prepositional phrase beginning with 'of'"
+        ],
+        "examples": [
+          { "text": "anybody", "correct": true },
+          { "text": "everybody", "correct": true },
+          { "text": "nobody", "correct": true },
+          { "text": "somebody", "correct": true },
+          { "text": "anything", "correct": true },
+          { "text": "everything", "correct": true },
+          { "text": "nothing", "correct": true },
+          { "text": "something", "correct": true },
+          { "text": "anywhere", "correct": true },
+          { "text": "everywhere", "correct": true },
+          { "text": "nowhere", "correct": true },
+          { "text": "somewhere", "correct": true },
+          { "text": "No one came.", "correct": true },
+          { "text": "Any one of us can do it.", "correct": true },
+          { "text": "Each and every one of you must take the responsibility.", "correct": true },
+          { "text": "Someone must tell the Minister.", "correct": true },
+          { "text": "Everyone is in agreement.", "correct": true },
+          { "text": "Anyone can participate.", "correct": true }
+        ]
+      }
+    },
+    {
+      "id": "2.09",
+      "title": "Suffixes",
+      "content": {
+        "text": "This section covers hyphenation rules for common suffixes.",
+        "rules": [
+          "(a) For words ending in 'like': Write as one word, except where this would result in a double 'l' and where the compound is a temporary one coined for a specific purpose or text.",
+          "(b) For words ending in 'wide': Since usage depends on the degree of familiarity of the compound, no general rule can be stated.",
+          "(c) Hyphenate compounds made up of a numerical expression plus 'odd' or 'strong'.",
+          "(d) Write compounds with 'fold' and 'score' as one word, except when the numerical expression itself already has a hyphen."
+        ],
+        "examples": [
+          { "text": "businesslike", "correct": true },
+          { "text": "ladylike", "correct": true },
+          { "text": "childlike", "correct": true },
+          { "text": "lifelike", "correct": true },
+          { "text": "nut-like (double l)", "correct": true },
+          { "text": "petal-like (double l)", "correct": true },
+          { "text": "worldwide", "correct": true },
+          { "text": "storewide", "correct": true },
+          { "text": "industry-wide", "correct": true },
+          { "text": "province-wide", "correct": true },
+          { "text": "sixty-odd", "correct": true },
+          { "text": "thirty-strong", "correct": true },
+          { "text": "twofold", "correct": true },
+          { "text": "sixtyfold", "correct": true },
+          { "text": "threescore", "correct": true },
+          { "text": "fourscore", "correct": true },
+          { "text": "twenty-two-fold (numerical expression has hyphen)", "correct": true }
+        ]
+      }
+    },
+    {
+      "id": "2.10",
+      "title": "Numerals and units of measurement",
+      "content": {
+        "text": "This section covers hyphenation rules for numerals and measurements.",
+        "rules": [
+          "(a) Hyphenate compound cardinal and ordinal numerals from twenty-one (twenty-first) to ninety-nine (ninety-ninth) when written out.",
+          "(b) Hyphenate a compound adjective in which one element is a cardinal or ordinal numeral and the other a noun. Do not hyphenate before a symbol that is not a letter, and do not hyphenate a modifier in which the numeral, written in full, is itself a compound.",
+          "(c) Do not hyphenate a possessive noun preceded by a numerical expression.",
+          "(d) Hyphenate expressions of time of day as follows when writing out numerals."
+        ],
+        "examples": [
+          { "text": "There are twenty-nine members on the committee.", "correct": true },
+          { "text": "a five-kilometre trek", "correct": true },
+          { "text": "a first-class coach", "correct": true },
+          { "text": "a $4-million project", "correct": true },
+          { "text": "a two-car family", "correct": true },
+          { "text": "a third-rate play", "correct": true },
+          { "text": "a 60-W bulb", "correct": true },
+          { "text": "a 100°C thermometer (no hyphen before symbol)", "correct": true },
+          { "text": "a two hundred and fifty hectare farm (no hyphen when numeral is compound)", "correct": true },
+          { "text": "one week's pay (no hyphen)", "correct": true },
+          { "text": "three weeks' vacation (no hyphen)", "correct": true },
+          { "text": "40 hours' work (no hyphen)", "correct": true },
+          { "text": "10 months' leave (no hyphen)", "correct": true },
+          { "text": "eight-thirty", "correct": true },
+          { "text": "four-twenty", "correct": true },
+          { "text": "eight thirty-five", "correct": true },
+          { "text": "four twenty-six", "correct": true }
+        ],
+        "note": "In cases where the numeral written in full is itself a compound, use the abbreviated form (e.g., a 250-ha farm) if at all possible. See 5.05 for further information."
+      }
+    },
+    {
+      "id": "2.11",
+      "title": "Fractions",
+      "content": {
+        "text": "Hyphenate fractions used as modifiers and written in full, unless the numerator or denominator already contains a hyphen.",
+        "rules": [
+          "Hyphenate fractions used as modifiers when written in full",
+          "Do not hyphenate if numerator or denominator already contains a hyphen",
+          "Usage is divided on whether fractions used as nouns should be hyphenated - we recommend that the hyphen not be used in such cases"
+        ],
+        "examples": [
+          { "text": "a one-third share", "correct": true },
+          { "text": "twenty-fiftieths calcium", "correct": true },
+          { "text": "one thirty-second (numerator has hyphen - no additional hyphen)", "correct": true },
+          { "text": "twenty-nine fiftieths calcium (numerator has hyphen - use numerals preferred)", "correct": true },
+          { "text": "one and a half months (exception)", "correct": true },
+          { "text": "Four fifths of the load was wheat, and one fifth barley. (no hyphen when used as noun)", "correct": true }
+        ]
+      }
+    },
+    {
+      "id": "2.12",
+      "title": "The suspended compound",
+      "content": {
+        "text": "Hyphenate as follows when an element common to successive compound adjectives is omitted.",
+        "examples": [
+          { "text": "first- and second-class fares", "correct": true },
+          { "text": "high- and low-pressure turbine", "correct": true },
+          { "text": "interest- or revenue-producing schemes", "correct": true },
+          { "text": "short- and long-term plans", "correct": true },
+          { "text": "two-, four- and six-metre widths", "correct": true }
+        ]
+      }
+    },
+    {
+      "id": "2.13",
+      "title": "Points of the compass",
+      "content": {
+        "text": "Write as one word compass directions consisting of two points, but use a hyphen after the first point in those compounds consisting of three points.",
+        "examples": [
+          { "text": "northeast", "correct": true },
+          { "text": "southwest", "correct": true },
+          { "text": "north-northeast", "correct": true },
+          { "text": "south-southwest", "correct": true }
+        ]
+      }
+    },
+    {
+      "id": "2.14",
+      "title": "Titles of office",
+      "content": {
+        "text": "This section covers hyphenation of official titles and positions.",
+        "rules": [
+          "Hyphenate compounds with the endings 'elect' and 'designate'",
+          "Hyphenate most titles beginning with the prefix 'vice' or with 'then' and the names of certain military and administrative positions in which a noun is followed by another noun, an adjective or a prepositional phrase",
+          "Note: There are, however, many common exceptions to this rule"
+        ],
+        "examples": [
+          { "text": "president-elect", "correct": true },
+          { "text": "minister-designate", "correct": true },
+          { "text": "vice-president", "correct": true },
+          { "text": "vice-chairman", "correct": true },
+          { "text": "aide-de-camp", "correct": true },
+          { "text": "then-Prime Minister", "correct": true },
+          { "text": "Commander-in-Chief", "correct": true },
+          { "text": "secretary-general", "correct": true },
+          { "text": "Lieutenant-Governor", "correct": true },
+          { "text": "sergeant-at-arms", "correct": true },
+          { "text": "Governor General (exception - no hyphen)", "correct": true },
+          { "text": "Solicitor General (exception - no hyphen)", "correct": true },
+          { "text": "Governor in Council (exception - no hyphen)", "correct": true },
+          { "text": "Receiver General for Canada (exception - no hyphen)", "correct": true },
+          { "text": "Judge Advocate General (exception - no hyphen)", "correct": true },
+          { "text": "Viceroy (exception - no hyphen)", "correct": true }
+        ],
+        "note": "In Canadian usage the hyphen is used in compounds designating military ranks such as Lieutenant-General, Vice-Admiral and Rear-Admiral, whereas the American practice is to omit the hyphen. Similarly, the official title of the second-highest-ranking official of the United States is Vice President."
+      }
+    },
+    {
+      "id": "2.15",
+      "title": "Numerals and single letters",
+      "content": {
+        "text": "Hyphenate numerals or single letters and the words they modify. Do not hyphenate a compound adjective when the second element is a letter or figure.",
+        "examples": [
+          { "text": "e-mail", "correct": true },
+          { "text": "T-shirt", "correct": true },
+          { "text": "S-hook", "correct": true },
+          { "text": "U-turn", "correct": true },
+          { "text": "1,2-dimethylbutylene", "correct": true },
+          { "text": "2,4-D", "correct": true },
+          { "text": "Class II railroad (no hyphen)", "correct": true },
+          { "text": "Grade A milk (no hyphen)", "correct": true }
+        ]
+      }
+    },
+    {
+      "id": "2.16",
+      "title": "Plurals of compound terms",
+      "content": {
+        "text": "This section covers how to form plurals of various types of compound terms.",
+        "rules": [
+          "(a) In forming the plurals of compound terms, pluralize the significant word. If both words are of equal significance, pluralize both. Pluralize the last one if no one word is significant in itself.",
+          "(b) When a noun is hyphenated with a preposition, the plural is formed on the noun.",
+          "(c) When neither word of a compound is a noun, the plural is formed on the last word.",
+          "(d) Add 's' to nouns ending in 'ful'."
+        ],
+        "examples": [
+          { "text": "attorneys general", "correct": true },
+          { "text": "men drivers", "correct": true },
+          { "text": "brigadier-generals", "correct": true },
+          { "text": "women writers", "correct": true },
+          { "text": "trade unions", "correct": true },
+          { "text": "assistant chiefs of staff", "correct": true },
+          { "text": "judge advocates", "correct": true },
+          { "text": "courts-martial", "correct": true },
+          { "text": "orders-in-council", "correct": true },
+          { "text": "poets laureate", "correct": true },
+          { "text": "fillers-in", "correct": true },
+          { "text": "hangers-on", "correct": true },
+          { "text": "passers-by", "correct": true },
+          { "text": "makers-up", "correct": true },
+          { "text": "also-rans", "correct": true },
+          { "text": "go-betweens", "correct": true },
+          { "text": "run-ins", "correct": true },
+          { "text": "higher-ups", "correct": true },
+          { "text": "teaspoonfuls", "correct": true },
+          { "text": "cupfuls", "correct": true },
+          { "text": "handfuls", "correct": true },
+          { "text": "sackfuls", "correct": true }
+        ]
+      }
+    },
+    {
+      "id": "2.17",
+      "title": "Word division",
+      "content": {
+        "text": "In order to ensure clear, unambiguous presentation, avoid dividing words at the end of a line as much as possible. If word division is necessary, text comprehension and readability should be your guides.",
+        "keyPrinciple": {
+          "title": "Key Principle",
+          "content": "Avoid dividing words at the end of a line as much as possible. When division is necessary, follow these rules to maintain clarity and readability."
+        },
+        "rules": [
+          "(a) Usually, words may be divided between syllables (the Gage Canadian Dictionary shows syllabication clearly for all its entries), but not all syllable breaks are acceptable as end-of-line breaks, as rules (b) to (m) explain.",
+          "(b) Two-letter syllables should not be carried over to the next line (fil-ly, not fill-y; stricken, not strick-en). Similarly, final syllables in which a liquid 'l' is the only pronounced vowel sound should not be carried over (pas-sible, not possi-ble; prin-ciples, not princi-ples).",
+          "(c) Do not divide words of one syllable or words in which the second 'syllable' contains only a silent 'e' (crime, there, vexe, etc.).",
+          "(d) One-letter word divisions are not permissible. Do not divide words such as again, item, enough and even.",
+          "(e) Avoid awkward divisions that would result from attempting to divide words such as every, only, eighteen and people.",
+          "(f) Divide between a prefix and a following letter (pre-fix, re-location).",
+          "(g) Divide a word between the root and the suffix (care-less, convert-ible, world-wide).",
+          "(h) When a consonant is doubled, divide it for purposes of word division (equip-ping, rub-ber).",
+          "(i) Avoid misleading breaks that might cause the reader to confuse one word with another, as in read-just and rea-pear. Similarly, such words as women and even should be left unbroken.",
+          "(j) Divide compounds only at the hyphen, if possible (court-martial, not court-mar-tial). A compound written as one word should be divided between its elements (hot-house, sail-boat).",
+          "(k) Most words ending in 'ing' may be divided at that syllable. When the final consonant is doubled before 'ing', however, the second consonant is carried over (bid-ding, control-ling). When the verb has an 'l' preceded by a consonant, carry over the letter preceding the 'l' (han-dling, dwin-dling).",
+          "(l) Do not divide abbreviations, contractions and numbers (UNDP, won't, 235 006, $14.37). Abbreviations or symbols used with numerals should not be separated from the numerals (16 kg, 0°C, s. 4, 11:55 a.m.).",
+          "(m) Do not divide the last word on a page."
+        ]
+      }
+    }
+  ]
+}
