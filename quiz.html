@@ -28,6 +28,16 @@
             
             <!-- Start Screen -->
             <div id="startScreen" class="quiz-screen">
+                <!-- Navigation buttons - Top -->
+                <div class="quiz-navigation quiz-navigation-top">
+                    <button id="backToChapterBtnTop" class="btn btn-secondary-outline">
+                        ← Back to Chapter
+                    </button>
+                    <button onclick="window.location.href='dashboard.html'" class="btn btn-secondary-outline">
+                        ← Back to Dashboard
+                    </button>
+                </div>
+                
                 <div class="quiz-card">
                     <div class="quiz-intro">
                         <h2>Ready to Test Your Knowledge?</h2>
@@ -67,10 +77,30 @@
                         <button id="startQuizBtn" class="btn btn-primary btn-large">Start Quiz</button>
                     </div>
                 </div>
+                
+                <!-- Navigation buttons - Bottom -->
+                <div class="quiz-navigation quiz-navigation-bottom">
+                    <button id="backToChapterBtnBottom1" class="btn btn-secondary-outline">
+                        ← Back to Chapter
+                    </button>
+                    <button onclick="window.location.href='dashboard.html'" class="btn btn-secondary-outline">
+                        ← Back to Dashboard
+                    </button>
+                </div>
             </div>
             
             <!-- Question Screen -->
             <div id="questionScreen" class="quiz-screen" style="display: none;">
+                <!-- Navigation buttons - Top -->
+                <div class="quiz-navigation quiz-navigation-top">
+                    <button id="backToChapterBtnTop2" class="btn btn-secondary-outline">
+                        ← Back to Chapter
+                    </button>
+                    <button onclick="window.location.href='dashboard.html'" class="btn btn-secondary-outline">
+                        ← Back to Dashboard
+                    </button>
+                </div>
+                
                 <div class="quiz-progress">
                     <div class="progress-text">
                         Question <span id="currentQuestionNum">1</span> of <span id="totalQuestionsNum">10</span>
@@ -94,10 +124,30 @@
                         <button id="nextQuestionBtn" class="btn btn-primary" style="display: none;">Next Question →</button>
                     </div>
                 </div>
+                
+                <!-- Navigation buttons - Bottom -->
+                <div class="quiz-navigation quiz-navigation-bottom">
+                    <button id="backToChapterBtnBottom2" class="btn btn-secondary-outline">
+                        ← Back to Chapter
+                    </button>
+                    <button onclick="window.location.href='dashboard.html'" class="btn btn-secondary-outline">
+                        ← Back to Dashboard
+                    </button>
+                </div>
             </div>
             
             <!-- Results Screen -->
             <div id="resultsScreen" class="quiz-screen" style="display: none;">
+                <!-- Navigation buttons - Top -->
+                <div class="quiz-navigation quiz-navigation-top">
+                    <button id="backToChapterBtnTop3" class="btn btn-secondary-outline">
+                        ← Back to Chapter
+                    </button>
+                    <button onclick="window.location.href='dashboard.html'" class="btn btn-secondary-outline">
+                        ← Back to Dashboard
+                    </button>
+                </div>
+                
                 <div class="quiz-card">
                     <div class="results-content">
                         <div class="results-header">
@@ -131,9 +181,18 @@
                         <div class="results-actions">
                             <button id="retakeQuizBtn" class="btn btn-secondary">Retake Quiz</button>
                             <button id="completeChapterBtn" class="btn btn-primary">Complete Chapter →</button>
-                            <button onclick="window.location.href='dashboard.html'" class="btn btn-secondary">Back to Dashboard</button>
                         </div>
                     </div>
+                </div>
+                
+                <!-- Navigation buttons - Bottom -->
+                <div class="quiz-navigation quiz-navigation-bottom">
+                    <button id="backToChapterBtnBottom3" class="btn btn-secondary-outline">
+                        ← Back to Chapter
+                    </button>
+                    <button onclick="window.location.href='dashboard.html'" class="btn btn-secondary-outline">
+                        ← Back to Dashboard
+                    </button>
                 </div>
             </div>
             
