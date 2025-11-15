@@ -1,6 +1,7 @@
 // ===================================
 // Canadian Style Learner - Chapter.js
 // Updated to load content from JSON files
+// FIXED: Handles complex abbreviations and examples correctly
 // ===================================
 
 // Chapter data - will be loaded from JSON
@@ -184,19 +185,124 @@ function buildSectionHTML(section) {
         `;
     }
     
-    // Examples list
+    // === FIXED: Abbreviations (handles complex objects like Latin terms) ===
+    if (content.abbreviations && Array.isArray(content.abbreviations)) {
+        const firstItem = content.abbreviations[0];
+        
+        // Check if this is a complex abbreviation structure (like 1.13 Latin Terms)
+        if (typeof firstItem === 'object' && firstItem !== null && 
+            (firstItem.abbr || firstItem.quantity || firstItem.symbol)) {
+            
+            // Complex abbreviations - render as table
+            html += `
+                <div class="abbreviations-section">
+                    <h4>Abbreviations</h4>
+                    <table class="abbreviations-table">
+                        <thead>
+                            <tr>
+            `;
+            
+            // Determine table headers based on structure
+            if (firstItem.abbr) {
+                // Latin terms style
+                html += `
+                    <th>Abbreviation</th>
+                    <th>Full Form</th>
+                    <th>Meaning</th>
+                    <th>Usage</th>
+                `;
+            } else if (firstItem.quantity) {
+                // SI units style
+                html += `
+                    <th>Quantity</th>
+                    <th>Unit</th>
+                    <th>Symbol</th>
+                `;
+            }
+            
+            html += `
+                            </tr>
+                        </thead>
+                        <tbody>
+            `;
+            
+            content.abbreviations.forEach(abbr => {
+                html += `<tr>`;
+                
+                if (abbr.abbr) {
+                    // Latin terms format
+                    html += `
+                        <td><strong>${abbr.abbr}</strong></td>
+                        <td>${abbr.full || ''}</td>
+                        <td>${abbr.meaning || ''}</td>
+                        <td class="usage-text">${abbr.usage || ''}</td>
+                    `;
+                } else if (abbr.quantity) {
+                    // SI units format
+                    html += `
+                        <td>${abbr.quantity || ''}</td>
+                        <td>${abbr.unit || ''}</td>
+                        <td><strong>${abbr.symbol || ''}</strong></td>
+                    `;
+                }
+                
+                html += `</tr>`;
+            });
+            
+            html += `
+                        </tbody>
+                    </table>
+                </div>
+            `;
+        } else {
+            // Simple string abbreviations - render as list
+            html += `<ul>`;
+            content.abbreviations.forEach(abbr => {
+                html += `<li>${abbr}</li>`;
+            });
+            html += `</ul>`;
+        }
+    }
+    
+    // === FIXED: Examples list (handles complex objects with base/derived) ===
     if (content.examples && Array.isArray(content.examples)) {
         html += `
             <div class="examples-section">
                 <h4>Examples</h4>
                 <ul class="examples-list">
         `;
+        
         content.examples.forEach(example => {
             // Handle both string and object formats
             if (typeof example === 'object' && example !== null) {
-                const exampleText = example.text || String(example);
-                // Handle both 'type' and 'correct' properties
+                let exampleText = '';
                 let exampleType = example.type;
+                
+                // === FIXED: Handle different example object structures ===
+                if (example.base && example.derived) {
+                    // Pattern: base → derived (e.g., spelling rules in Chapter 3)
+                    exampleText = `<strong>${example.base}</strong> → ${example.derived}`;
+                } else if (example.base && example.suffix) {
+                    // Pattern: base + suffix
+                    exampleText = `<strong>${example.base}</strong> → ${example.suffix}`;
+                } else if (example.base && example.derivatives) {
+                    // Pattern: base with multiple derivatives
+                    exampleText = `<strong>${example.base}</strong> → ${example.derivatives}`;
+                } else if (example.separate && example.combined) {
+                    // Pattern: separate vs combined (like "all together" → "altogether")
+                    exampleText = `${example.separate} → <strong>${example.combined}</strong>`;
+                } else if (example.root && example.derived) {
+                    // Pattern: root → derived (for able/ible examples)
+                    exampleText = `<strong>${example.root}</strong> → ${example.derived}`;
+                } else if (example.text) {
+                    // Has explicit text field
+                    exampleText = example.text;
+                } else {
+                    // Fallback: convert to string
+                    exampleText = String(example);
+                }
+                
+                // Handle both 'type' and 'correct' properties for correct/incorrect examples
                 if (!exampleType && example.correct !== undefined) {
                     exampleType = example.correct ? 'correct' : 'incorrect';
                 }
@@ -221,6 +327,7 @@ function buildSectionHTML(section) {
                 html += `<li>${example}</li>`;
             }
         });
+        
         html += `
                 </ul>
             </div>
@@ -247,7 +354,18 @@ function buildSectionHTML(section) {
                         ${rule.examples ? `
                             <div class="examples-grid">
                                 ${rule.examples.map(ex => {
-                                    const exText = typeof ex === 'object' ? (ex.text || String(ex)) : ex;
+                                    let exText = '';
+                                    if (typeof ex === 'object' && ex !== null) {
+                                        if (ex.base && ex.derived) {
+                                            exText = `<strong>${ex.base}</strong> → ${ex.derived}`;
+                                        } else if (ex.text) {
+                                            exText = ex.text;
+                                        } else {
+                                            exText = String(ex);
+                                        }
+                                    } else {
+                                        exText = ex;
+                                    }
                                     return `<span class="example-item">${exText}</span>`;
                                 }).join('')}
                             </div>
@@ -257,6 +375,84 @@ function buildSectionHTML(section) {
             });
         }
     }
+    
+    // === Handle nested rule structures (Chapter 3 spelling rules) ===
+    // These are rules stored as objects, not arrays
+    const nestedRuleKeys = [
+        'rule', 'rule1', 'rule2', 
+        'exceptions', 'exceptions2', 'exception',
+        'supersede', 'sedeVerb',
+        'ceedVerbs', 'cedeVerbs',
+        'iseWords', 'izeWords',
+        'distinction', 'vowelYRule'
+    ];
+    
+    nestedRuleKeys.forEach(key => {
+        if (content[key] && typeof content[key] === 'object') {
+            const ruleContent = content[key];
+            
+            html += `
+                <div class="rule-subsection">
+                    <h4>${ruleContent.title || ''}</h4>
+                    ${ruleContent.text ? `<p>${ruleContent.text}</p>` : ''}
+                    ${ruleContent.content ? `<p>${ruleContent.content}</p>` : ''}
+            `;
+            
+            // Handle examples in the rule
+            if (ruleContent.examples && Array.isArray(ruleContent.examples)) {
+                html += `<ul>`;
+                ruleContent.examples.forEach(ex => {
+                    let exText = '';
+                    if (typeof ex === 'object' && ex !== null) {
+                        if (ex.base && ex.derived) {
+                            exText = `<strong>${ex.base}</strong> → ${ex.derived}`;
+                        } else if (ex.base && ex.suffix) {
+                            exText = `<strong>${ex.base}</strong> → ${ex.suffix}`;
+                        } else if (ex.base && ex.derivatives) {
+                            exText = `<strong>${ex.base}</strong> → ${ex.derivatives}`;
+                        } else if (ex.separate && ex.combined) {
+                            exText = `${ex.separate} → <strong>${ex.combined}</strong>`;
+                        } else if (ex.text) {
+                            exText = ex.text;
+                        } else if (ex.word) {
+                            exText = ex.word;
+                        } else {
+                            exText = String(ex);
+                        }
+                    } else {
+                        exText = ex;
+                    }
+                    html += `<li>${exText}</li>`;
+                });
+                html += `</ul>`;
+            }
+            
+            // Handle words list (for ise/ize words, exceptions, etc.)
+            if (ruleContent.words && Array.isArray(ruleContent.words)) {
+                html += `<div class="words-grid">`;
+                ruleContent.words.forEach(word => {
+                    html += `<span class="word-item">${word}</span>`;
+                });
+                html += `</div>`;
+            }
+            
+            // Handle verbs list (for sede/ceed/cede)
+            if (ruleContent.verbs && Array.isArray(ruleContent.verbs)) {
+                html += `<ul class="verbs-list">`;
+                ruleContent.verbs.forEach(verb => {
+                    html += `<li>${verb}</li>`;
+                });
+                html += `</ul>`;
+            }
+            
+            // Handle note
+            if (ruleContent.note) {
+                html += `<p class="note"><em>${ruleContent.note}</em></p>`;
+            }
+            
+            html += `</div>`;
+        }
+    });
     
     // Standard Spellings (Chapter 3)
     if (content.standardSpellings && Array.isArray(content.standardSpellings)) {
@@ -381,73 +577,6 @@ function buildSectionHTML(section) {
         `;
     }
     
-    // ei/ie Rule and Exceptions
-    if (content.keyPrinciple && content.exceptions) {
-        html += `
-            <div class="key-principle">
-                <h4>${content.keyPrinciple.title}</h4>
-                <p>${content.keyPrinciple.content}</p>
-            </div>
-        `;
-        
-        if (content.exceptions.title) {
-            html += `
-                <div class="exceptions-box">
-                    <h4>${content.exceptions.title}</h4>
-                    <div class="words-grid">
-            `;
-            content.exceptions.words.forEach(word => {
-                html += `<span class="word-item">${word}</span>`;
-            });
-            html += `
-                    </div>
-                </div>
-            `;
-        }
-    }
-    
-    // Verbs lists (sede/ceed/cede)
-    if (content.sedeVerb) {
-        html += `
-            <div class="verb-section">
-                <h4>${content.sedeVerb.title}</h4>
-                <p>${content.sedeVerb.content}</p>
-            </div>
-        `;
-    }
-    
-    if (content.ceedVerbs) {
-        html += `
-            <div class="verb-section">
-                <h4>${content.ceedVerbs.title}</h4>
-                <p>${content.ceedVerbs.content}</p>
-                <ul>
-        `;
-        content.ceedVerbs.verbs.forEach(verb => {
-            html += `<li>${verb}</li>`;
-        });
-        html += `
-                </ul>
-            </div>
-        `;
-    }
-    
-    if (content.cedeVerbs) {
-        html += `
-            <div class="verb-section">
-                <h4>${content.cedeVerbs.title}</h4>
-                <p>${content.cedeVerbs.content}</p>
-                <div class="words-grid">
-        `;
-        content.cedeVerbs.verbs.forEach(verb => {
-            html += `<span class="word-item">${verb}</span>`;
-        });
-        html += `
-                </div>
-            </div>
-        `;
-    }
-    
     // able/ible Examples
     if (content.ableAtiveExamples) {
         html += `
@@ -491,41 +620,6 @@ function buildSectionHTML(section) {
                 <div class="words-grid">
         `;
         content.exampleWords.forEach(word => {
-            html += `<span class="word-item">${word}</span>`;
-        });
-        html += `
-                </div>
-            </div>
-        `;
-    }
-    
-    // Suffix words (ise/ize)
-    if (content.iseWords) {
-        html += `
-            <div class="words-section">
-                <h4>${content.iseWords.title}</h4>
-                <p>${content.iseWords.text}</p>
-                <div class="words-grid">
-        `;
-        content.iseWords.examples.forEach(word => {
-            html += `<span class="word-item">${word}</span>`;
-        });
-        html += `
-                </div>
-                ${content.iseWords.note ? 
-                    `<p class="note"><em>Note: ${content.iseWords.note}</em></p>` : ''}
-            </div>
-        `;
-    }
-    
-    if (content.izeWords) {
-        html += `
-            <div class="words-section">
-                <h4>${content.izeWords.title}</h4>
-                <p>${content.izeWords.text}</p>
-                <div class="words-grid">
-        `;
-        content.izeWords.examples.forEach(word => {
             html += `<span class="word-item">${word}</span>`;
         });
         html += `
@@ -659,7 +753,7 @@ function buildSectionHTML(section) {
     // Simple arrays (titles, ranks, degrees, provinces, etc.)
     const simpleArrayFields = [
         'titles', 'ranks', 'degrees', 'provinces', 'streetAbbreviations', 
-        'compassPoints', 'abbreviations', 'monthAbbreviations', 'timeZones',
+        'compassPoints', 'monthAbbreviations', 'timeZones',
         'commonUnits', 'commonAbbreviations', 'capitalizationRules', 
         'exceptions', 'criticalRules', 
         'additionalUnits', 'incorrectAbbreviations', 'spacingRules'
@@ -844,8 +938,43 @@ function buildSectionHTML(section) {
     }
     
     // Notes
-    if (content.note) {
+    if (content.note && typeof content.note === 'string') {
         html += `<p class="note"><strong>Note:</strong> ${content.note}</p>`;
+    }
+    
+    // British/American Differences (Chapter 3)
+    if (content.britishAmericanDifferences) {
+        html += `
+            <div class="info-box">
+                <h4>${content.britishAmericanDifferences.title}</h4>
+        `;
+        
+        if (content.britishAmericanDifferences.patterns && Array.isArray(content.britishAmericanDifferences.patterns)) {
+            content.britishAmericanDifferences.patterns.forEach(pattern => {
+                html += `
+                    <div class="pattern-section">
+                        <h5>${pattern.category}</h5>
+                        <div class="comparison-grid">
+                            <div class="british-column">
+                                <strong>British:</strong>
+                                <ul>
+                                    ${pattern.british.map(word => `<li>${word}</li>`).join('')}
+                                </ul>
+                            </div>
+                            <div class="american-column">
+                                <strong>American:</strong>
+                                <ul>
+                                    ${pattern.american.map(word => `<li>${word}</li>`).join('')}
+                                </ul>
+                            </div>
+                        </div>
+                        ${pattern.note ? `<p class="note"><em>${pattern.note}</em></p>` : ''}
+                    </div>
+                `;
+            });
+        }
+        
+        html += `</div>`;
     }
     
     return html;
