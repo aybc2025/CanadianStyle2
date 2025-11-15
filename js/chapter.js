@@ -169,159 +169,30 @@ function buildSectionHTML(section) {
         `;
     }
     
-    // Avoid box
-    if (content.avoidBox) {
+    // Info/Use box  
+    if (content.useBox) {
         html += `
-            <div class="warning-box">
-                <h4>⚠ ${content.avoidBox.title}</h4>
-                <ul>
-                    ${content.avoidBox.items.map(item => `<li>${item}</li>`).join('')}
-                </ul>
+            <div class="info-box">
+                <h4>${content.useBox.title}</h4>
+                ${content.useBox.content ? `<p>${content.useBox.content}</p>` : ''}
+                ${content.useBox.items ? `
+                    <ul>
+                        ${content.useBox.items.map(item => `<li>${item}</li>`).join('')}
+                    </ul>
+                ` : ''}
             </div>
         `;
     }
     
-    // Rules list
-    if (content.rules) {
-        html += '<ul class="rules-list">';
-        content.rules.forEach(rule => {
-            if (typeof rule === 'string') {
-                html += `<li>${rule}</li>`;
-            } else if (rule.rule) {
-                html += `
-                    <li>
-                        <strong>${rule.rule}</strong>
-                        ${rule.examples ? `
-                            <div class="example-box">
-                                ${rule.examples.join('<br>')}
-                            </div>
-                        ` : ''}
-                    </li>
-                `;
-            }
-        });
-        html += '</ul>';
-    }
-    
-    // Principles
-    if (content.principles) {
-        html += `<ul>${content.principles.map(p => `<li>${p}</li>`).join('')}</ul>`;
-    }
-    
-    // Examples
-    if (content.examples) {
+    // Examples list
+    if (content.examples && Array.isArray(content.examples)) {
+        html += `
+            <div class="examples-section">
+                <h4>Examples</h4>
+                <ul class="examples-list">
+        `;
         content.examples.forEach(example => {
-            const className = example.type === 'correct' ? 'example-correct' : 
-                            example.type === 'incorrect' ? 'example-incorrect' : 'example-box';
-            const label = example.type === 'correct' ? '✓ Correct' : 
-                         example.type === 'incorrect' ? '✗ Incorrect' : 'Example';
-            
-            html += `
-                <div class="${className}">
-                    <div class="example-label">${label}</div>
-                    ${example.text}
-                </div>
-            `;
-        });
-    }
-    
-    // Special cases (for plurals, provinces, etc.)
-    if (content.specialCases) {
-        html += '<h3>Special Cases</h3><ul>';
-        content.specialCases.forEach(item => {
-            html += `<li><strong>${item.singular}</strong> → ${item.plural}</li>`;
-        });
-        html += '</ul>';
-    }
-    
-    if (content.provinces) {
-        html += '<div class="provinces-list"><ul>';
-        content.provinces.forEach(province => {
-            html += `<li>${province}</li>`;
-        });
-        html += '</ul></div>';
-    }
-    
-    // Abbreviations (for Latin terms, etc.)
-    if (content.abbreviations) {
-        content.abbreviations.forEach(abbr => {
-            if (typeof abbr === 'string') {
-                html += `<p>${abbr}</p>`;
-            } else if (abbr.abbr) {
-                html += `
-                    <div class="abbr-item">
-                        <strong>${abbr.abbr}</strong> 
-                        ${abbr.full ? `(${abbr.full})` : ''} 
-                        — ${abbr.meaning}
-                        ${abbr.usage ? `<br><em>${abbr.usage}</em>` : ''}
-                    </div>
-                `;
-            }
-        });
-    }
-    
-    // Tables (for SI units, etc.)
-    if (content.baseUnits) {
-        html += '<h3>Base Units</h3><table><thead><tr><th>Quantity</th><th>Unit</th><th>Symbol</th></tr></thead><tbody>';
-        content.baseUnits.forEach(unit => {
-            html += `<tr><td>${unit.quantity}</td><td>${unit.unit}</td><td>${unit.symbol}</td></tr>`;
-        });
-        html += '</tbody></table>';
-    }
-    
-    // ========================================
-    // CHAPTER 3 SPECIFIC CONTENT HANDLERS
-    // ========================================
-    
-    // British vs American Differences (Chapter 3)
-    if (content.britishAmericanDifferences) {
-        html += `
-            <div class="comparison-section">
-                <h3>${content.britishAmericanDifferences.title}</h3>
-                <table class="comparison-table">
-                    <thead>
-                        <tr>
-                            <th>Category</th>
-                            <th>British</th>
-                            <th>American</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-        `;
-        
-        content.britishAmericanDifferences.patterns.forEach(pattern => {
-            html += `
-                <tr>
-                    <td><strong>${pattern.category}</strong></td>
-                    <td>${pattern.british.join('<br>')}</td>
-                    <td>${pattern.american.join('<br>')}</td>
-                </tr>
-            `;
-            if (pattern.note) {
-                html += `
-                    <tr>
-                        <td colspan="3" class="pattern-note"><em>Note: ${pattern.note}</em></td>
-                    </tr>
-                `;
-            }
-        });
-        
-        html += `
-                    </tbody>
-                </table>
-            </div>
-        `;
-    }
-    
-    // Recommended Spellings (Chapter 3)
-    if (content.recommendedSpellings) {
-        html += `
-            <div class="recommended-box">
-                <h4>${content.recommendedSpellings.title}</h4>
-                <ul>
-        `;
-        content.recommendedSpellings.patterns.forEach(pattern => {
-            html += `<li>${pattern}</li>`;
+            html += `<li>${example}</li>`;
         });
         html += `
                 </ul>
@@ -329,22 +200,24 @@ function buildSectionHTML(section) {
         `;
     }
     
-    // Frequently Misspelled Words (Chapter 3)
-    if (content.words && Array.isArray(content.words)) {
-        html += `
-            <div class="words-list">
-                <div class="words-grid">
-        `;
-        content.words.forEach(word => {
-            html += `<span class="word-item">${word}</span>`;
-        });
-        html += `
+    // Rules with sub-sections (Hyphenation Chapter 2)
+    if (content.rules && Array.isArray(content.rules)) {
+        content.rules.forEach(rule => {
+            html += `
+                <div class="rule-section">
+                    <h4>${rule.title}</h4>
+                    <p>${rule.text}</p>
+                    ${rule.examples ? `
+                        <div class="examples-grid">
+                            ${rule.examples.map(ex => `<span class="example-item">${ex}</span>`).join('')}
+                        </div>
+                    ` : ''}
                 </div>
-            </div>
-        `;
+            `;
+        });
     }
     
-    // Standard Spellings (SI units, etc.)
+    // Standard Spellings (Chapter 3)
     if (content.standardSpellings && Array.isArray(content.standardSpellings)) {
         html += `<ul>`;
         content.standardSpellings.forEach(spelling => {
@@ -402,6 +275,58 @@ function buildSectionHTML(section) {
                     <td>${pair.meaning3}</td>
                 `;
             } else if (content.homonyms.some(h => h.word3)) {
+                html += `<td></td><td></td>`;
+            }
+            
+            html += `</tr>`;
+        });
+        
+        html += `
+                    </tbody>
+                </table>
+            </div>
+        `;
+    }
+    
+    // Word Pairs (Chapter 3.05 - alternative to homonyms)
+    if (content.wordPairs && Array.isArray(content.wordPairs)) {
+        html += `
+            <div class="homonyms-section">
+                <table class="homonyms-table">
+                    <thead>
+                        <tr>
+                            <th>Word 1</th>
+                            <th>Meaning</th>
+                            <th>Word 2</th>
+                            <th>Meaning</th>
+        `;
+        
+        // Check if there's a third column
+        if (content.wordPairs.some(p => p.word3)) {
+            html += `<th>Word 3</th><th>Meaning</th>`;
+        }
+        
+        html += `
+                        </tr>
+                    </thead>
+                    <tbody>
+        `;
+        
+        content.wordPairs.forEach(pair => {
+            html += `
+                <tr>
+                    <td><strong>${pair.word1}</strong></td>
+                    <td>${pair.meaning1}</td>
+                    <td><strong>${pair.word2}</strong></td>
+                    <td>${pair.meaning2}</td>
+            `;
+            
+            if (pair.word3) {
+                html += `
+                    <td><strong>${pair.word3}</strong></td>
+                    <td>${pair.meaning3}</td>
+                `;
+            } else if (content.wordPairs.some(p => p.word3)) {
                 html += `<td></td><td></td>`;
             }
             
@@ -514,97 +439,18 @@ function buildSectionHTML(section) {
     }
     
     // Rules with examples (for consonant doubling, etc.)
-    if (content.rule1) {
+    if (content.rule && content.exampleWords) {
         html += `
-            <div class="rule-section">
-                <h4>${content.rule1.title}</h4>
-                <p>${content.rule1.text}</p>
-        `;
-        if (content.rule1.examples) {
-            html += `<div class="examples-grid">`;
-            content.rule1.examples.forEach(ex => {
-                html += `<div class="example-item"><strong>${ex.base}</strong> → ${ex.suffix || ex.derived}</div>`;
-            });
-            html += `</div>`;
-        }
-        html += `</div>`;
-    }
-    
-    if (content.rule2) {
-        html += `
-            <div class="rule-section">
-                <h4>${content.rule2.title}</h4>
-                <p>${content.rule2.text}</p>
-        `;
-        if (content.rule2.examples) {
-            html += `<div class="examples-grid">`;
-            content.rule2.examples.forEach(ex => {
-                html += `<div class="example-item"><strong>${ex.base}</strong> → ${ex.suffix || ex.derived}</div>`;
-            });
-            html += `</div>`;
-        }
-        html += `</div>`;
-    }
-    
-    if (content.exceptions1) {
-        html += `
-            <div class="exceptions-box">
-                <h4>${content.exceptions1.title}</h4>
-                <p>${content.exceptions1.text}</p>
-        `;
-        if (content.exceptions1.examples) {
-            html += `<div class="examples-grid">`;
-            content.exceptions1.examples.forEach(ex => {
-                html += `<div class="example-item"><strong>${ex.base}</strong> → ${ex.suffix || ex.derived}</div>`;
-            });
-            html += `</div>`;
-        }
-        html += `</div>`;
-    }
-    
-    if (content.exceptions2) {
-        html += `
-            <div class="exceptions-box">
-                <h4>${content.exceptions2.title}</h4>
-                <p>${content.exceptions2.content}</p>
+            <div class="rule-box">
+                <h4>Rule</h4>
+                <p>${content.rule}</p>
             </div>
-        `;
-    }
-    
-    if (content.busNote) {
-        html += `
-            <div class="info-box">
-                <h4>${content.busNote.title}</h4>
-                <p>${content.busNote.content}</p>
-            </div>
-        `;
-    }
-    
-    // Y ending rules
-    if (content.rule && content.rule.title) {
-        html += `
-            <div class="rule-section">
-                <h4>${content.rule.title}</h4>
-                <p>${content.rule.text}</p>
-        `;
-        if (content.rule.examples) {
-            html += `<div class="examples-grid">`;
-            content.rule.examples.forEach(ex => {
-                html += `<div class="example-item"><strong>${ex.base}</strong> → ${ex.derived}</div>`;
-            });
-            html += `</div>`;
-        }
-        html += `</div>`;
-    }
-    
-    if (content.exceptions && content.exceptions.title && content.exceptions.examples) {
-        html += `
-            <div class="exceptions-box">
-                <h4>${content.exceptions.title}</h4>
+            <div class="examples-section">
+                <h4>Examples</h4>
                 <div class="words-grid">
         `;
-        content.exceptions.examples.forEach(ex => {
-            html += `<span class="word-item">${ex.word}</span>`;
+        content.exampleWords.forEach(word => {
+            html += `<span class="word-item">${word}</span>`;
         });
         html += `
                 </div>
@@ -612,32 +458,7 @@ function buildSectionHTML(section) {
         `;
     }
     
-    if (content.distinction) {
-        html += `
-            <div class="info-box">
-                <h4>${content.distinction.title}</h4>
-                <p>${content.distinction.content}</p>
-            </div>
-        `;
-    }
-    
-    if (content.vowelYRule) {
-        html += `
-            <div class="rule-section">
-                <h4>${content.vowelYRule.title}</h4>
-                <p>${content.vowelYRule.text}</p>
-        `;
-        if (content.vowelYRule.examples) {
-            html += `<div class="examples-grid">`;
-            content.vowelYRule.examples.forEach(ex => {
-                html += `<div class="example-item"><strong>${ex.base}</strong> → ${ex.derivatives}</div>`;
-            });
-            html += `</div>`;
-        }
-        html += `</div>`;
-    }
-    
-    // ise/ize words
+    // Suffix words (ise/ize)
     if (content.iseWords) {
         html += `
             <div class="words-section">
@@ -645,12 +466,13 @@ function buildSectionHTML(section) {
                 <p>${content.iseWords.text}</p>
                 <div class="words-grid">
         `;
-        content.iseWords.words.forEach(word => {
+        content.iseWords.examples.forEach(word => {
             html += `<span class="word-item">${word}</span>`;
         });
         html += `
                 </div>
-                ${content.iseWords.note ? `<p class="note"><em>Note: ${content.iseWords.note}</em></p>` : ''}
+                ${content.iseWords.note ? 
+                    `<p class="note"><em>Note: ${content.iseWords.note}</em></p>` : ''}
             </div>
         `;
     }
@@ -723,11 +545,10 @@ function buildSectionHTML(section) {
             <div class="example-section">
                 <h4>${content.searchReplaceExample.title}</h4>
                 <p>${content.searchReplaceExample.text}</p>
-                ${content.searchReplaceExample.solution ? `
-                    <div class="solution-box">
+                ${content.searchReplaceExample.solution ? 
+                    `<div class="solution-box">
                         <strong>Solution:</strong> ${content.searchReplaceExample.solution}
-                    </div>
-                ` : ''}
+                    </div>` : ''}
             </div>
         `;
     }
