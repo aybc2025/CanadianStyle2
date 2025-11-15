@@ -263,6 +263,23 @@ function buildSectionHTML(section) {
             html += `</ul>`;
         }
     }
+
+    // === Words list (for frequently misspelled words - Section 3.03) ===
+if (content.words && Array.isArray(content.words)) {
+    html += `
+        <div class="words-section">
+            <div class="words-grid">
+    `;
+    
+    content.words.forEach(word => {
+        html += `<div class="word-item">${word}</div>`;
+    });
+    
+    html += `
+            </div>
+        </div>
+    `;
+}
     
     // === FIXED: Examples list (handles complex objects with base/derived) ===
     if (content.examples && Array.isArray(content.examples)) {
