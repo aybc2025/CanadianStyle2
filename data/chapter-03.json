@@ -460,6 +460,7 @@
         "ceedVerbs": {
           "title": "Ceed Ending",
           "content": "Exceed, proceed and succeed are the only common verbs ending in ceed."
+          "verbs": ["exceed", "proceed", "succeed"]
         },
         "cedeVerbs": {
           "title": "Cede Ending",
