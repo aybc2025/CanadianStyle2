@@ -14,11 +14,12 @@ let quizResults = {
 };
 let currentUser = null;
 let userProgress = null;
+let currentChapterId = 1; // Store the current chapter ID
 
 // ===== INITIALIZATION =====
 document.addEventListener('DOMContentLoaded', async function() {
     const urlParams = new URLSearchParams(window.location.search);
-    const chapterId = parseInt(urlParams.get('id')) || 1;
+    currentChapterId = parseInt(urlParams.get('id')) || 1;
     
     // Load user data
     currentUser = window.auth.getCurrentUser();
@@ -27,11 +28,36 @@ document.addEventListener('DOMContentLoaded', async function() {
     }
     
     // Load quiz data from JSON
-    await loadQuizData(chapterId);
+    await loadQuizData(currentChapterId);
     
     // Setup event listeners
     setupEventListeners();
+    
+    // Setup navigation buttons
+    setupNavigationButtons();
 });
+
+// Setup navigation buttons for "Back to Chapter"
+function setupNavigationButtons() {
+    // Get all "Back to Chapter" buttons
+    const backToChapterButtons = [
+        document.getElementById('backToChapterBtnTop'),
+        document.getElementById('backToChapterBtnBottom1'),
+        document.getElementById('backToChapterBtnTop2'),
+        document.getElementById('backToChapterBtnBottom2'),
+        document.getElementById('backToChapterBtnTop3'),
+        document.getElementById('backToChapterBtnBottom3')
+    ];
+    
+    // Add click event to all buttons
+    backToChapterButtons.forEach(btn => {
+        if (btn) {
+            btn.addEventListener('click', function() {
+                window.location.href = `chapter.html?id=${currentChapterId}`;
+            });
+        }
+    });
+}
 
 // Load quiz data from JSON file
 async function loadQuizData(chapterId) {
