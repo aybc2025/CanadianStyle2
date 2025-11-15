@@ -28,8 +28,8 @@ const chapters = [
         title: "Spelling",
         category: "basics",
         description: "Canadian spelling conventions and common errors.",
-        sections: 12,
-        available: false
+        sections: 17,
+        available: true
     },
     {
         id: 4,
