@@ -527,18 +527,35 @@ textarea:focus {
 }
 
 .module-number {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: var(--spacing-lg);
+}
+
+.number-badge {
     background-color: var(--primary-red);
     color: white;
     font-family: var(--font-sans);
     font-weight: 700;
     font-size: 1.5rem;
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     border-radius: var(--radius-md);
     display: flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
+}
+
+.category-tag {
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    color: var(--medium-gray);
+    text-transform: lowercase;
+    letter-spacing: 0;
+    font-weight: 400;
 }
 
 .module-title h3 {
