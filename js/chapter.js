@@ -195,7 +195,12 @@ function buildSectionHTML(section) {
             // Handle both string and object formats
             if (typeof example === 'object' && example !== null) {
                 const exampleText = example.text || String(example);
-                const exampleType = example.type || 'example';
+                // Handle both 'type' and 'correct' properties
+                let exampleType = example.type;
+                if (!exampleType && example.correct !== undefined) {
+                    exampleType = example.correct ? 'correct' : 'incorrect';
+                }
+                exampleType = exampleType || 'example';
                 
                 if (exampleType === 'correct' || exampleType === 'incorrect') {
                     // Use example-box for typed examples
@@ -222,21 +227,35 @@ function buildSectionHTML(section) {
         `;
     }
     
-    // Rules with sub-sections (Hyphenation Chapter 2)
-    if (content.rules && Array.isArray(content.rules)) {
-        content.rules.forEach(rule => {
-            html += `
-                <div class="rule-section">
-                    <h4>${rule.title}</h4>
-                    <p>${rule.text}</p>
-                    ${rule.examples ? `
-                        <div class="examples-grid">
-                            ${rule.examples.map(ex => `<span class="example-item">${ex}</span>`).join('')}
-                        </div>
-                    ` : ''}
-                </div>
-            `;
-        });
+    // Rules - can be array of strings or array of objects
+    if (content.rules && Array.isArray(content.rules) && content.rules.length > 0) {
+        // Check if first rule is a string (simple array) or object
+        if (typeof content.rules[0] === 'string') {
+            // Simple array of strings
+            html += `<ul>`;
+            content.rules.forEach(rule => {
+                html += `<li>${rule}</li>`;
+            });
+            html += `</ul>`;
+        } else {
+            // Array of rule objects
+            content.rules.forEach(rule => {
+                html += `
+                    <div class="rule-section">
+                        <h4>${rule.title || ''}</h4>
+                        <p>${rule.text || ''}</p>
+                        ${rule.examples ? `
+                            <div class="examples-grid">
+                                ${rule.examples.map(ex => {
+                                    const exText = typeof ex === 'object' ? (ex.text || String(ex)) : ex;
+                                    return `<span class="example-item">${exText}</span>`;
+                                }).join('')}
+                            </div>
+                        ` : ''}
+                    </div>
+                `;
+            });
+        }
     }
     
     // Standard Spellings (Chapter 3)
@@ -573,6 +592,255 @@ function buildSectionHTML(section) {
                     </div>` : ''}
             </div>
         `;
+    }
+    
+    // Special Cases (for plurals, etc.)
+    if (content.specialCases && Array.isArray(content.specialCases)) {
+        html += `
+            <div class="special-cases-section">
+                <h4>Special Cases</h4>
+                <ul>
+        `;
+        content.specialCases.forEach(caseItem => {
+            if (typeof caseItem === 'object' && caseItem.singular && caseItem.plural) {
+                html += `<li><strong>${caseItem.singular}</strong> → ${caseItem.plural}</li>`;
+            } else {
+                html += `<li>${caseItem}</li>`;
+            }
+        });
+        html += `
+                </ul>
+            </div>
+        `;
+    }
+    
+    // Special Rule
+    if (content.specialRule) {
+        html += `
+            <div class="key-principle">
+                <h4>${content.specialRule.title || 'Special Rule'}</h4>
+                <p>${content.specialRule.content || ''}</p>
+                ${content.specialRule.examples && Array.isArray(content.specialRule.examples) ? `
+                    <ul>
+                        ${content.specialRule.examples.map(ex => {
+                            const exText = typeof ex === 'object' ? (ex.text || String(ex)) : ex;
+                            return `<li>${exText}</li>`;
+                        }).join('')}
+                    </ul>
+                ` : ''}
+            </div>
+        `;
+    }
+    
+    // Additional Notes
+    if (content.additionalNotes && Array.isArray(content.additionalNotes)) {
+        html += `<ul>`;
+        content.additionalNotes.forEach(note => {
+            html += `<li>${note}</li>`;
+        });
+        html += `</ul>`;
+    }
+    
+    // Order of Precedence (object with title, content, and order array)
+    if (content.orderOfPrecedence) {
+        html += `
+            <div class="info-box">
+                <h4>${content.orderOfPrecedence.title || 'Order of Precedence'}</h4>
+                <p>${content.orderOfPrecedence.content || ''}</p>
+                ${content.orderOfPrecedence.order && Array.isArray(content.orderOfPrecedence.order) ? `
+                    <ul>
+                        ${content.orderOfPrecedence.order.map(item => `<li>${item}</li>`).join('')}
+                    </ul>
+                ` : ''}
+            </div>
+        `;
+    }
+    
+    // Simple arrays (titles, ranks, degrees, provinces, etc.)
+    const simpleArrayFields = [
+        'titles', 'ranks', 'degrees', 'provinces', 'streetAbbreviations', 
+        'compassPoints', 'abbreviations', 'monthAbbreviations', 'timeZones',
+        'commonUnits', 'commonAbbreviations', 'capitalizationRules', 
+        'exceptions', 'criticalRules', 
+        'additionalUnits', 'incorrectAbbreviations', 'spacingRules'
+    ];
+    
+    simpleArrayFields.forEach(field => {
+        if (content[field] && Array.isArray(content[field])) {
+            html += `<ul>`;
+            content[field].forEach(item => {
+                const itemText = typeof item === 'object' ? (item.text || String(item)) : item;
+                html += `<li>${itemText}</li>`;
+            });
+            html += `</ul>`;
+        }
+    });
+    
+    // Base Units (array of objects)
+    if (content.baseUnits && Array.isArray(content.baseUnits)) {
+        html += `
+            <div class="units-section">
+                <table class="units-table">
+                    <thead>
+                        <tr>
+                            <th>Quantity</th>
+                            <th>Unit</th>
+                            <th>Symbol</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+        `;
+        content.baseUnits.forEach(unit => {
+            html += `
+                <tr>
+                    <td>${unit.quantity || ''}</td>
+                    <td>${unit.unit || ''}</td>
+                    <td><strong>${unit.symbol || ''}</strong></td>
+                </tr>
+            `;
+        });
+        html += `
+                    </tbody>
+                </table>
+            </div>
+        `;
+    }
+    
+    // Symbols (array of objects)
+    if (content.symbols && Array.isArray(content.symbols)) {
+        html += `
+            <div class="symbols-section">
+                <table class="symbols-table">
+                    <thead>
+                        <tr>
+                            <th>Symbol</th>
+                            <th>Meaning</th>
+                            <th>Example</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+        `;
+        content.symbols.forEach(symbol => {
+            html += `
+                <tr>
+                    <td><strong>${symbol.symbol || ''}</strong></td>
+                    <td>${symbol.meaning || ''}</td>
+                    <td>${symbol.example || ''}</td>
+                </tr>
+            `;
+        });
+        html += `
+                    </tbody>
+                </table>
+            </div>
+        `;
+    }
+    
+    // Currency Symbols
+    if (content.currencySymbols && Array.isArray(content.currencySymbols)) {
+        html += `<ul>`;
+        content.currencySymbols.forEach(symbol => {
+            html += `<li>${symbol}</li>`;
+        });
+        html += `</ul>`;
+    }
+    
+    // Definitions (array of objects)
+    if (content.definitions && Array.isArray(content.definitions)) {
+        html += `<ul>`;
+        content.definitions.forEach(def => {
+            html += `<li><strong>${def.term || ''}:</strong> ${def.definition || ''}</li>`;
+        });
+        html += `</ul>`;
+    }
+    
+    // Derived Units
+    if (content.derivedUnits) {
+        html += `
+            <div class="info-box">
+                ${content.derivedUnits.note ? `<p>${content.derivedUnits.note}</p>` : ''}
+                ${content.derivedUnits.exception ? `<p><strong>Exception:</strong> ${content.derivedUnits.exception}</p>` : ''}
+            </div>
+        `;
+    }
+    
+    // Number Symbol
+    if (content.numberSymbol) {
+        html += `
+            <div class="info-box">
+                <h4>${content.numberSymbol.symbol || 'Number Symbol'}</h4>
+                <p>${content.numberSymbol.usage || ''}</p>
+                ${content.numberSymbol.examples && Array.isArray(content.numberSymbol.examples) ? `
+                    <ul>
+                        ${content.numberSymbol.examples.map(ex => {
+                            const exText = typeof ex === 'object' ? (ex.text || String(ex)) : ex;
+                            const exType = typeof ex === 'object' ? (ex.type || '') : '';
+                            if (exType === 'correct' || exType === 'incorrect') {
+                                return `<li class="${exType === 'correct' ? 'example-correct' : 'example-incorrect'}">${exText}</li>`;
+                            }
+                            return `<li>${exText}</li>`;
+                        }).join('')}
+                    </ul>
+                ` : ''}
+            </div>
+        `;
+    }
+    
+    // Percent Symbol
+    if (content.percentSymbol) {
+        html += `
+            <div class="info-box">
+                <h4>${content.percentSymbol.symbol || 'Percent Symbol'}</h4>
+                <p>${content.percentSymbol.usage || ''}</p>
+                ${content.percentSymbol.examples && Array.isArray(content.percentSymbol.examples) ? `
+                    <ul>
+                        ${content.percentSymbol.examples.map(ex => {
+                            const exText = typeof ex === 'object' ? (ex.text || String(ex)) : ex;
+                            const exType = typeof ex === 'object' ? (ex.type || '') : '';
+                            if (exType === 'correct' || exType === 'incorrect') {
+                                return `<li class="${exType === 'correct' ? 'example-correct' : 'example-incorrect'}">${exText}</li>`;
+                            }
+                            return `<li>${exText}</li>`;
+                        }).join('')}
+                    </ul>
+                ` : ''}
+            </div>
+        `;
+    }
+    
+    // Time of Day
+    if (content.timeOfDay) {
+        html += `
+            <div class="info-box">
+                <h4>${content.timeOfDay.title || 'Time of Day'}</h4>
+                ${content.timeOfDay.formats && Array.isArray(content.timeOfDay.formats) ? `
+                    <ul>
+                        ${content.timeOfDay.formats.map(format => `<li>${format}</li>`).join('')}
+                    </ul>
+                ` : ''}
+                ${content.timeOfDay.note ? `<p><em>${content.timeOfDay.note}</em></p>` : ''}
+            </div>
+        `;
+    }
+    
+    // Elapsed Time
+    if (content.elapsedTime) {
+        html += `
+            <div class="info-box">
+                <h4>${content.elapsedTime.title || 'Elapsed Time'}</h4>
+                ${content.elapsedTime.format ? `<p><strong>Format:</strong> ${content.elapsedTime.format}</p>` : ''}
+                ${content.elapsedTime.examples && Array.isArray(content.elapsedTime.examples) ? `
+                    <ul>
+                        ${content.elapsedTime.examples.map(ex => `<li>${ex}</li>`).join('')}
+                    </ul>
+                ` : ''}
+            </div>
+        `;
+    }
+    
+    // Format (simple string)
+    if (content.format) {
+        html += `<p><strong>Format:</strong> ${content.format}</p>`;
     }
     
     // Notes

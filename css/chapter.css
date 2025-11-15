@@ -249,6 +249,38 @@
     margin-bottom: var(--spacing-sm);
 }
 
+/* === INFO BOX === */
+.info-box {
+    background-color: #E3F2FD;
+    border-left: 5px solid var(--secondary-blue);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-md);
+    margin: var(--spacing-xl) 0;
+}
+
+.info-box h4 {
+    font-family: var(--font-sans);
+    color: var(--secondary-blue);
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-md);
+    font-weight: 600;
+}
+
+.info-box p {
+    margin: var(--spacing-md) 0;
+    line-height: 1.7;
+    color: var(--dark-gray);
+}
+
+.info-box ul {
+    margin: var(--spacing-md) 0 0 var(--spacing-lg);
+    color: var(--dark-gray);
+}
+
+.info-box li {
+    margin-bottom: var(--spacing-sm);
+}
+
 /* === EXAMPLE BOX === */
 .example-box {
     background-color: #F8F9FA;
@@ -552,4 +584,87 @@
 
 .plural-table tr:hover {
     background-color: #E8EAF6;
+}
+
+/* Units Table */
+.units-section {
+    margin: var(--spacing-xl) 0;
+}
+
+.units-table {
+    width: 100%;
+    max-width: 600px;
+    border-collapse: collapse;
+    margin-top: var(--spacing-md);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.units-table thead {
+    background-color: var(--secondary-blue);
+    color: white;
+}
+
+.units-table th {
+    padding: var(--spacing-md);
+    text-align: left;
+    font-weight: 600;
+}
+
+.units-table td {
+    padding: var(--spacing-md);
+    border-bottom: 1px solid var(--border-gray);
+}
+
+.units-table tr:nth-child(even) {
+    background-color: #F8F9FA;
+}
+
+.units-table tr:hover {
+    background-color: #E8EAF6;
+}
+
+/* Symbols Table */
+.symbols-section {
+    margin: var(--spacing-xl) 0;
+}
+
+.symbols-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: var(--spacing-md);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.symbols-table thead {
+    background-color: var(--secondary-blue);
+    color: white;
+}
+
+.symbols-table th {
+    padding: var(--spacing-md);
+    text-align: left;
+    font-weight: 600;
+}
+
+.symbols-table td {
+    padding: var(--spacing-md);
+    border-bottom: 1px solid var(--border-gray);
+}
+
+.symbols-table tr:nth-child(even) {
+    background-color: #F8F9FA;
+}
+
+.symbols-table tr:hover {
+    background-color: #E8EAF6;
+}
+
+/* Special Cases Section */
+.special-cases-section {
+    margin: var(--spacing-xl) 0;
+}
+
+.special-cases-section h4 {
+    color: var(--dark-gray);
+    margin-bottom: var(--spacing-md);
 }
