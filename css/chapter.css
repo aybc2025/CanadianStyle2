@@ -382,3 +382,169 @@
         padding: var(--spacing-lg);
     }
 }
+
+/* Comparison Table (British vs American) */
+.comparison-section {
+    margin: var(--spacing-xl) 0;
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: var(--spacing-md);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.comparison-table thead {
+    background-color: var(--primary-red);
+    color: white;
+}
+
+.comparison-table th {
+    padding: var(--spacing-md);
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.comparison-table td {
+    padding: var(--spacing-md);
+    border-bottom: 1px solid var(--border-gray);
+    vertical-align: top;
+}
+
+.comparison-table tr:hover {
+    background-color: var(--light-gray);
+}
+
+.pattern-note {
+    background-color: #FFF8E1;
+    font-style: italic;
+    color: var(--dark-gray);
+}
+
+/* Recommended Spellings Box */
+.recommended-box {
+    background-color: #E8F5E9;
+    border-left: 5px solid #4CAF50;
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-md);
+    margin: var(--spacing-xl) 0;
+}
+
+.recommended-box h4 {
+    color: #2E7D32;
+    margin-bottom: var(--spacing-md);
+    font-size: 1.1rem;
+}
+
+.recommended-box ul {
+    margin: var(--spacing-md) 0 0 var(--spacing-lg);
+}
+
+.recommended-box li {
+    margin-bottom: var(--spacing-sm);
+    color: var(--dark-gray);
+}
+
+/* Words Grid (Misspelled Words) */
+.words-list {
+    margin: var(--spacing-xl) 0;
+}
+
+.words-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-md);
+}
+
+.word-item {
+    padding: var(--spacing-sm) var(--spacing-md);
+    background-color: var(--light-gray);
+    border-radius: var(--radius-sm);
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    text-align: center;
+    transition: all 0.2s ease;
+}
+
+.word-item:hover {
+    background-color: #E3F2FD;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Homonyms Table */
+.homonyms-section {
+    margin: var(--spacing-xl) 0;
+}
+
+.homonyms-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: var(--spacing-md);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.homonyms-table thead {
+    background-color: var(--secondary-blue);
+    color: white;
+}
+
+.homonyms-table th {
+    padding: var(--spacing-md);
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.homonyms-table td {
+    padding: var(--spacing-md);
+    border-bottom: 1px solid var(--border-gray);
+}
+
+.homonyms-table tr:nth-child(even) {
+    background-color: #F8F9FA;
+}
+
+.homonyms-table tr:hover {
+    background-color: #E3F2FD;
+}
+
+/* Plural Forms Table */
+.plural-forms-section {
+    margin: var(--spacing-xl) 0;
+}
+
+.plural-table {
+    width: 100%;
+    max-width: 600px;
+    border-collapse: collapse;
+    margin-top: var(--spacing-md);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.plural-table thead {
+    background-color: #5C6BC0;
+    color: white;
+}
+
+.plural-table th {
+    padding: var(--spacing-md);
+    text-align: left;
+    font-weight: 600;
+}
+
+.plural-table td {
+    padding: var(--spacing-md);
+    border-bottom: 1px solid var(--border-gray);
+}
+
+.plural-table tr:nth-child(even) {
+    background-color: #F8F9FA;
+}
+
+.plural-table tr:hover {
+    background-color: #E8EAF6;
+}
