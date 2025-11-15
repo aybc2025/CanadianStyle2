@@ -192,7 +192,29 @@ function buildSectionHTML(section) {
                 <ul class="examples-list">
         `;
         content.examples.forEach(example => {
-            html += `<li>${example}</li>`;
+            // Handle both string and object formats
+            if (typeof example === 'object' && example !== null) {
+                const exampleText = example.text || String(example);
+                const exampleType = example.type || 'example';
+                
+                if (exampleType === 'correct' || exampleType === 'incorrect') {
+                    // Use example-box for typed examples
+                    html += `
+                        <li class="example-list-item">
+                            <div class="example-box ${exampleType === 'correct' ? 'example-correct' : 'example-incorrect'}">
+                                <div class="example-label">${exampleType === 'correct' ? '✓ Correct' : '✗ Incorrect'}</div>
+                                <div>${exampleText}</div>
+                            </div>
+                        </li>
+                    `;
+                } else {
+                    // Regular example object without type
+                    html += `<li>${exampleText}</li>`;
+                }
+            } else {
+                // Simple string example
+                html += `<li>${example}</li>`;
+            }
         });
         html += `
                 </ul>

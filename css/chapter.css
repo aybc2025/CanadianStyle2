@@ -301,6 +301,11 @@
     color: var(--primary-red);
 }
 
+#contentArea li.example-list-item {
+    list-style: none;
+    margin-left: calc(-1 * var(--spacing-xl));
+}
+
 /* === TABLES === */
 #contentArea table {
     width: 100%;
