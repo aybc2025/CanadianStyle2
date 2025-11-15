@@ -1,5 +1,6 @@
 /* ===================================
    Canadian Style Learner - Main CSS
+   Complete Fixed Version
    =================================== */
 
 /* === VARIABLES === */
@@ -457,6 +458,8 @@ textarea:focus {
     padding: 0 var(--spacing-lg);
 }
 
+/* === MODULE CARDS - COMPLETE FIXED SECTION === */
+
 .modules-section {
     padding: var(--spacing-xxl) 0;
 }
@@ -485,6 +488,7 @@ textarea:focus {
     border-radius: 20px;
     cursor: pointer;
     transition: all 0.3s ease;
+    font-size: 0.95rem;
 }
 
 .filter-tab.active {
@@ -511,6 +515,8 @@ textarea:focus {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     transition: all 0.3s ease;
     border: 2px solid transparent;
+    display: flex;
+    flex-direction: column;
 }
 
 .module-card:hover {
@@ -519,11 +525,8 @@ textarea:focus {
     border-color: var(--primary-red);
 }
 
-.module-header {
-    display: flex;
-    align-items: flex-start;
-    gap: var(--spacing-md);
-    margin-bottom: var(--spacing-lg);
+.module-card.locked {
+    opacity: 0.6;
 }
 
 .module-number {
@@ -547,6 +550,7 @@ textarea:focus {
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
+    box-shadow: 0 2px 8px rgba(213, 43, 30, 0.2);
 }
 
 .category-tag {
@@ -558,74 +562,129 @@ textarea:focus {
     font-weight: 400;
 }
 
-.module-title h3 {
-    font-size: 1.25rem;
-    margin-bottom: var(--spacing-xs);
-}
-
-.module-category {
-    font-family: var(--font-sans);
-    font-size: 0.8rem;
-    color: var(--medium-gray);
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
+.module-title {
+    font-size: 1.5rem;
+    color: var(--dark-gray);
+    margin-bottom: var(--spacing-sm);
+    font-weight: 600;
+    text-align: left;
 }
 
 .module-description {
     color: var(--medium-gray);
     font-size: 0.95rem;
     margin-bottom: var(--spacing-lg);
-    line-height: 1.5;
+    line-height: 1.6;
+    flex-grow: 1;
+}
+
+.module-meta {
+    display: flex;
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+    font-family: var(--font-sans);
+    font-size: 0.875rem;
+    color: var(--medium-gray);
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.icon {
+    font-size: 1rem;
 }
 
 .module-progress {
     margin-bottom: var(--spacing-lg);
 }
 
-.module-progress-label {
-    display: flex;
-    justify-content: space-between;
+.progress-label {
     font-family: var(--font-sans);
     font-size: 0.875rem;
     margin-bottom: var(--spacing-sm);
+    color: var(--dark-gray);
+    font-weight: 500;
 }
 
-.module-progress-bar {
+.progress-bar-container {
     background-color: var(--light-gray);
     height: 8px;
     border-radius: 4px;
     overflow: hidden;
 }
 
-.module-progress-fill {
+.progress-bar-fill {
     background-color: var(--primary-red);
     height: 100%;
     transition: width 0.5s ease;
+    border-radius: 4px;
 }
 
-.module-card.completed .module-progress-fill {
+.module-card.completed .progress-bar-fill {
     background-color: var(--success-green);
 }
 
-.module-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
 .completion-badge {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     gap: var(--spacing-sm);
     font-family: var(--font-sans);
     font-size: 0.875rem;
     color: var(--success-green);
     font-weight: 600;
+    margin-bottom: var(--spacing-md);
 }
 
-.completion-badge svg {
-    width: 20px;
-    height: 20px;
+.module-actions {
+    margin-top: auto;
+    padding-top: var(--spacing-md);
+}
+
+.module-actions button {
+    width: 100%;
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.875rem 1.5rem;
+    border: none;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    min-height: 48px;
+}
+
+.module-actions .btn-primary {
+    background-color: var(--primary-red);
+    color: white;
+    box-shadow: 0 2px 4px rgba(213, 43, 30, 0.2);
+}
+
+.module-actions .btn-primary:hover {
+    background-color: #B82419;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(213, 43, 30, 0.3);
+}
+
+.module-actions .btn-secondary {
+    background-color: transparent;
+    color: var(--primary-red);
+    border: 2px solid var(--primary-red);
+}
+
+.module-actions .btn-secondary:hover {
+    background-color: var(--primary-red);
+    color: white;
+}
+
+.module-actions button:disabled {
+    background-color: var(--medium-gray);
+    cursor: not-allowed;
+    opacity: 0.6;
+    border: none;
 }
 
 /* === RESPONSIVE === */
@@ -668,5 +727,19 @@ textarea:focus {
     
     .stat-number {
         font-size: 2rem;
+    }
+    
+    .module-card {
+        padding: var(--spacing-lg);
+    }
+    
+    .number-badge {
+        width: 50px;
+        height: 50px;
+        font-size: 1.25rem;
+    }
+    
+    .module-title {
+        font-size: 1.25rem;
     }
 }
