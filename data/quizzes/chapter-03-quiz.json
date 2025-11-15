@@ -1,0 +1,550 @@
+{
+  "chapterId": 3,
+  "title": "Spelling",
+  "totalQuestions": 40,
+  "passingScore": 70,
+  "questions": [
+    {
+      "id": 1,
+      "section": "3.01",
+      "type": "single",
+      "question": "Which spelling authority is recommended for Canadian government writing?",
+      "options": [
+        "Oxford English Dictionary",
+        "Gage Canadian Dictionary",
+        "Merriam-Webster Dictionary",
+        "Cambridge Dictionary"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The Gage Canadian Dictionary is recommended since it reflects the usage of most federal government departments and agencies more closely than the Webster's or Oxford dictionaries, is based on research into Canadian usage, and contains specifically Canadian terms."
+    },
+    {
+      "id": 2,
+      "section": "3.01",
+      "type": "single",
+      "question": "Which spelling is recommended for Canadian government writing?",
+      "options": [
+        "organize (American)",
+        "organise (British)",
+        "Both are acceptable",
+        "Neither"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Canadian recommended spelling uses -ize endings (organize, not organise), following the pattern: endings in -ize, -ization."
+    },
+    {
+      "id": 3,
+      "section": "3.01",
+      "type": "single",
+      "question": "How should 'colour' be spelled in Canadian government documents?",
+      "options": [
+        "color (American)",
+        "colour (British/Canadian)",
+        "Either spelling is acceptable",
+        "Neither spelling"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Canadian spelling follows British practice for -our endings: colour, honour, favour (not color, honor, favor)."
+    },
+    {
+      "id": 4,
+      "section": "3.01",
+      "type": "single",
+      "question": "Which is the correct Canadian spelling?",
+      "options": [
+        "center",
+        "centre",
+        "Both are acceptable",
+        "Neither"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Canadian spelling uses -re endings: centre, fibre, theatre (not center, fiber, theater)."
+    },
+    {
+      "id": 5,
+      "section": "3.01",
+      "type": "single",
+      "question": "How should 'travelled' be spelled in Canadian writing?",
+      "options": [
+        "traveled (single l)",
+        "travelled (double l)",
+        "Both are acceptable",
+        "Neither"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Canadian spelling uses double l in the past tense of verbs: travelled, counselled, labelled (not traveled, counseled, labeled)."
+    },
+    {
+      "id": 6,
+      "section": "3.01",
+      "type": "multiple",
+      "question": "Which of the following are exceptions to the Canadian digraph rule? (Select all that apply)",
+      "options": [
+        "aesthetic",
+        "encyclopedia",
+        "onomatopoeic",
+        "medieval"
+      ],
+      "correctAnswers": [0, 2],
+      "explanation": "Canadian spelling uses 'e' for digraphs (encyclopedia, medieval), but there are two exceptions: aesthetic and onomatopoeic retain the 'ae' and 'oe'."
+    },
+    {
+      "id": 7,
+      "section": "3.02",
+      "type": "true-false",
+      "question": "Spell-checking programs can detect when a correctly spelled word is used incorrectly in context.",
+      "correctAnswer": false,
+      "explanation": "Spell-checking programs cannot detect correctly spelled words that are incorrect in the specific context. For example, 'Ewe bake two manly arrows' would be approved even though it should read 'You make too many errors.'"
+    },
+    {
+      "id": 8,
+      "section": "3.02",
+      "type": "single",
+      "question": "When using search-and-replace to change 'honor' to 'honour', what command should you use to avoid errors?",
+      "options": [
+        "honor",
+        "<space>honor<space>",
+        "honor.",
+        "All of the above"
+      ],
+      "correctAnswer": 1,
+      "explanation": "To avoid affecting words like honorarium, honorific, and honorary, use <space>honor<space> instead of just 'honor'. This ensures only the standalone word is replaced."
+    },
+    {
+      "id": 9,
+      "section": "3.02",
+      "type": "multiple",
+      "question": "Which of the following are drawbacks of spell-checking programs? (Select all that apply)",
+      "options": [
+        "They cannot detect omissions of words",
+        "They flag grammatically incorrect words",
+        "They may not respect organizational spelling preferences",
+        "They detect context errors"
+      ],
+      "correctAnswers": [0, 2],
+      "explanation": "Spell-checkers cannot detect word omissions and may not respect organizational preferences. They do NOT flag grammatically incorrect words (unless part of a grammar checker) and do NOT detect context errors."
+    },
+    {
+      "id": 10,
+      "section": "3.03",
+      "type": "single",
+      "question": "Which is the correct spelling?",
+      "options": [
+        "accomodate",
+        "accommodate",
+        "acommodate",
+        "acomodate"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The correct spelling is 'accommodate' with double 'c' and double 'm'. This is one of the most frequently misspelled words."
+    },
+    {
+      "id": 11,
+      "section": "3.03",
+      "type": "single",
+      "question": "Which is the correct spelling?",
+      "options": [
+        "occurance",
+        "occurence",
+        "occurrence",
+        "ocurrence"
+      ],
+      "correctAnswer": 2,
+      "explanation": "The correct spelling is 'occurrence' with double 'c' and double 'r'. This is a frequently misspelled word."
+    },
+    {
+      "id": 12,
+      "section": "3.03",
+      "type": "single",
+      "question": "Which is the correct spelling?",
+      "options": [
+        "miniscule",
+        "minuscule",
+        "minescule",
+        "mynuscule"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The correct spelling is 'minuscule', not 'miniscule'. This word is frequently misspelled."
+    },
+    {
+      "id": 13,
+      "section": "3.04",
+      "type": "single",
+      "question": "What is the correct spelling for the SI unit of volume?",
+      "options": [
+        "liter",
+        "litre",
+        "Both are acceptable",
+        "Neither"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The preferred Canadian spelling for the SI unit of volume is 'litre' (not 'liter')."
+    },
+    {
+      "id": 14,
+      "section": "3.04",
+      "type": "single",
+      "question": "What is the difference between 'meter' and 'metre'?",
+      "options": [
+        "They are the same",
+        "Meter is a measuring device, metre is a unit of length",
+        "Metre is a measuring device, meter is a unit of length",
+        "There is no difference in Canadian spelling"
+      ],
+      "correctAnswer": 1,
+      "explanation": "In Canadian spelling, 'meter' refers to a measuring device, while 'metre' is the unit of length."
+    },
+    {
+      "id": 15,
+      "section": "3.04",
+      "type": "single",
+      "question": "Which SI unit names have identical singular and plural forms?",
+      "options": [
+        "gram, kilogram",
+        "metre, litre",
+        "hertz, lux, siemens",
+        "kelvin, ampere"
+      ],
+      "correctAnswer": 2,
+      "explanation": "The singular and plural forms are identical for: hertz, lux and siemens."
+    },
+    {
+      "id": 16,
+      "section": "3.05",
+      "type": "single",
+      "question": "Which word means 'influence'?",
+      "options": [
+        "affect",
+        "effect",
+        "Both",
+        "Neither"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Affect (verb) means 'influence'. Effect as a verb means 'bring about' or 'result in', and as a noun means 'consequence' or 'impact'."
+    },
+    {
+      "id": 17,
+      "section": "3.05",
+      "type": "single",
+      "question": "Which word refers to writing materials?",
+      "options": [
+        "stationary",
+        "stationery",
+        "Both",
+        "Neither"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Stationery (with 'e') refers to writing materials. Stationary (with 'a') means fixed or motionless."
+    },
+    {
+      "id": 18,
+      "section": "3.05",
+      "type": "single",
+      "question": "Which is the possessive form of 'it'?",
+      "options": [
+        "its",
+        "it's",
+        "its'",
+        "it`s"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Its (no apostrophe) is the possessive form of 'it'. It's (with apostrophe) is a contraction of 'it is' or 'it has'."
+    },
+    {
+      "id": 19,
+      "section": "3.05",
+      "type": "single",
+      "question": "Which word means 'rule' or 'fundamental truth'?",
+      "options": [
+        "principal",
+        "principle",
+        "Both",
+        "Neither"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Principle means 'rule' or 'fundamental truth'. Principal means 'chief', 'main', 'leading', or 'school administrator'."
+    },
+    {
+      "id": 20,
+      "section": "3.06",
+      "type": "single",
+      "question": "According to the 'i before e' rule, which is correct?",
+      "options": [
+        "recieve",
+        "receive",
+        "Both",
+        "Neither"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The correct spelling is 'receive'. The rule is 'i before e except after c', so after 'c' we use 'ei'."
+    },
+    {
+      "id": 21,
+      "section": "3.06",
+      "type": "multiple",
+      "question": "Which of the following are exceptions to the 'i before e' rule? (Select all that apply)",
+      "options": [
+        "weird",
+        "belief",
+        "seize",
+        "achieve"
+      ],
+      "correctAnswers": [0, 2],
+      "explanation": "Weird and seize are exceptions to the 'i before e' rule. Belief and achieve follow the rule correctly."
+    },
+    {
+      "id": 22,
+      "section": "3.06",
+      "type": "single",
+      "question": "Which is correct when sounded as 'a' as in 'weigh'?",
+      "options": [
+        "Use 'ie'",
+        "Use 'ei'",
+        "Either is acceptable",
+        "Neither"
+      ],
+      "correctAnswer": 1,
+      "explanation": "When sounded as 'a' as in 'neighbour' and 'weigh', use 'ei' (not 'ie')."
+    },
+    {
+      "id": 23,
+      "section": "3.07",
+      "type": "single",
+      "question": "What is the only verb ending in 'sede'?",
+      "options": [
+        "proceed",
+        "supersede",
+        "recede",
+        "concede"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Supersede is the only verb ending in 'sede'."
+    },
+    {
+      "id": 24,
+      "section": "3.07",
+      "type": "multiple",
+      "question": "Which verbs end in 'ceed'? (Select all that apply)",
+      "options": [
+        "exceed",
+        "proceed",
+        "succeed",
+        "recede"
+      ],
+      "correctAnswers": [0, 1, 2],
+      "explanation": "Exceed, proceed and succeed are the only common verbs ending in 'ceed'. Recede ends in 'cede'."
+    },
+    {
+      "id": 25,
+      "section": "3.07",
+      "type": "single",
+      "question": "Which ending do most verbs like 'accede', 'concede', and 'precede' use?",
+      "options": [
+        "sede",
+        "ceed",
+        "cede",
+        "seed"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Most verbs end in 'cede': accede, concede, recede, antecede, intercede, secede, cede, precede."
+    },
+    {
+      "id": 26,
+      "section": "3.08",
+      "type": "single",
+      "question": "If a word has a corresponding word ending in 'ation', which ending is usually correct?",
+      "options": [
+        "-ible",
+        "-able",
+        "-itive",
+        "Either -ible or -able"
+      ],
+      "correctAnswer": 1,
+      "explanation": "If there's a corresponding word ending in 'ation', the ending is usually -able or -ative. For example: information → informative, duration → durable."
+    },
+    {
+      "id": 27,
+      "section": "3.08",
+      "type": "single",
+      "question": "Which is correct?",
+      "options": [
+        "divisable",
+        "divisible",
+        "Both",
+        "Neither"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The correct spelling is 'divisible'. Since 'division' ends in 'sion' not preceded by 'a', use -ible."
+    },
+    {
+      "id": 28,
+      "section": "3.09",
+      "type": "single",
+      "question": "Which is the correct spelling?",
+      "options": [
+        "stoped",
+        "stopped",
+        "stoppped",
+        "stoppd"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The correct spelling is 'stopped'. Double the final consonant before a suffix in one-syllable words ending in single consonant preceded by single vowel."
+    },
+    {
+      "id": 29,
+      "section": "3.09",
+      "type": "single",
+      "question": "Which is correct?",
+      "options": [
+        "occured",
+        "occurred",
+        "ocurred",
+        "occurrd"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The correct spelling is 'occurred'. Double the final consonant in multi-syllable words if accent is on last syllable."
+    },
+    {
+      "id": 30,
+      "section": "3.09",
+      "type": "true-false",
+      "question": "The preferred plural spelling of 'bus' is 'busses'.",
+      "correctAnswer": false,
+      "explanation": "The preferred plural spelling of the noun 'bus' is 'buses' (not 'busses', which is the verb form)."
+    },
+    {
+      "id": 31,
+      "section": "3.10",
+      "type": "single",
+      "question": "What happens when suffix 'ness' is added to a word ending in 'n'?",
+      "options": [
+        "Single n",
+        "Double n",
+        "Triple n",
+        "The n is dropped"
+      ],
+      "correctAnswer": 1,
+      "explanation": "When suffix 'ness' is added to a word ending in 'n', a double n is formed: even → evenness, green → greenness."
+    },
+    {
+      "id": 32,
+      "section": "3.11",
+      "type": "single",
+      "question": "Which is the correct spelling?",
+      "options": [
+        "alltogether",
+        "all together",
+        "altogether",
+        "All are correct depending on context"
+      ],
+      "correctAnswer": 3,
+      "explanation": "'All together' means everyone in a group; 'altogether' means completely or in total. Both are correct but have different meanings. There is no 'alltogether'."
+    },
+    {
+      "id": 33,
+      "section": "3.11",
+      "type": "true-false",
+      "question": "'Alright' is an acceptable spelling.",
+      "correctAnswer": false,
+      "explanation": "The correct spelling is always two words: 'all right'. 'Alright' is not acceptable."
+    },
+    {
+      "id": 34,
+      "section": "3.12",
+      "type": "single",
+      "question": "Which is correct?",
+      "options": [
+        "likeable",
+        "likable",
+        "Both",
+        "Neither"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The correct spelling is 'likable'. Drop the final silent 'e' before a suffix beginning with a vowel."
+    },
+    {
+      "id": 35,
+      "section": "3.12",
+      "type": "single",
+      "question": "Why do we write 'changeable' (keeping the e) but 'changing' (dropping the e)?",
+      "options": [
+        "Random exception",
+        "To preserve soft sound of 'g' before 'a' and 'o'",
+        "To preserve soft sound of 'g' before 'i'",
+        "No reason"
+      ],
+      "correctAnswer": 1,
+      "explanation": "When 'e' follows 'c' or 'g', it is retained before vowels 'a' and 'o' to preserve the soft sound: changeable, courageous, but changing, changer."
+    },
+    {
+      "id": 36,
+      "section": "3.13",
+      "type": "single",
+      "question": "Which is correct?",
+      "options": [
+        "panicing",
+        "panicking",
+        "panikking",
+        "paniccing"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The correct spelling is 'panicking'. Add 'k' before 'i' or 'y' in words ending in 'c' that has the sound of 'k'."
+    },
+    {
+      "id": 37,
+      "section": "3.14",
+      "type": "single",
+      "question": "What happens to verbs ending in 'ie' before 'ing'?",
+      "options": [
+        "ie stays the same",
+        "ie changes to y",
+        "ie changes to i",
+        "ie is dropped"
+      ],
+      "correctAnswer": 1,
+      "explanation": "In verbs ending in 'ie', change 'ie' to 'y' before 'ing': die → dying, lie → lying, tie → tying."
+    },
+    {
+      "id": 38,
+      "section": "3.15",
+      "type": "single",
+      "question": "Which is correct?",
+      "options": [
+        "heavyest",
+        "heaviest",
+        "heavyiest",
+        "heavyist"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The correct spelling is 'heaviest'. Change 'y' to 'i' before a suffix when 'y' is preceded by a consonant (unless suffix begins with 'i')."
+    },
+    {
+      "id": 39,
+      "section": "3.16",
+      "type": "multiple",
+      "question": "Which of these words must end in '-ise' (cannot use -ize)? (Select all that apply)",
+      "options": [
+        "advertise",
+        "organize",
+        "supervise",
+        "recognize"
+      ],
+      "correctAnswers": [0, 2],
+      "explanation": "Advertise and supervise must end in '-ise' (cannot be replaced with -ize). Organize and recognize use '-ize'."
+    },
+    {
+      "id": 40,
+      "section": "3.17",
+      "type": "single",
+      "question": "What is the plural of 'criterion'?",
+      "options": [
+        "criterions",
+        "criteria",
+        "criterias",
+        "criteriones"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The plural of 'criterion' is 'criteria' (irregular Latin plural form)."
+    }
+  ]
+}
