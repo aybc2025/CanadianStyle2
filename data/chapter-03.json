@@ -1,0 +1,797 @@
+{
+  "id": 3,
+  "number": 3,
+  "title": "Spelling",
+  "description": "Canadian spelling conventions and common errors",
+  "category": "basics",
+  "sections": [
+    {
+      "id": "3.01",
+      "title": "Introduction",
+      "content": {
+        "text": "Spelling poses a major problem in English because it is not phonetic and because the rules that can be formulated nearly always have significant exceptions. In addition, there are hundreds of words that have variant spellings in different parts of the English-speaking world, the principal cleavage being between the United Kingdom and the United States. Partly as a result of our historical links with Britain and our proximity to the United States, Canadian spelling has tended to waver between the forms used in these two countries, so that, to this day, there is no clearly established Canadian standard.",
+        "britishAmericanDifferences": {
+          "title": "British vs American Spelling Patterns",
+          "patterns": [
+            {
+              "category": "Verbs ending in ise/ize",
+              "british": ["civilise, civilisation", "organise, organisation", "specialise, specialisation"],
+              "american": ["civilize, civilization", "organize, organization", "specialize, specialization"]
+            },
+            {
+              "category": "Nouns ending in our/or",
+              "british": ["colour, honour, favour"],
+              "american": ["color, honor, favor"]
+            },
+            {
+              "category": "Nouns ending in re/er",
+              "british": ["centre, fibre, theatre"],
+              "american": ["center, fiber, theater"]
+            },
+            {
+              "category": "Verbs with single l/double l",
+              "british": ["instil", "fulfil, fulfilment", "enrol, enrolment"],
+              "american": ["instill", "fulfill, fulfillment", "enroll, enrollment"]
+            },
+            {
+              "category": "Nouns in ce/se",
+              "british": ["defence, offence, pretence"],
+              "american": ["defense, offense, pretense"],
+              "note": "British spelling also makes a distinction between licence (noun), license (verb) and practice (noun), practise (verb); American uses license and practice for both forms."
+            },
+            {
+              "category": "Double l/single l in past tense of verbs",
+              "british": ["counselled, labelled, travelled"],
+              "american": ["counseled, labeled, traveled"]
+            },
+            {
+              "category": "Treatment of digraphs ae and oe",
+              "british": ["anaemia, encyclopaedia", "diarrhoea, oecumenical"],
+              "american": ["anemia, encyclopedia", "diarrhea, ecumenical"]
+            }
+          ]
+        },
+        "keyPrinciple": {
+          "title": "Canadian Standard - Gage Canadian Dictionary",
+          "content": "The recommended spelling authority is the Gage Canadian Dictionary, since it reflects the usage of most federal government departments and agencies more closely than do the Webster's or Oxford dictionaries, is based on research into Canadian usage, and contains specifically Canadian terms. When it lists two spellings for a word in the same entry, choose the one entered first. When two spellings are given separate entries, choose the primary spelling, which is the one followed by the definition (the variant simply refers the reader to the primary spelling entry). For scientific and technical words not in Gage, check Webster's Third New International Dictionary."
+        },
+        "recommendedSpellings": {
+          "title": "Recommended Canadian Spelling Patterns",
+          "patterns": [
+            "Endings in -ize, -ization (not -ise, -isation)",
+            "Endings in -our (not -or): colour, honour, favour",
+            "Endings in -re (not -er): centre, fibre, theatre",
+            "Single l (as in instil, not instill)",
+            "Endings in -ce (not -se): defence, offence, pretence",
+            "Single l in words such as enrolment (not enrolLment)",
+            "Double l in travelled, etc. (not traveled)",
+            "Use e for digraphs (exceptions: aesthetic and onomatopoeic)"
+          ]
+        },
+        "warningBox": {
+          "title": "Respect U.S. Institution Names",
+          "content": "Respect the official spelling of names of U.S. institutions, e.g. Department of Defense, Center for Disease Control."
+        },
+        "note": "The important point with respect to spelling is to be consistent in your written work unless a good reason exists for using variant or archaic spellings."
+      }
+    },
+    {
+      "id": "3.02",
+      "title": "Spell-checking",
+      "content": {
+        "text": "Spell-checking functions are now included in word-processing programs for use with computers. They can help you eliminate, at the proofreading stage, most of the spelling and typographical errors in a document. Especially useful are the 'search' feature, which can instantly locate a specific combination of letters, and the 'search-and-replace' feature, which can find all instances of a misspelled word or variant spelling and replace them with the correct or preferred form.",
+        "drawbacks": {
+          "title": "Spell-checking Program Drawbacks",
+          "points": [
+            "They cannot detect omissions of words.",
+            "They do not flag correctly spelled words that are incorrect in the specific context. Thus the sentence 'Ewe bake two manly arrows.' would be approved by a spell-checker for a sentence that should read 'You make too many errors.'",
+            "Unless they are part of a larger grammar-checking utility, they do not identify words that are grammatically wrong. Thus the sentence 'He do not understands.' would not be flagged.",
+            "They may not respect the spelling preferences of your organization or your clients. In this case, you can usually modify the content of the spell-checker dictionary.",
+            "The search-and-replace feature can result in misspellings that have to be reversed manually."
+          ]
+        },
+        "searchReplaceExample": {
+          "title": "Search-and-Replace Pitfall Example",
+          "text": "For example, you may have decided to use the spelling honour instead of honor, the variant listed in American spell-checker dictionaries. Instructing the spell-checker to make a universal change will affect even correctly spelled words such as honorarium, honorific and honorary as well as words placed in quotes or followed by [sic].",
+          "solution": "To avoid the error, give the command <space>honor<space> instead of just honor. A variation of this command is required to cover specific occurrences such as honor followed by a period."
+        }
+      }
+    },
+    {
+      "id": "3.03",
+      "title": "Frequently Misspelled Words",
+      "content": {
+        "text": "The following is a list of words that are often misspelled. The letters that are usually the object of the errors—through inversion, omission, doubling, addition or substitution—are in boldface:",
+        "words": [
+          "abhor", "abysmal", "accommodate", "acquaintance", "aggressive", "all right",
+          "anomalous", "appellant", "arctic", "argument", "attorney", "awkward",
+          "battalion", "calendar", "canister", "Caribbean", "cartilage", "census",
+          "Chile (the country)", "chlorophyll", "coherent, coherence", "Colombia (the country)", "commitment", "comparative",
+          "concomitant", "connection", "consensus", "consistent, consistency", "corollary", "correspondence",
+          "crystallographic", "Dene (no accents in English)", "descend", "desiccate", "develop", "diarrhea",
+          "diphtheria", "disappoint", "discernible", "domain (not domaine)", "dysentery", "ecstasy",
+          "embarrass", "exaggerate", "excerpt", "exhilarate", "existent, existence", "exonerate",
+          "exorbitant (not exhorbitant)", "Filipino", "focus", "foreseen", "genealogy", "gauge",
+          "grammar", "guerrilla", "harass", "hemorrhage", "hereditary", "histogram",
+          "honorary", "hypocrisy", "hypothesis", "independent, independence", "indispensable", "infinitesimal",
+          "inoculate", "inscribe", "insistent, insistence", "Inuk", "Inuit", "iridescent",
+          "irrelevant", "laboratory", "liaison", "liquefy", "lightning", "marshal",
+          "measure", "memento", "medicine", "Métis", "minuscule", "Mississippi",
+          "misspell", "moccasin", "Morocco", "naphtha", "negotiation", "nickel",
+          "occasional", "occurrence", "ophthalmology", "parallel", "paraffin", "pastime",
+          "perinatal", "permissible", "Philippines", "polyethylene", "polystyrene", "polyurethane",
+          "possession", "precede", "preferential", "privilege", "proceed", "pronunciation",
+          "ptomaine", "quadriplegia", "rarefy", "recommendation", "recede", "reminiscent",
+          "resistant, resistance", "responsible", "rheumatism", "rhythm", "sacrilegious", "separate",
+          "siege", "soybean", "spatial", "stochastic", "supersede", "tariff",
+          "tendency", "thorough", "threshold", "until", "weird", "withhold",
+          "written"
+        ]
+      }
+    },
+    {
+      "id": "3.04",
+      "title": "SI/Metric Units",
+      "content": {
+        "text": "Preferred spellings of terms have been established in National Standard of Canada CAN/CSA-Z234.1-89 for a number of SI/metric units and prefixes:",
+        "standardSpellings": [
+          "deca (not deka)",
+          "gram (not gramme)",
+          "litre (not liter)",
+          "tonne or metric ton (not metric tonne)"
+        ],
+        "prefixRules": {
+          "title": "Prefix Vowel Retention Rules",
+          "text": "In two cases the final vowel of a unit prefix is omitted: megohm and kilohm. In other cases where the unit name begins with a vowel, both vowels are retained."
+        },
+        "meterVsMetre": {
+          "title": "Meter vs. Metre",
+          "content": "Note that meter is the spelling for a measuring device, while metre is the unit of length."
+        },
+        "pluralForms": {
+          "title": "Identical Singular and Plural Forms",
+          "content": "Note also that the singular and plural of the following unit names are identical: hertz, lux and siemens."
+        }
+      }
+    },
+    {
+      "id": "3.05",
+      "title": "Homonyms and Similar-Sounding Words",
+      "content": {
+        "text": "Many words are misspelled because they are confused with similar-sounding and similarly spelled words which, in fact, have a different meaning. In the following list of word pairs (and one group of three), information is given in parentheses to indicate which spelling should be used in a particular context:",
+        "wordPairs": [
+          {
+            "word1": "affect",
+            "meaning1": "influence",
+            "word2": "effect",
+            "meaning2": "verb: bring about, result in; noun: consequence, impact"
+          },
+          {
+            "word1": "allusion",
+            "meaning1": "reference",
+            "word2": "illusion",
+            "meaning2": "misleading appearance"
+          },
+          {
+            "word1": "all ready",
+            "meaning1": "prepared",
+            "word2": "already",
+            "meaning2": "previously"
+          },
+          {
+            "word1": "ascent",
+            "meaning1": "climb",
+            "word2": "assent",
+            "meaning2": "agreement"
+          },
+          {
+            "word1": "bloc",
+            "meaning1": "group of persons, companies or nations",
+            "word2": "block",
+            "meaning2": "group of things; obstruct; solid piece, etc."
+          },
+          {
+            "word1": "born",
+            "meaning1": "of birth",
+            "word2": "borne",
+            "meaning2": "carried"
+          },
+          {
+            "word1": "breach",
+            "meaning1": "gap; violation",
+            "word2": "breech",
+            "meaning2": "lower part"
+          },
+          {
+            "word1": "broach",
+            "meaning1": "pointed tool or rod; begin to talk about",
+            "word2": "brooch",
+            "meaning2": "type of jewellery"
+          },
+          {
+            "word1": "canvas",
+            "meaning1": "cloth",
+            "word2": "canvass",
+            "meaning2": "solicit"
+          },
+          {
+            "word1": "capital",
+            "meaning1": "city; very significant",
+            "word2": "capitol",
+            "meaning2": "government building in U.S.A."
+          },
+          {
+            "word1": "carat",
+            "meaning1": "unit of mass for precious stones",
+            "word2": "caret",
+            "meaning2": "proofreader's mark",
+            "word3": "karat",
+            "meaning3": "unit used to specify proportion of gold in alloy"
+          },
+          {
+            "word1": "cast",
+            "meaning1": "actors; verb meanings",
+            "word2": "caste",
+            "meaning2": "exclusive social class"
+          },
+          {
+            "word1": "censor",
+            "meaning1": "check the morality or acceptability of; person who does this",
+            "word2": "censure",
+            "meaning2": "criticize, blame; criticism"
+          },
+          {
+            "word1": "chord",
+            "meaning1": "music; geometry; engineering",
+            "word2": "cord",
+            "meaning2": "other uses"
+          },
+          {
+            "word1": "complement",
+            "meaning1": "complete; that which completes",
+            "word2": "compliment",
+            "meaning2": "praise"
+          },
+          {
+            "word1": "councillor",
+            "meaning1": "member of a council",
+            "word2": "counsellor",
+            "meaning2": "adviser; lawyer"
+          },
+          {
+            "word1": "dependant",
+            "meaning1": "noun",
+            "word2": "dependent",
+            "meaning2": "adjective"
+          },
+          {
+            "word1": "discreet",
+            "meaning1": "prudent, tactful",
+            "word2": "discrete",
+            "meaning2": "distinct, separate"
+          },
+          {
+            "word1": "dyeing",
+            "meaning1": "colouring",
+            "word2": "dying",
+            "meaning2": "approaching death"
+          },
+          {
+            "word1": "elicit",
+            "meaning1": "draw forth",
+            "word2": "illicit",
+            "meaning2": "unlawful"
+          },
+          {
+            "word1": "envelop",
+            "meaning1": "verb",
+            "word2": "envelope",
+            "meaning2": "noun"
+          },
+          {
+            "word1": "faze",
+            "meaning1": "disturb",
+            "word2": "phase",
+            "meaning2": "stage, period"
+          },
+          {
+            "word1": "flair",
+            "meaning1": "talent",
+            "word2": "flare",
+            "meaning2": "flame, light"
+          },
+          {
+            "word1": "forbear",
+            "meaning1": "hold back",
+            "word2": "forebear",
+            "meaning2": "ancestor"
+          },
+          {
+            "word1": "foreword",
+            "meaning1": "preface",
+            "word2": "forward",
+            "meaning2": "ahead"
+          },
+          {
+            "word1": "hoard",
+            "meaning1": "save up",
+            "word2": "horde",
+            "meaning2": "crowd"
+          },
+          {
+            "word1": "immanent",
+            "meaning1": "inherent",
+            "word2": "imminent",
+            "meaning2": "about to occur"
+          },
+          {
+            "word1": "inequity",
+            "meaning1": "unfairness",
+            "word2": "iniquity",
+            "meaning2": "sin"
+          },
+          {
+            "word1": "its",
+            "meaning1": "belonging to it",
+            "word2": "it's",
+            "meaning2": "it is"
+          },
+          {
+            "word1": "loath",
+            "meaning1": "adjective",
+            "word2": "loathe",
+            "meaning2": "verb"
+          },
+          {
+            "word1": "loose",
+            "meaning1": "set free; untight, etc.",
+            "word2": "lose",
+            "meaning2": "mislay; forfeit"
+          },
+          {
+            "word1": "mantel",
+            "meaning1": "shelf above fireplace",
+            "word2": "mantle",
+            "meaning2": "cloak, etc."
+          },
+          {
+            "word1": "mucous",
+            "meaning1": "adjective",
+            "word2": "mucus",
+            "meaning2": "noun"
+          },
+          {
+            "word1": "ordinance",
+            "meaning1": "law",
+            "word2": "ordnance",
+            "meaning2": "military weapons"
+          },
+          {
+            "word1": "pedal",
+            "meaning1": "operate levers with feet; activation device",
+            "word2": "peddle",
+            "meaning2": "sell, hawk"
+          },
+          {
+            "word1": "personal",
+            "meaning1": "individual; private",
+            "word2": "personnel",
+            "meaning2": "staff"
+          },
+          {
+            "word1": "phosphorous",
+            "meaning1": "adjective",
+            "word2": "phosphorus",
+            "meaning2": "noun"
+          },
+          {
+            "word1": "principal",
+            "meaning1": "chief, main, leading; school administrator",
+            "word2": "principle",
+            "meaning2": "rule"
+          },
+          {
+            "word1": "prophecy",
+            "meaning1": "noun",
+            "word2": "prophesy",
+            "meaning2": "verb"
+          },
+          {
+            "word1": "sceptic",
+            "meaning1": "one who doubts",
+            "word2": "septic",
+            "meaning2": "involving putrefaction, sepsis"
+          },
+          {
+            "word1": "stationary",
+            "meaning1": "fixed, motionless",
+            "word2": "stationery",
+            "meaning2": "writing materials"
+          },
+          {
+            "word1": "therefor",
+            "meaning1": "for this purpose or thing",
+            "word2": "therefore",
+            "meaning2": "for that reason, consequently"
+          },
+          {
+            "word1": "troop",
+            "meaning1": "soldiers",
+            "word2": "troupe",
+            "meaning2": "actors, performers"
+          },
+          {
+            "word1": "waive",
+            "meaning1": "give up, forego",
+            "word2": "wave",
+            "meaning2": "move up and down, etc."
+          }
+        ]
+      }
+    },
+    {
+      "id": "3.06",
+      "title": "Words with ei and ie",
+      "content": {
+        "text": "The jingle 'i before e except after c or when sounded as a as in neighbour and weigh' covers the rule.",
+        "keyPrinciple": {
+          "title": "The i before e Rule",
+          "content": "Write i before e, except after c, or when sounded as 'a' as in neighbour and weigh."
+        },
+        "exceptions": {
+          "title": "Exceptions to the Rule",
+          "words": [
+            "either", "heifer", "neither",
+            "foreign", "height", "seize",
+            "forfeit", "leisure", "sovereign",
+            "weird"
+          ]
+        }
+      }
+    },
+    {
+      "id": "3.07",
+      "title": "Verbs Ending in sede, ceed and cede",
+      "content": {
+        "supersede": {
+          "title": "Sede Ending",
+          "content": "Supersede is the only verb ending in sede."
+        },
+        "ceedVerbs": {
+          "title": "Ceed Ending",
+          "content": "Exceed, proceed and succeed are the only common verbs ending in ceed."
+        },
+        "cedeVerbs": {
+          "title": "Cede Ending",
+          "content": "Verbs ending in cede include the following:",
+          "verbs": [
+            "accede", "concede", "recede",
+            "antecede", "intercede", "secede",
+            "cede", "precede"
+          ]
+        }
+      }
+    },
+    {
+      "id": "3.08",
+      "title": "Able/ible and ative/itive Endings",
+      "content": {
+        "text": "There is no basic rule for these endings. However, if there is a corresponding word ending in ation, the ending is usually able or ative; if the corresponding word ends in sion or tion not preceded by a, the ending is usually ible or itive:",
+        "ableAtiveExamples": {
+          "title": "Words with -able or -ative",
+          "examples": [
+            {"root": "affirmation", "derived": "affirmative"},
+            {"root": "duration", "derived": "durable"},
+            {"root": "information", "derived": "informative"}
+          ]
+        },
+        "ibleItiveExamples": {
+          "title": "Words with -ible or -itive",
+          "examples": [
+            {"root": "competition", "derived": "competitive"},
+            {"root": "division", "derived": "divisible"},
+            {"root": "reproduction", "derived": "reproducible"}
+          ]
+        }
+      }
+    },
+    {
+      "id": "3.09",
+      "title": "Final Consonants Doubled Before a Suffix",
+      "content": {
+        "rule1": {
+          "title": "One-Syllable Words",
+          "text": "Double the final consonant before y or before a suffix beginning with a vowel in a word of one syllable that ends in a single consonant preceded by a single vowel:",
+          "examples": [
+            {"base": "bed", "suffix": "bedded"},
+            {"base": "dip", "suffix": "dipped"},
+            {"base": "fat", "suffix": "fatty"},
+            {"base": "fit", "suffix": "fitted"},
+            {"base": "flit", "suffix": "flitting"},
+            {"base": "gum", "suffix": "gummy"},
+            {"base": "log", "suffix": "logged"},
+            {"base": "mad", "suffix": "madden"},
+            {"base": "rot", "suffix": "rotted"},
+            {"base": "scrub", "suffix": "scrubbing"},
+            {"base": "sit", "suffix": "sitting"},
+            {"base": "stop", "suffix": "stopping"}
+          ]
+        },
+        "exceptions1": {
+          "title": "Exceptions - Long Vowel Sound",
+          "text": "Do not double the final consonant in a word of one syllable if the vowel sound is long:",
+          "examples": [
+            {"base": "boat", "suffix": "boating"},
+            {"base": "light", "suffix": "lighten"},
+            {"base": "read", "suffix": "reading"},
+            {"base": "stoop", "suffix": "stooped"}
+          ]
+        },
+        "busNote": {
+          "title": "Special Note on 'bus'",
+          "content": "Note that the preferred plural spelling of the noun bus is buses."
+        },
+        "rule2": {
+          "title": "Multi-Syllable Words",
+          "text": "The final consonant is doubled in words of more than one syllable ending in a single consonant preceded by a single vowel, if the accent is on the last syllable and the suffix begins with a vowel:",
+          "examples": [
+            {"base": "acquit", "suffix": "acquittal"},
+            {"base": "commit", "suffix": "committal"},
+            {"base": "occur", "suffix": "occurrence"},
+            {"base": "rebel", "suffix": "rebellion"},
+            {"base": "regret", "suffix": "regretted"},
+            {"base": "transmit", "suffix": "transmitted"}
+          ]
+        },
+        "exceptions2": {
+          "title": "Special Cases",
+          "content": "Note that there is no doubling of the consonant in targeted and benefited."
+        }
+      }
+    },
+    {
+      "id": "3.10",
+      "title": "Words Ending in n",
+      "content": {
+        "text": "When the suffix ness is added to a word ending in n, a double n is formed:",
+        "examples": [
+          {"base": "even", "derived": "evenness"},
+          {"base": "green", "derived": "greenness"},
+          {"base": "keen", "derived": "keenness"},
+          {"base": "sudden", "derived": "suddenness"}
+        ]
+      }
+    },
+    {
+      "id": "3.11",
+      "title": "Combinations with all",
+      "content": {
+        "text": "The final l is usually dropped when all is used as a prefix:",
+        "examples": [
+          {"separate": "all together", "combined": "altogether"},
+          {"separate": "all ready", "combined": "already"}
+        ],
+        "note": "(see 3.05 for distinctions in meaning)",
+        "exception": {
+          "title": "Exception",
+          "content": "all right (always two words, never 'alright')"
+        }
+      }
+    },
+    {
+      "id": "3.12",
+      "title": "Words Ending in a Silent e",
+      "content": {
+        "rule1": {
+          "title": "Before Suffix Beginning with Vowel",
+          "text": "The final e is usually dropped before a suffix beginning with a vowel:",
+          "examples": [
+            {"base": "debate", "derived": "debatable"},
+            {"base": "desire", "derived": "desirable"},
+            {"base": "dine", "derived": "dining"},
+            {"base": "excite", "derived": "excitable"},
+            {"base": "like", "derived": "likable"},
+            {"base": "love", "derived": "lovable"},
+            {"base": "make", "derived": "makable"},
+            {"base": "move", "derived": "movable"},
+            {"base": "rate", "derived": "ratable"},
+            {"base": "sale", "derived": "salable"},
+            {"base": "size", "derived": "sizable"},
+            {"base": "subdue", "derived": "subduing"}
+          ]
+        },
+        "exceptions1": {
+          "title": "Exceptions to Vowel Rule",
+          "examples": [
+            {"base": "age", "derived": "ageing"},
+            {"base": "mile", "derived": "mileage"}
+          ]
+        },
+        "cAndGRule": {
+          "title": "After c or g",
+          "text": "However, when e follows c or g it is retained before the vowels a and o to preserve the soft sound of these consonants:",
+          "examples": [
+            {"base": "change", "with_a_o": "changeable", "other": "changing"},
+            {"base": "courage", "with_a_o": "courageous", "other": ""},
+            {"base": "gauge", "with_a_o": "gaugeable", "other": "gauging"},
+            {"base": "knowledge", "with_a_o": "knowledgeable", "other": ""},
+            {"base": "notice", "with_a_o": "noticeable", "other": "noticing"},
+            {"base": "peace", "with_a_o": "peaceable", "other": ""},
+            {"base": "trace", "with_a_o": "traceable", "other": "tracing"}
+          ]
+        },
+        "distinctions": {
+          "title": "Retained e for Distinction",
+          "text": "Note that the e is retained even before i in some cases in order to distinguish a word from a similarly spelled one or to preserve a particular pronunciation:",
+          "examples": [
+            {"word": "dyeing", "note": "(vs. dying)"},
+            {"word": "singeing", "note": "(vs. singing)"},
+            {"word": "shoeing", "note": ""},
+            {"word": "toeing", "note": ""}
+          ],
+          "contrast": [
+            {"word": "routing", "note": "(e not retained)"}
+          ]
+        },
+        "rule2": {
+          "title": "Before Suffix Beginning with Consonant",
+          "text": "Words ending in a silent e generally retain the e before a suffix beginning with a consonant:",
+          "examples": [
+            {"base": "complete", "derived": "completeness"},
+            {"base": "hope", "derived": "hopeless"},
+            {"base": "waste", "derived": "wasteful"},
+            {"base": "whole", "derived": "wholesome"}
+          ]
+        },
+        "exceptions2": {
+          "title": "Exceptions to Consonant Rule",
+          "examples": [
+            {"base": "due", "derived": "duly"},
+            {"base": "subtle", "derived": "subtly"},
+            {"base": "true", "derived": "truly"},
+            {"base": "whole", "derived": "wholly"}
+          ]
+        },
+        "eOptional": {
+          "title": "Optional e Retention",
+          "content": "Abridgment, acknowledgment and judgment can be spelled with or without the e, but the preferred spelling is as given (without the e)."
+        }
+      }
+    },
+    {
+      "id": "3.13",
+      "title": "Words Ending in c",
+      "content": {
+        "text": "In words ending in a c that has the sound of k, add k before i or y:",
+        "examples": [
+          {"base": "picnic", "derived": "picnicking"},
+          {"base": "panic", "derived": "panicky"},
+          {"base": "Quebec", "derived": "Quebecker"},
+          {"base": "traffic", "derived": "trafficking"}
+        ]
+      }
+    },
+    {
+      "id": "3.14",
+      "title": "Verbs Ending in ie",
+      "content": {
+        "text": "In verbs ending in ie, change ie to y before ing:",
+        "examples": [
+          {"base": "die", "derived": "dying"},
+          {"base": "lie", "derived": "lying"},
+          {"base": "tie", "derived": "tying"},
+          {"base": "vie", "derived": "vying"}
+        ]
+      }
+    },
+    {
+      "id": "3.15",
+      "title": "Words Ending in y",
+      "content": {
+        "rule": {
+          "title": "Y Preceded by Consonant",
+          "text": "In words ending in y preceded by a consonant, change the y to i before a suffix, unless the suffix itself begins with i:",
+          "examples": [
+            {"base": "heavy", "derived": "heaviest"},
+            {"base": "lively", "derived": "livelihood"},
+            {"base": "necessary", "derived": "necessarily"},
+            {"base": "salary", "derived": "salaried"}
+          ]
+        },
+        "exceptions": {
+          "title": "Exceptions (suffix begins with i)",
+          "examples": [
+            {"word": "copyist"},
+            {"word": "flying"},
+            {"word": "denying"},
+            {"word": "trying"}
+          ]
+        },
+        "distinction": {
+          "title": "Dryer vs. Drier",
+          "content": "Note the distinction between dryer (something or someone that dries) and drier (the comparative of dry)."
+        },
+        "vowelYRule": {
+          "title": "Y Preceded by Vowel",
+          "text": "Words ending in y preceded by a vowel generally retain the y before a suffix:",
+          "examples": [
+            {"base": "annoy", "derivatives": "annoyance, annoying"},
+            {"base": "pay", "derivatives": "payable, paying"}
+          ]
+        }
+      }
+    },
+    {
+      "id": "3.16",
+      "title": "Words Ending in ise and ize",
+      "content": {
+        "iseWords": {
+          "title": "Common Words Ending in -ise",
+          "text": "The following are the only common words ending in ise:",
+          "words": [
+            "advertise", "compromise", "exercise", "premise",
+            "advise", "demise", "franchise", "reprise",
+            "apprise", "despise", "guise", "revise",
+            "arise", "devise", "improvise", "supervise",
+            "chastise", "disguise", "incise", "surmise",
+            "circumcise", "enterprise", "merchandise", "surprise",
+            "comprise", "excise", "mortise", "televise"
+          ],
+          "note": "To this list should be added all words with wise as a suffix."
+        },
+        "warningBox": {
+          "title": "Important Note",
+          "content": "Note that the suffix ise cannot be replaced with ize in this group."
+        },
+        "izeWords": {
+          "title": "Words Ending in -ize",
+          "text": "Use the suffix ize for most other words, including:",
+          "examples": [
+            "civilize", "criticize", "itemize",
+            "memorize", "agonize", "organize",
+            "analyze", "realize", "recognize"
+          ]
+        }
+      }
+    },
+    {
+      "id": "3.17",
+      "title": "Plural Forms of Nouns",
+      "content": {
+        "text": "Note the following singular and plural forms:",
+        "pluralForms": [
+          {"singular": "addendum", "plural": "addenda"},
+          {"singular": "alumna", "plural": "alumnae"},
+          {"singular": "alumnus", "plural": "alumni"},
+          {"singular": "analysis", "plural": "analyses"},
+          {"singular": "antenna", "plural": "antennae (feelers) or antennas (aerials)"},
+          {"singular": "appendix", "plural": "appendixes (or appendices)"},
+          {"singular": "bacterium", "plural": "bacteria"},
+          {"singular": "basis", "plural": "bases"},
+          {"singular": "bureau", "plural": "bureaus"},
+          {"singular": "bus", "plural": "buses"},
+          {"singular": "census", "plural": "censuses"},
+          {"singular": "crisis", "plural": "crises"},
+          {"singular": "criterion", "plural": "criteria"},
+          {"singular": "ellipsis", "plural": "ellipses"},
+          {"singular": "erratum", "plural": "errata"},
+          {"singular": "focus", "plural": "focuses (not focusses, which is the preferred verb form)"},
+          {"singular": "formula", "plural": "formulas (or formulae)"},
+          {"singular": "gas", "plural": "gases (not gasses, which is the verb form)"},
+          {"singular": "hypothesis", "plural": "hypotheses"},
+          {"singular": "index", "plural": "indexes (of a book) or indices (in mathematics, statistics)"},
+          {"singular": "matrix", "plural": "matrices"},
+          {"singular": "medium", "plural": "mediums or media (check dictionary for plural form to use in a given context)"},
+          {"singular": "memorandum", "plural": "memorandums (or memoranda)"},
+          {"singular": "nucleus", "plural": "nuclei"},
+          {"singular": "parenthesis", "plural": "parentheses"},
+          {"singular": "phenomenon", "plural": "phenomena"},
+          {"singular": "plateau", "plural": "plateaus"},
+          {"singular": "surplus", "plural": "surpluses"},
+          {"singular": "symposium", "plural": "symposiums (or symposia)"}
+        ],
+        "note": "Many other English words form their plurals irregularly, including some of those ending in y, o, f and ft."
+      }
+    }
+  ]
+}
