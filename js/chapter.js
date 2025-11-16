@@ -435,6 +435,22 @@ function buildSectionHTML(section) {
                                 </ul>
                             </div>
                         ` : ''}
+                        ${rule.lowercase && Array.isArray(rule.lowercase) ? `
+                            <div class="lowercase-section">
+                                <h4>Lowercase:</h4>
+                                <ul>
+                                    ${rule.lowercase.map(ex => `<li>${ex}</li>`).join('')}
+                                </ul>
+                            </div>
+                        ` : ''}
+                        ${rule.capitalized && Array.isArray(rule.capitalized) ? `
+                            <div class="capitalized-section">
+                                <h4>Capitalized:</h4>
+                                <ul>
+                                    ${rule.capitalized.map(ex => `<li>${ex}</li>`).join('')}
+                                </ul>
+                            </div>
+                        ` : ''}
                         ${rule.capitalizedExamples && typeof rule.capitalizedExamples === 'object' && rule.capitalizedExamples.text ? `
                             <div class="capitalized-examples">
                                 <p><strong>${rule.capitalizedExamples.text}</strong></p>
@@ -471,35 +487,35 @@ function buildSectionHTML(section) {
     
     // === NEW: mainRule (Chapter 4.04, 4.10 style - object with text and examples) ===
     if (content.mainRule && typeof content.mainRule === 'object') {
-        html += `
-            <div class="main-rule-section">
-                ${content.mainRule.text ? `<p>${content.mainRule.text}</p>` : ''}
-                ${content.mainRule.explanation ? `<p class="explanation">${content.mainRule.explanation}</p>` : ''}
-                ${content.mainRule.examples && Array.isArray(content.mainRule.examples) ? `
-                    <div class="examples-section">
-                        <h4>Examples</h4>
-                        <ul>
-                            ${content.mainRule.examples.map(ex => `<li>${ex}</li>`).join('')}
-                        </ul>
-                    </div>
-                ` : ''}
-                ${content.mainRule.capitalized && Array.isArray(content.mainRule.capitalized) ? `
-                    <div class="capitalized-section">
-                        <h4>Capitalized:</h4>
-                        <ul>
-                            ${content.mainRule.capitalized.map(ex => `<li>${ex}</li>`).join('')}
-                        </ul>
-                    </div>
-                ` : ''}
-                ${content.mainRule.lowercase && Array.isArray(content.mainRule.lowercase) ? `
-                    <div class="lowercase-section">
-                        <h4>Lowercase:</h4>
-                        <ul>
-                            ${content.mainRule.lowercase.map(ex => `<li>${ex}</li>`).join('')}
-                        </ul>
-                    </div>
-                ` : ''}
-            </div>
+    html += `
+        <div class="main-rule-section">
+            ${content.mainRule.text ? `<p>${content.mainRule.text}</p>` : ''}
+            ${content.mainRule.explanation ? `<p class="explanation">${content.mainRule.explanation}</p>` : ''}
+            ${content.mainRule.examples && Array.isArray(content.mainRule.examples) ? `
+                <div class="examples-section">
+                    <h4>Examples</h4>
+                    <ul>
+                        ${content.mainRule.examples.map(ex => `<li>${ex}</li>`).join('')}
+                    </ul>
+                </div>
+            ` : ''}
+            ${content.mainRule.capitalized && Array.isArray(content.mainRule.capitalized) ? `
+                <div class="capitalized-section">
+                    <h4>Capitalized:</h4>
+                    <ul>
+                        ${content.mainRule.capitalized.map(ex => `<li>${ex}</li>`).join('')}
+                    </ul>
+                </div>
+            ` : ''}
+            ${content.mainRule.lowercase && Array.isArray(content.mainRule.lowercase) ? `
+                <div class="lowercase-section">
+                    <h4>Lowercase:</h4>
+                    <ul>
+                        ${content.mainRule.lowercase.map(ex => `<li>${ex}</li>`).join('')}
+                    </ul>
+                </div>
+            ` : ''}
+        </div>
         `;
     }
     
