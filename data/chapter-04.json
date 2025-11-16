@@ -189,6 +189,430 @@
           }
         ]
       }
+    },
+    {
+      "id": "4.04",
+      "title": "Words derived from proper nouns",
+      "content": {
+        "mainRule": {
+          "text": "As a general rule, capitalize an adjective derived from a proper noun or a name used adjectivally:",
+          "examples": [
+            "Canadian whisky",
+            "Franciscan friar",
+            "Digby chicken",
+            "Newtonian physics"
+          ],
+          "explanation": "Proper adjectives are associated with the person or place from whose name they are derived."
+        },
+        "remoteAssociation": {
+          "title": "When association is remote",
+          "text": "When this association is remote, the adjective becomes common and in most cases no longer takes a capital, as illustrated below:",
+          "examples": [
+            "bohemian lifestyle",
+            "manila envelope",
+            "chinaware",
+            "platonic relationship"
+          ]
+        },
+        "verbs": {
+          "title": "Verbs derived from proper nouns",
+          "text": "Verbs derived from proper nouns are also capitalized unless their association with the proper noun is remote:",
+          "capitalized": [
+            "Anglicize",
+            "Russianize"
+          ],
+          "lowercase": [
+            "italicize",
+            "vulcanize"
+          ]
+        },
+        "warning": {
+          "type": "important",
+          "text": "Check proper noun derivatives carefully, however. Usage in this regard is not standardized."
+        }
+      }
+    },
+    {
+      "id": "4.05",
+      "title": "Governments and government bodies",
+      "content": {
+        "rules": [
+          {
+            "letter": "a",
+            "title": "Official titles to capitalize",
+            "text": "Capitalize the titles of international, national, provincial, state, regional and local governments; the titles of government departments and agencies and their organizational subdivisions; the names of boards, committees and royal commissions; and the Crown when it means the supreme governing authority:",
+            "examples": [
+              "the United Nations",
+              "the Government of Canada",
+              "the Parliament of Canada",
+              "the House of Commons",
+              "the Senate of Canada",
+              "the Public Service Commission",
+              "the Department of Citizenship and Immigration",
+              "the Public Affairs Section",
+              "the Federal Cultural Policy Review Committee",
+              "the Royal Commission on National Development in the Arts, Letters and Sciences"
+            ],
+            "note": "Note that both the legal title and the applied title of a federal department are capitalized:",
+            "titleExamples": [
+              "Department of the Environment = Environment Canada"
+            ]
+          },
+          {
+            "letter": "b",
+            "title": "Short forms - when to use lowercase",
+            "text": "It is in the use of short forms that the greatest uncertainty arises. Short forms are normally written in lower case when used in a non-specific sense, when preceded by a possessive, demonstrative or other type of adjective, and when used adjectivally or in an adjectival form:",
+            "lowercaseExamples": [
+              "We have formed a committee to study the matter.",
+              "Our section held its monthly meeting yesterday.",
+              "This division has 60 employees.",
+              "The Canadian (federal, provincial, present) government has issued a policy statement.",
+              "An interpretation of the departmental rules and regulations is required.",
+              "The question of parliamentary procedure was raised.",
+              "Unfortunately division practice proscribes such an approach.",
+              "The decision was based on government (governmental) policy."
+            ],
+            "capitalizedExamples": {
+              "text": "However, when short forms of government bodies stand for the full title and are intended to carry its full force, they are usually capitalized. This style is almost always used in in-house documents:",
+              "examples": [
+                "The Government has adjourned for the summer.",
+                "The Minister's message was circulated throughout the Department"
+              ]
+            },
+            "adjectivalUse": {
+              "text": "If the short title is a specific term which the organization shares with no other body within the government concerned, that title retains the upper case when used adjectivally:",
+              "examples": [
+                "the question of Senate reform",
+                "some House committees"
+              ]
+            }
+          },
+          {
+            "letter": "c",
+            "title": "The word 'Government'",
+            "text": "The word Government is capitalized when it refers to the political apparatus of a party in power. It is lower-cased when it refers in a general way to the offices and agencies that carry out the functions of governing:",
+            "capitalized": "The Liberal Government introduced this measure.",
+            "lowercase": "It is government policy not to discuss matters before the courts."
+          },
+          {
+            "letter": "d",
+            "title": "Plural forms",
+            "text": "Do not capitalize the plural forms of government, department, division, etc., even when the full titles of the bodies concerned are given:",
+            "examples": [
+              "Representatives from the departments of Finance, National Defence and Natural Resources were present."
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "4.06",
+      "title": "Institutions",
+      "content": {
+        "rules": [
+          {
+            "letter": "a",
+            "title": "Official names",
+            "text": "Capitalize the official names of organized churches (religious denominations, sects, orders) and their adherents, universities, school boards, schools, courts of law, clubs, corporations, unions, alliances, associations, political parties, etc.:",
+            "examples": [
+              "the Carleton School Board",
+              "Lisgar Collegiate Institute",
+              "the Supreme Court of Canada",
+              "the Quebec Superior Court",
+              "the International Court of Justice",
+              "the Opposition (official)",
+              "the Rotary Club",
+              "Canadian Airlines International",
+              "the Canadian Medical Association",
+              "the New Democratic Party",
+              "the University of Manitoba",
+              "the First Baptist Church"
+            ],
+            "note": "The official capitalization is that used by the institution itself."
+          },
+          {
+            "letter": "b",
+            "title": "Administrative subdivisions",
+            "text": "The names of administrative subdivisions of these institutions are also capitalized:",
+            "examples": [
+              "the Department of Political Science",
+              "the Toronto Synod"
+            ]
+          },
+          {
+            "letter": "c",
+            "title": "Generic short forms in corporate writing",
+            "text": "A generic noun used as a short form of a title is often capitalized, especially in corporate writing:",
+            "examples": [
+              "the Institute",
+              "the Board",
+              "the Party"
+            ]
+          },
+          {
+            "letter": "d",
+            "title": "Specifying element only",
+            "text": "Capitalize short forms that use only the specifying element:",
+            "examples": [
+              "This afternoon, Concordia and Western will play in the final."
+            ]
+          },
+          {
+            "letter": "e",
+            "title": "When NOT to capitalize generic short forms",
+            "text": "Do not capitalize generic short forms used in a non-specific sense, preceded by a possessive, demonstrative or other type of adjective, or used adjectivally or in an adjectival form:",
+            "examples": [
+              "The university is our town's major employer.",
+              "Our family attended a Baptist church regularly.",
+              "She tries to attend all board meetings.",
+              "Only strict adherence to the party line was tolerated.",
+              "Every board of education in the province has adjourned for the season."
+            ]
+          },
+          {
+            "letter": "f",
+            "title": "Specific, unique institutions",
+            "text": "But, if the short form refers to a specific, unique institution, it retains the upper case when used as a noun or adjectivally:",
+            "examples": [
+              "The Scouts held a rally over the weekend.",
+              "A city-wide Red Cross blood drive replenished the hospital's supply."
+            ]
+          },
+          {
+            "letter": "g",
+            "title": "Internal documents",
+            "text": "Documents intended for an internal readership often capitalize terms that would be lower-cased in writings of a general nature:",
+            "examples": [
+              "He worked for the Company for almost forty years.",
+              "The document was forwarded to the Regional Office."
+            ]
+          },
+          {
+            "letter": "h",
+            "title": "Subsequent references",
+            "text": "In second and subsequent references, short forms may be treated generically and lower-cased:",
+            "examples": [
+              "He was invited to address the Second Annual Conference on Biotechnology but declined because the conference was not sufficiently broad in scope.",
+              "She applied for a grant under the External Scholars Program, but only graduate students were eligible under the program."
+            ]
+          },
+          {
+            "letter": "i",
+            "title": "Plural forms",
+            "text": "Do not capitalize the plural of common nouns, even when the full titles of the bodies concerned are given:",
+            "examples": [
+              "He held degrees from the universities of Saskatchewan and Toronto.",
+              "Candidates for the Liberal and Progressive Conservative parties attended the rally."
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "4.07",
+      "title": "Political parties and movements",
+      "content": {
+        "mainRules": [
+          {
+            "title": "Specific parties and movements",
+            "text": "Adjectives and nouns referring to the ideas, actions, documents and members of specific political parties, movements and groups are capitalized. Capitalization often helps distinguish these terms from the same words used descriptively:",
+            "capitalized": [
+              "a Liberal policy paper (of the Liberal government or party)",
+              "New Democrats",
+              "a Progressive Conservative government (refers to the Progressive Conservative Party)"
+            ],
+            "lowercase": [
+              "the liberal arts",
+              "a conservative on moral issues"
+            ]
+          },
+          {
+            "title": "The word 'party'",
+            "text": "Capitalize the word party when it is preceded by the official name of a political party, unless it is used as a generic term:",
+            "capitalized": "He was a member of the Social Democratic Party.",
+            "lowercase": "A new agrarian party was founded at the rally."
+          },
+          {
+            "title": "General terms for movements",
+            "text": "General terms describing political movements and their adherents are lower-cased unless they are derived from proper nouns:",
+            "lowercase": [
+              "fascism",
+              "democracy"
+            ],
+            "capitalized": [
+              "Marxist",
+              "Thatcherite"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "4.08",
+      "title": "Titles of office or rank",
+      "content": {
+        "rules": [
+          {
+            "letter": "a",
+            "title": "Titles preceding names",
+            "text": "Capitalize civil, military, religious and professional titles and titles of nobility when they precede and form part of a personal name:",
+            "examples": [
+              "Queen Elizabeth II",
+              "Pope John Paul II",
+              "Lord Carrington",
+              "Prime Minister Chrétien",
+              "Finance Minister Paul Martin",
+              "Professor Layton",
+              "General de Chastelain",
+              "President Clinton",
+              "Archbishop Gervais"
+            ]
+          },
+          {
+            "letter": "b",
+            "title": "Titles in apposition",
+            "text": "Capitalize all titles following and placed in apposition to a personal name, except those denoting professions:",
+            "capitalized": [
+              "Clara Smith, Director of Public Affairs",
+              "Ron Irwin, Minister of Indian Affairs and Northern Development"
+            ],
+            "lowercase": [
+              "Jane Tanaka, professor of physics"
+            ]
+          },
+          {
+            "letter": "c",
+            "title": "Titles as substitute for names",
+            "text": "Capitalize a title referring to a specific person and used as a substitute for that person's name, even if it is a short form:",
+            "examples": [
+              "the President of the Treasury Board",
+              "the Chief, Public Affairs Section",
+              "the Leader of the Opposition",
+              "According to the Assistant Deputy Minister, this is a unique agreement.",
+              "They discussed the matter with the Colonel.",
+              "The Archbishop made no further comment."
+            ]
+          },
+          {
+            "letter": "d",
+            "title": "Titles in plural or with indefinite article",
+            "text": "Do not capitalize spelled-out titles in the plural or titles preceded by an indefinite article:",
+            "lowercase": [
+              "the lieutenant-governors of Quebec and Ontario",
+              "a member of Parliament"
+            ],
+            "exception": "the Member for Winnipeg North Centre"
+          },
+          {
+            "letter": "e",
+            "title": "Abbreviated titles in plural",
+            "text": "Capitalize abbreviated titles in the plural:",
+            "examples": [
+              "We met Profs. Sami and Nicolet."
+            ]
+          },
+          {
+            "letter": "f",
+            "title": "Modified titles",
+            "text": "Do not capitalize titles modified by a possessive or other type of adjective, or by an indefinite article:",
+            "examples": [
+              "They discussed it with their colonel.",
+              "They discussed it with the former ambassador.",
+              "They discussed it with the Canadian prime minister.",
+              "They discussed it with a member of Parliament."
+            ]
+          },
+          {
+            "letter": "g",
+            "title": "Title vs. role",
+            "text": "Capitalize titles only when they refer to a specific person; do not capitalize a term that refers to a role rather than a person:",
+            "examples": [
+              "As prime minister [that is, while occupying a certain position], Lester Pearson introduced the new Canadian flag.",
+              "The production manager [any person who occupies that position] assigns schedules."
+            ]
+          },
+          {
+            "letter": "h",
+            "title": "Occupational titles",
+            "text": "Occupational titles used descriptively are normally followed by a complete personal name. They should not be capitalized in writing for general readers, although corporate requirements and the expectations of a specialized readership often result in a more liberal use of capital letters:",
+            "examples": [
+              "manager Cito Gaston",
+              "production superintendent Anna Chang",
+              "technical writer John Upton"
+            ]
+          },
+          {
+            "letter": "i",
+            "title": "Adjectives from titles",
+            "text": "Do not capitalize adjectives derived from titles unless they are part of a title:",
+            "lowercase": [
+              "episcopal",
+              "papal",
+              "ministerial correspondence",
+              "presidential prerogative"
+            ],
+            "capitalized": [
+              "Rabbinical College of Telshe"
+            ]
+          },
+          {
+            "letter": "j",
+            "title": "Titles of respect",
+            "text": "Capitalize titles of respect and forms of address, even when used in the plural:",
+            "examples": [
+              "Your Honour",
+              "Mr. Chairman",
+              "Your Grace",
+              "Their Royal Highnesses",
+              "Your Excellencies",
+              "Her Worship"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "4.09",
+      "title": "Personifications and abstractions",
+      "content": {
+        "personifications": {
+          "title": "Vivid personifications",
+          "text": "Capitalize vivid personifications and metonymic nouns:",
+          "examples": [
+            "the march of Time",
+            "Fate's fool",
+            "the Chair (the person in charge of a meeting or assembly)",
+            "the Crown (the person or agency representing a king or queen)"
+          ]
+        },
+        "abstractions": {
+          "title": "Abstractions in ideal sense",
+          "text": "Abstractions are sometimes capitalized when used in an ideal sense. As general concepts, however, they are lower-cased:",
+          "capitalized": [
+            "We know that Justice is blind.",
+            "Beauty is truth, truth beauty—that is all / Ye know on earth, and all ye need to know. —John Keats"
+          ]
+        }
+      }
+    },
+    {
+      "id": "4.10",
+      "title": "Family appellations",
+      "content": {
+        "mainRule": {
+          "text": "Capitalize family appellations only when the name of a person follows, when they are unmodified, or when they are used in direct address:",
+          "capitalized": [
+            "Grandmother Smith",
+            "Aunt Sarah",
+            "I met Mother at the theatre.",
+            "Tell me, Son, where you have been."
+          ],
+          "lowercase": [
+            "John's grandmother",
+            "This is my aunt, Sarah Vick."
+          ]
+        }
+      }
     }
   ]
 }
