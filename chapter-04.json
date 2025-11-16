@@ -1,0 +1,194 @@
+{
+  "chapterNumber": 4,
+  "title": "Capitalization",
+  "description": "Rules for proper capitalization in Canadian English",
+  "category": "basics",
+  "sections": [
+    {
+      "id": "4.01",
+      "title": "Introduction",
+      "content": {
+        "mainText": "Capital letters have three basic uses, of which nearly all others may be regarded as particular cases: (1) to give emphasis, as in official titles and initial words; (2) to distinguish proper nouns and adjectives from common ones; and (3) to highlight words in headings and captions.",
+        "explanation": "In English the first letter of certain words is capitalized to give emphasis and to clarify sentence structure and meaning for the reader. This chapter gives rules to define which words require capitals, but editorial practice varies considerably on this subject, depending on the desired degree of formality, the intended readership and the organization's house style.",
+        "keyPrinciple": {
+          "title": "Consistency and Reference",
+          "content": "In order to ensure consistency in your own style, follow the rules below, which apply to most general types of writing, and consult the Gage Canadian Dictionary, which gives the upper-case use of many words. Capitalization in specialized documents should be based on professional style guides."
+        }
+      }
+    },
+    {
+      "id": "4.02",
+      "title": "Initial words",
+      "content": {
+        "rules": [
+          {
+            "letter": "a",
+            "title": "First word of sentence",
+            "text": "Capitalize the first word of a sentence or sentence equivalent:",
+            "examples": [
+              "There are no other constraints.",
+              "Come.",
+              "What a pity!",
+              "Where?",
+              "Exit",
+              "All rights reserved"
+            ]
+          },
+          {
+            "letter": "b",
+            "title": "Direct quotations",
+            "text": "Capitalize the first word of a direct quotation that is itself a complete sentence:",
+            "examples": [
+              "The candidates said, \"We are in favour of a free vote on the death penalty.\""
+            ],
+            "note": "Do not use the upper case if the quotation is merely a sentence fragment or is worked into the structure of the sentence:",
+            "counterExamples": [
+              "The candidates said that they were \"in favour of a free vote on the death penalty.\""
+            ],
+            "additionalNote": "In quotations where historical, legal, documentary or scientific accuracy is crucial, reproduce upper-case letters as faithfully as possible. For more detailed information on quotations, see Chapter 8."
+          },
+          {
+            "letter": "c",
+            "title": "Sentences in parentheses",
+            "text": "Capitalize the first word of a complete sentence enclosed in parentheses when it stands alone, but not when it is enclosed within another sentence:",
+            "examples": [
+              "The speaker concluded by citing facts and figures to support her contention. (Details may be found on p. 37.)"
+            ],
+            "but": [
+              "The increasing scarcity of the species is attributable to overfishing (statistics will be found in the appendix), to acid rain and to other factors outlined in the report."
+            ]
+          },
+          {
+            "letter": "d",
+            "title": "Direct questions within sentences",
+            "text": "Capitalize the first word of a direct question within a sentence:",
+            "examples": [
+              "The question to be asked in every case is this: Does the writer express himself or herself clearly?"
+            ],
+            "note": "Consistently capitalize (or lower-case) parallel sentence fragments used as questions:",
+            "parallelExamples": [
+              "Will farmers be taxed under this plan? Lumberjacks? Trappers?",
+              "Will farmers be taxed under this plan? lumberjacks? trappers?"
+            ],
+            "warningText": "Do not capitalize words that normally introduce questions (who, why, when, how) when they stand alone as a verb complement:",
+            "warningExample": "He knew he had to meet the deadline. The question was how."
+          },
+          {
+            "letter": "e",
+            "title": "After a colon",
+            "text": "Capitalize the first word after a colon if it begins a direct question (see 4.02(d) above) or a formal statement, introduces a distinct idea, or is followed by more than one sentence:",
+            "examples": [
+              "There are several possibilities: For example, the Director General might resign.",
+              "The jury finds as follows: The defendant is guilty as charged on all counts.",
+              "Our position is clear: We will not permit new landfill sites in our region.",
+              "In conclusion, I answer the question asked at the outset: Revenues will be greater this year than in the past three years. However, they will not match expenditures."
+            ],
+            "note": "See Chapter 7 for further information on use of the colon."
+          },
+          {
+            "letter": "f",
+            "title": "After question mark or exclamation mark",
+            "text": "The word following a question mark or exclamation mark may or may not be capitalized, depending on how closely the material it introduces is considered to be related to what precedes:",
+            "examples": [
+              "What a piece of work is man! how noble in reason! how infinite in faculty!",
+              "Progress where? or, even more fundamentally, progress for whom?",
+              "What factors contributed to the decline of Rome? Did the barbarian invasions play a significant part?"
+            ]
+          },
+          {
+            "letter": "g",
+            "title": "Truisms and mottoes",
+            "text": "Capitalize the first words of truisms and mottoes run into text:",
+            "examples": [
+              "His watchword was Learn to write well, or not to write at all.",
+              "Her motto in life is Do unto others ... before they do unto you."
+            ]
+          },
+          {
+            "letter": "h",
+            "title": "I and O",
+            "text": "The personal pronoun I and the vocative O are always capitalized in English; oh is capitalized only when it begins a sentence or stands alone."
+          },
+          {
+            "letter": "i",
+            "title": "Poetry",
+            "text": "The first word of a line of poetry is traditionally capitalized, but some modern poets do not follow this practice. It is therefore best to check the original and respect the poet's preference."
+          }
+        ]
+      }
+    },
+    {
+      "id": "4.03",
+      "title": "Personal names",
+      "content": {
+        "rules": [
+          {
+            "letter": "a",
+            "title": "Proper nouns and epithets",
+            "text": "Capitalize proper nouns and epithets that accompany or replace them:",
+            "examples": [
+              "John Diefenbaker",
+              "Margaret Thatcher",
+              "Peter the Great",
+              "the Sun King"
+            ]
+          },
+          {
+            "letter": "b",
+            "title": "O' names",
+            "text": "When O' forms part of a proper noun, it and the first letter after the apostrophe are capitalized:",
+            "examples": [
+              "O'Brien",
+              "O'Malley"
+            ]
+          },
+          {
+            "letter": "c",
+            "title": "Mc and Mac names",
+            "text": "When the particle Mc or Mac forms part of a name, the letter M is capitalized. Capitalization and spacing of the letters that follow may differ and individual preferences should be respected:",
+            "examples": [
+              "McDonald or MacDonald or Mac Donald or Macdonald"
+            ]
+          },
+          {
+            "letter": "d",
+            "title": "Articles and particles in names",
+            "text": "Individual preferences regarding the capitalization and spacing of articles and particles in French or foreign names should also be respected when they can be ascertained. The following are correct forms:",
+            "examples": [
+              "Walter de la Mare",
+              "John Dos Passos",
+              "Pierre de Savoye",
+              "Ethel Vandenberg",
+              "Cornelius Van Horne",
+              "Paul DeVillers"
+            ]
+          },
+          {
+            "letter": "e",
+            "title": "Historical figures",
+            "text": "In the case of historical figures, treatment in English may differ from that in the original language, and no real standard appears to exist. Consistency in treating a particular name (such as Leonardo da Vinci, Luca della Robbia or Vincent van Gogh) is all that can be aimed for. In some cases, the most familiar form of the name omits the particle entirely:",
+            "examples": [
+              "Beethoven (Ludwig van Beethoven)",
+              "Torquemada (Tomás de Torquemada)"
+            ],
+            "note": "The Anglo-American Cataloguing Rules is an excellent source of such information."
+          },
+          {
+            "letter": "f",
+            "title": "Nicknames and personifications",
+            "text": "Capitalize a nickname (a word or phrase used as part of, or instead of, a personal name). Similarly, capitalize names of fictitious or anonymous persons, and names used as personifications:",
+            "examples": [
+              "the Chief",
+              "the Rocket",
+              "the Iron Lady",
+              "Johnny Canuck",
+              "Paul Bunyan",
+              "the Caped Crusader",
+              "John Bull"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
