@@ -2,6 +2,7 @@
 // Canadian Style Learner - Chapter.js
 // Updated to load content from JSON files
 // FIXED: Handles complex abbreviations and examples correctly
+// FIXED: Added handlers for Chapter 4 structures (mainRule, mainRules, personifications, abstractions, verbs, warning)
 // ===================================
 
 // Chapter data - will be loaded from JSON
@@ -145,6 +146,16 @@ function buildSectionHTML(section) {
         html += `<p>${content.text}</p>`;
     }
     
+    // === NEW: mainText (Chapter 4 style) ===
+    if (content.mainText) {
+        html += `<p>${content.mainText}</p>`;
+    }
+    
+    // === NEW: explanation (Chapter 4 style) ===
+    if (content.explanation) {
+        html += `<p>${content.explanation}</p>`;
+    }
+    
     // Key Principle box
     if (content.keyPrinciple) {
         html += `
@@ -265,21 +276,21 @@ function buildSectionHTML(section) {
     }
 
     // === Words list (for frequently misspelled words - Section 3.03) ===
-if (content.words && Array.isArray(content.words)) {
-    html += `
-        <div class="words-section">
-            <div class="words-grid">
-    `;
-    
-    content.words.forEach(word => {
-        html += `<div class="word-item">${word}</div>`;
-    });
-    
-    html += `
+    if (content.words && Array.isArray(content.words)) {
+        html += `
+            <div class="words-section">
+                <div class="words-grid">
+        `;
+        
+        content.words.forEach(word => {
+            html += `<div class="word-item">${word}</div>`;
+        });
+        
+        html += `
+                </div>
             </div>
-        </div>
-    `;
-}
+        `;
+    }
     
     // === FIXED: Examples list (handles complex objects with base/derived) ===
     if (content.examples && Array.isArray(content.examples)) {
@@ -366,9 +377,24 @@ if (content.words && Array.isArray(content.words)) {
             content.rules.forEach(rule => {
                 html += `
                     <div class="rule-section">
-                        <h4>${rule.title || ''}</h4>
-                        <p>${rule.text || ''}</p>
-                        ${rule.examples ? `
+                        ${rule.letter ? `<h4>${rule.letter})</h4>` : ''}
+                        ${rule.title ? `<h4>${rule.title}</h4>` : ''}
+                        ${rule.text ? `<p>${rule.text}</p>` : ''}
+                        ${rule.note ? `<p class="note"><em>Note: ${rule.note}</em></p>` : ''}
+                        ${rule.additionalNote ? `<p class="note"><em>${rule.additionalNote}</em></p>` : ''}
+                        ${rule.warningText ? `<p class="warning-text"><strong>Warning:</strong> ${rule.warningText}</p>` : ''}
+                        ${rule.warningExample ? `<p class="example-text"><em>${rule.warningExample}</em></p>` : ''}
+                        ${rule.capitalized && typeof rule.capitalized === 'string' ? `<p><strong>Capitalized:</strong> ${rule.capitalized}</p>` : ''}
+                        ${rule.lowercase && typeof rule.lowercase === 'string' ? `<p><strong>Lowercase:</strong> ${rule.lowercase}</p>` : ''}
+                        ${rule.but && Array.isArray(rule.but) ? `
+                            <div class="but-section">
+                                <p><strong>But:</strong></p>
+                                <ul>
+                                    ${rule.but.map(item => `<li>${item}</li>`).join('')}
+                                </ul>
+                            </div>
+                        ` : ''}
+                        ${rule.examples && Array.isArray(rule.examples) ? `
                             <div class="examples-grid">
                                 ${rule.examples.map(ex => {
                                     let exText = '';
@@ -387,10 +413,212 @@ if (content.words && Array.isArray(content.words)) {
                                 }).join('')}
                             </div>
                         ` : ''}
+                        ${rule.counterExamples && Array.isArray(rule.counterExamples) ? `
+                            <div class="counter-examples">
+                                <ul>
+                                    ${rule.counterExamples.map(ex => `<li>${ex}</li>`).join('')}
+                                </ul>
+                            </div>
+                        ` : ''}
+                        ${rule.parallelExamples && Array.isArray(rule.parallelExamples) ? `
+                            <div class="parallel-examples">
+                                <ul>
+                                    ${rule.parallelExamples.map(ex => `<li>${ex}</li>`).join('')}
+                                </ul>
+                            </div>
+                        ` : ''}
+                        ${rule.lowercaseExamples && Array.isArray(rule.lowercaseExamples) ? `
+                            <div class="lowercase-examples">
+                                <p><strong>Lowercase examples:</strong></p>
+                                <ul>
+                                    ${rule.lowercaseExamples.map(ex => `<li>${ex}</li>`).join('')}
+                                </ul>
+                            </div>
+                        ` : ''}
+                        ${rule.capitalizedExamples && typeof rule.capitalizedExamples === 'object' && rule.capitalizedExamples.text ? `
+                            <div class="capitalized-examples">
+                                <p><strong>${rule.capitalizedExamples.text}</strong></p>
+                                ${rule.capitalizedExamples.examples && Array.isArray(rule.capitalizedExamples.examples) ? `
+                                    <ul>
+                                        ${rule.capitalizedExamples.examples.map(ex => `<li>${ex}</li>`).join('')}
+                                    </ul>
+                                ` : ''}
+                            </div>
+                        ` : ''}
+                        ${rule.adjectivalUse && typeof rule.adjectivalUse === 'object' ? `
+                            <div class="adjectival-use">
+                                <p>${rule.adjectivalUse.text}</p>
+                                ${rule.adjectivalUse.examples && Array.isArray(rule.adjectivalUse.examples) ? `
+                                    <ul>
+                                        ${rule.adjectivalUse.examples.map(ex => `<li>${ex}</li>`).join('')}
+                                    </ul>
+                                ` : ''}
+                            </div>
+                        ` : ''}
+                        ${rule.titleExamples && Array.isArray(rule.titleExamples) ? `
+                            <ul>
+                                ${rule.titleExamples.map(ex => `<li>${ex}</li>`).join('')}
+                            </ul>
+                        ` : ''}
+                        ${rule.exception && typeof rule.exception === 'string' ? `
+                            <p class="exception"><strong>Exception:</strong> ${rule.exception}</p>
+                        ` : ''}
                     </div>
                 `;
             });
         }
+    }
+    
+    // === NEW: mainRule (Chapter 4.04, 4.10 style - object with text and examples) ===
+    if (content.mainRule && typeof content.mainRule === 'object') {
+        html += `
+            <div class="main-rule-section">
+                ${content.mainRule.text ? `<p>${content.mainRule.text}</p>` : ''}
+                ${content.mainRule.explanation ? `<p class="explanation">${content.mainRule.explanation}</p>` : ''}
+                ${content.mainRule.examples && Array.isArray(content.mainRule.examples) ? `
+                    <div class="examples-section">
+                        <h4>Examples</h4>
+                        <ul>
+                            ${content.mainRule.examples.map(ex => `<li>${ex}</li>`).join('')}
+                        </ul>
+                    </div>
+                ` : ''}
+                ${content.mainRule.capitalized && Array.isArray(content.mainRule.capitalized) ? `
+                    <div class="capitalized-section">
+                        <h4>Capitalized:</h4>
+                        <ul>
+                            ${content.mainRule.capitalized.map(ex => `<li>${ex}</li>`).join('')}
+                        </ul>
+                    </div>
+                ` : ''}
+                ${content.mainRule.lowercase && Array.isArray(content.mainRule.lowercase) ? `
+                    <div class="lowercase-section">
+                        <h4>Lowercase:</h4>
+                        <ul>
+                            ${content.mainRule.lowercase.map(ex => `<li>${ex}</li>`).join('')}
+                        </ul>
+                    </div>
+                ` : ''}
+            </div>
+        `;
+    }
+    
+    // === NEW: mainRules (Chapter 4.07 style - array of rule objects) ===
+    if (content.mainRules && Array.isArray(content.mainRules)) {
+        content.mainRules.forEach(mainRule => {
+            html += `
+                <div class="main-rule-section">
+                    ${mainRule.title ? `<h4>${mainRule.title}</h4>` : ''}
+                    ${mainRule.text ? `<p>${mainRule.text}</p>` : ''}
+                    ${mainRule.capitalized && Array.isArray(mainRule.capitalized) ? `
+                        <div class="capitalized-section">
+                            <h4>Capitalized:</h4>
+                            <ul>
+                                ${mainRule.capitalized.map(ex => `<li>${ex}</li>`).join('')}
+                            </ul>
+                        </div>
+                    ` : ''}
+                    ${mainRule.lowercase && Array.isArray(mainRule.lowercase) ? `
+                        <div class="lowercase-section">
+                            <h4>Lowercase:</h4>
+                            <ul>
+                                ${mainRule.lowercase.map(ex => `<li>${ex}</li>`).join('')}
+                            </ul>
+                        </div>
+                    ` : ''}
+                    ${mainRule.capitalized && typeof mainRule.capitalized === 'string' ? `
+                        <p><strong>Capitalized:</strong> ${mainRule.capitalized}</p>
+                    ` : ''}
+                    ${mainRule.lowercase && typeof mainRule.lowercase === 'string' ? `
+                        <p><strong>Lowercase:</strong> ${mainRule.lowercase}</p>
+                    ` : ''}
+                </div>
+            `;
+        });
+    }
+    
+    // === NEW: remoteAssociation (Chapter 4.04 style) ===
+    if (content.remoteAssociation && typeof content.remoteAssociation === 'object') {
+        html += `
+            <div class="remote-association-section">
+                ${content.remoteAssociation.title ? `<h4>${content.remoteAssociation.title}</h4>` : ''}
+                ${content.remoteAssociation.text ? `<p>${content.remoteAssociation.text}</p>` : ''}
+                ${content.remoteAssociation.examples && Array.isArray(content.remoteAssociation.examples) ? `
+                    <ul>
+                        ${content.remoteAssociation.examples.map(ex => `<li>${ex}</li>`).join('')}
+                    </ul>
+                ` : ''}
+            </div>
+        `;
+    }
+    
+    // === NEW: verbs (Chapter 4.04 style - object with capitalized and lowercase arrays) ===
+    if (content.verbs && typeof content.verbs === 'object') {
+        html += `
+            <div class="verbs-section">
+                ${content.verbs.title ? `<h4>${content.verbs.title}</h4>` : ''}
+                ${content.verbs.text ? `<p>${content.verbs.text}</p>` : ''}
+                ${content.verbs.capitalized && Array.isArray(content.verbs.capitalized) ? `
+                    <div class="capitalized-verbs">
+                        <h5>Capitalized:</h5>
+                        <ul>
+                            ${content.verbs.capitalized.map(verb => `<li>${verb}</li>`).join('')}
+                        </ul>
+                    </div>
+                ` : ''}
+                ${content.verbs.lowercase && Array.isArray(content.verbs.lowercase) ? `
+                    <div class="lowercase-verbs">
+                        <h5>Lowercase:</h5>
+                        <ul>
+                            ${content.verbs.lowercase.map(verb => `<li>${verb}</li>`).join('')}
+                        </ul>
+                    </div>
+                ` : ''}
+            </div>
+        `;
+    }
+    
+    // === NEW: warning (Chapter 4.04 style - standalone warning object) ===
+    if (content.warning && typeof content.warning === 'object') {
+        html += `
+            <div class="warning-box">
+                <h4>⚠ ${content.warning.type || 'Warning'}</h4>
+                ${content.warning.text ? `<p>${content.warning.text}</p>` : ''}
+            </div>
+        `;
+    }
+    
+    // === NEW: personifications (Chapter 4.09 style) ===
+    if (content.personifications && typeof content.personifications === 'object') {
+        html += `
+            <div class="personifications-section">
+                ${content.personifications.title ? `<h4>${content.personifications.title}</h4>` : ''}
+                ${content.personifications.text ? `<p>${content.personifications.text}</p>` : ''}
+                ${content.personifications.examples && Array.isArray(content.personifications.examples) ? `
+                    <ul>
+                        ${content.personifications.examples.map(ex => `<li>${ex}</li>`).join('')}
+                    </ul>
+                ` : ''}
+            </div>
+        `;
+    }
+    
+    // === NEW: abstractions (Chapter 4.09 style) ===
+    if (content.abstractions && typeof content.abstractions === 'object') {
+        html += `
+            <div class="abstractions-section">
+                ${content.abstractions.title ? `<h4>${content.abstractions.title}</h4>` : ''}
+                ${content.abstractions.text ? `<p>${content.abstractions.text}</p>` : ''}
+                ${content.abstractions.capitalized && Array.isArray(content.abstractions.capitalized) ? `
+                    <div class="capitalized-abstractions">
+                        <h5>Capitalized examples:</h5>
+                        <ul>
+                            ${content.abstractions.capitalized.map(ex => `<li>${ex}</li>`).join('')}
+                        </ul>
+                    </div>
+                ` : ''}
+            </div>
+        `;
     }
     
     // === Handle nested rule structures (Chapter 3 spelling rules) ===
