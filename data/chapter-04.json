@@ -614,6 +614,460 @@
           ]
         }
       }
+    },
+    {
+      "id": "4.11",
+      "title": "Races, languages and peoples",
+      "content": {
+        "mainRule": {
+          "text": "Capitalize nouns and adjectives referring to race, tribe, nationality and language:",
+          "examples": [
+            "Caucasian",
+            "Indian",
+            "Inuk (plural: Inuit)",
+            "Francophone",
+            "Métis",
+            "Anglophone",
+            "Amerindian",
+            "Arabic",
+            "Cree",
+            "French"
+          ]
+        },
+        "allophoneRule": {
+          "text": "Do not capitalize the word allophone, which refers to a person whose first language is neither English nor French and which is used with specific reference to Quebec."
+        },
+        "wordVariations": {
+          "title": "Variable forms depending on meaning",
+          "text": "The form of some words may vary depending on the meaning:",
+          "examples": [
+            {
+              "capitalized": "Highlander (inhabitant of the Scottish Highlands)",
+              "lowercase": "highlander (inhabitant of any highland area)"
+            },
+            {
+              "capitalized": "Aborigine (one of the indigenous peoples of Australia)",
+              "lowercase": "aborigine (indigenous inhabitant of a region)"
+            },
+            {
+              "capitalized": "Pygmy (member of a group of African peoples)",
+              "lowercase": "pygmy (small in stature; insignificant)"
+            }
+          ]
+        },
+        "indigenousPeoples": {
+          "title": "Aboriginal peoples terminology",
+          "text": "Capitalize the singular and plural forms of the nouns Status Indian, Registered Indian, Non-Status Indian and Treaty Indian, as well as the terms Aboriginal, Native and Indigenous when they refer to Aboriginal people in Canada.",
+          "note": "The terms Aboriginals and Natives are not used as proper nouns. When Aboriginal, Indigenous and Native are used as adjectives, note the following noun forms:",
+          "examples": [
+            "Aboriginal person (one individual)",
+            "Aboriginal persons, Aboriginal people (more than one person)",
+            "Aboriginal peoples (two or more Aboriginal groups)",
+            "Representatives from three Aboriginal peoples were present.",
+            "Any Native person in Alberta is eligible under this program.",
+            "The conference could not have succeeded without the help of almost a thousand Indigenous people from all over Saskatchewan."
+          ],
+          "referenceNote": "For further information on the representation of Aboriginal (Native) peoples in written communications, see Chapter 14."
+        }
+      }
+    },
+    {
+      "id": "4.12",
+      "title": "School subjects, courses and degrees",
+      "content": {
+        "languagesRule": {
+          "text": "In keeping with 4.11 above, capitalize the names of languages. Do not capitalize the names of other disciplines when used in a general sense. Capitalize them when used to refer to school subjects or the names of particular courses:",
+          "examples": [
+            "This university requires French as a prerequisite.",
+            "She is interested in history.",
+            "He reads articles on economics and biology in his spare time."
+          ],
+          "but": [
+            "He passed with a 'B' in History this term.",
+            "She is taking Chemistry 101 and Economics 406."
+          ]
+        },
+        "degreesRule": {
+          "text": "Do not capitalize the name of a degree in general references, but do capitalize it when it follows a person's name and is written in full:",
+          "examples": [
+            "Janet is earning her master's degree",
+            "Ellen Compton, Doctor of Philosophy",
+            "He holds a Master of Arts degree from McGill University."
+          ]
+        },
+        "academicYears": {
+          "text": "Do not capitalize terms designating academic years:",
+          "examples": [
+            "She held two jobs during her senior year."
+          ]
+        },
+        "gradeRule": {
+          "text": "Capitalize grade when followed by a number or letter:",
+          "examples": [
+            "My daughter has completed Grade 6."
+          ]
+        }
+      }
+    },
+    {
+      "id": "4.13",
+      "title": "Military terms",
+      "content": {
+        "mainRule": {
+          "text": "Capitalize the names and nicknames of military bases, forces and units of all sizes and of exercises:",
+          "examples": [
+            "the Canadian Forces",
+            "Mobile Command",
+            "Canadian Forces Base Trenton",
+            "450 Helicopter Squadron",
+            "Exercise Rapier Thrust",
+            "the Blue Berets"
+          ]
+        },
+        "dndNote": {
+          "title": "Note",
+          "text": "In Department of National Defence documents, the specific part of an exercise name is written entirely in upper case, e.g. Exercise SILENT DEFENDER."
+        },
+        "generalReferences": {
+          "text": "Use the lower case for general and informal references:",
+          "examples": [
+            "the Fifth Army"
+          ],
+          "but": [
+            "the army"
+          ]
+        }
+      }
+    },
+    {
+      "id": "4.14",
+      "title": "Modes of transportation",
+      "content": {
+        "mainRule": {
+          "text": "Capitalize the names of types of aircraft, the names of makes of cars and other modes of transportation, and the names of individual ships, locomotives, spacecraft, etc.:",
+          "examples": [
+            "the Cessna-7",
+            "a Boeing 747",
+            "HMCS Donnacona (italics for the name; roman type for the abbreviation)",
+            "the Bricklin",
+            "Mariner IV"
+          ]
+        },
+        "italicsReference": {
+          "text": "See 6.07 for further information about the italicization of such names."
+        }
+      }
+    },
+    {
+      "id": "4.15",
+      "title": "Medals, awards, honours and decorations",
+      "content": {
+        "mainRule": {
+          "text": "Capitalize the official names of professional, academic and military medals, awards, honours and decorations:",
+          "examples": [
+            "Distinguished Flying Cross",
+            "Order of Canada",
+            "Nobel Peace Prize",
+            "a Nobel Prize winner",
+            "Governor General's Award",
+            "Victoria Cross"
+          ]
+        },
+        "shortForms": {
+          "text": "Most common-noun short forms are lower-cased:",
+          "examples": [
+            "No award was given this year."
+          ],
+          "exception": "However, they may be capitalized if the reference is clear:",
+          "exceptionExample": "The Prize [Nobel Peace Prize, mentioned in a previous sentence] was her reward for a lifetime of effort."
+        }
+      }
+    },
+    {
+      "id": "4.16",
+      "title": "Sporting events and trophies",
+      "content": {
+        "mainRule": {
+          "text": "Capitalize the official and familiar names of major sporting events and trophies:",
+          "examples": [
+            "the Queen's Plate",
+            "the XXVI Olympiad; the Olympic Games",
+            "the Stanley Cup"
+          ]
+        },
+        "shortForms": {
+          "text": "Capitalize the short form in subsequent references:",
+          "examples": [
+            "The second Series game will be played today.",
+            "Her team won the Cup last year as well."
+          ]
+        }
+      }
+    },
+    {
+      "id": "4.17",
+      "title": "Time references and historical periods and events",
+      "content": {
+        "mainRule": {
+          "text": "Capitalize the names of months and days, of holidays and holy days, of historical and geological periods and events, and of parliamentary sessions:",
+          "examples": [
+            "Wednesday",
+            "the Ice Age",
+            "October",
+            "the Second World War",
+            "Thanksgiving Day",
+            "World War II",
+            "Passover",
+            "the Middle Ages",
+            "Christmas",
+            "the Gulf War",
+            "April Fools' Day",
+            "the Pleistocene Epoch",
+            "The First Session of the Thirty-second Parliament"
+          ]
+        },
+        "seasonsAndCenturies": {
+          "text": "Do not capitalize the names of the seasons, centuries or decades unless they are personified or are part of special names:",
+          "lowercase": [
+            "spring",
+            "winter",
+            "the twentieth century",
+            "the fifties"
+          ],
+          "capitalized": [
+            "the Roaring Twenties (name of an era)",
+            "the Winter Palace"
+          ]
+        },
+        "religiousEvents": {
+          "text": "Capitalize the names of events recorded in sacred writings and of historical events with a strong religious dimension:",
+          "examples": [
+            "the Flood",
+            "the Reformation",
+            "the Exodus",
+            "the Great Schism",
+            "the Immaculate Conception",
+            "the Hegira",
+            "the Crucifixion",
+            "the Diet of Worms",
+            "the Crusades",
+            "the Second Vatican Council"
+          ]
+        },
+        "specificVsGeneral": {
+          "text": "Terms that refer to events and periods are often capitalized when they refer to specific events or periods and lower-cased when used in a general sense:",
+          "examples": [
+            {
+              "specific": "the Ice Age",
+              "general": "the most recent ice age"
+            },
+            {
+              "specific": "the First World War",
+              "general": "the two world wars"
+            },
+            {
+              "specific": "the Quiet Revolution",
+              "general": "She started a revolution."
+            },
+            {
+              "specific": "the Crusades",
+              "general": "a crusade against poverty"
+            },
+            {
+              "specific": "Stone Age hunting implements",
+              "general": "He uses stone-age management techniques."
+            }
+          ]
+        },
+        "timeZonesReference": {
+          "text": "For the use of capitals with time zones, see 1.22."
+        }
+      }
+    },
+    {
+      "id": "4.18",
+      "title": "Cultural periods, movements and styles",
+      "content": {
+        "mainRule": {
+          "text": "Capitalize nouns and adjectives designating literary, philosophical, musical, religious and artistic periods, movements and styles when they are derived from proper nouns:",
+          "examples": [
+            "Aristotelian logic",
+            "Romanesque architecture",
+            "Cartesian dualism",
+            "Arianism",
+            "the Bauhaus",
+            "Methodism",
+            "Gregorian chant",
+            "Hasidism"
+          ]
+        },
+        "lowercaseRule": {
+          "text": "Otherwise, such terms are lower-cased except when it is necessary to distinguish a style or movement from the same word used in its general sense:",
+          "lowercase": [
+            "cubism",
+            "existentialism",
+            "humanism",
+            "rococo"
+          ],
+          "capitalized": [
+            "the New Criticism",
+            "the Group of Seven",
+            "the Enlightenment",
+            "Scholasticism"
+          ]
+        }
+      }
+    },
+    {
+      "id": "4.19",
+      "title": "Terms related to religion",
+      "content": {
+        "generalPrinciple": {
+          "text": "The same principles apply to religious terms as to general vocabulary. Writers should resist the temptation to overcapitalize."
+        },
+        "rules": [
+          {
+            "letter": "a",
+            "title": "Religious adjectives and verbs",
+            "text": "Capitalize most adjectives and verbs derived from the names of organized religions:",
+            "capitalized": [
+              "Anglican",
+              "Roman Catholic",
+              "Shiite",
+              "Greek Orthodox",
+              "Christianize",
+              "Free Methodist"
+            ],
+            "lowercase": [
+              "baptize",
+              "baptism",
+              "christen"
+            ]
+          },
+          {
+            "letter": "b",
+            "title": "Holy and revered persons",
+            "text": "Capitalize the names and titles of holy and revered persons:",
+            "examples": [
+              "The Blessed Virgin",
+              "Saint Jerome",
+              "Our Lady of Sorrows",
+              "Maimonides",
+              "Mother Superior",
+              "Buddha"
+            ]
+          },
+          {
+            "letter": "c",
+            "title": "Theological concepts",
+            "text": "Capitalize unique theological concepts:",
+            "examples": [
+              "the Fall",
+              "the Flood",
+              "Original Sin",
+              "the Second Coming",
+              "the Nativity",
+              "the Chosen People",
+              "the Holy Grail",
+              "the Holy of Holies"
+            ]
+          },
+          {
+            "letter": "d",
+            "title": "Non-religious sense",
+            "text": "Do not capitalize derived terms that are not used in a religious sense:",
+            "examples": [
+              "She is very catholic in her literary tastes.",
+              "His ideas are quite orthodox."
+            ]
+          },
+          {
+            "letter": "e",
+            "title": "Religious writings and documents",
+            "text": "Capitalize the titles of religious writings and documents, special prayers and devotional canticles, creeds and confessions:",
+            "examples": [
+              "the Bible",
+              "Deuteronomy",
+              "the Torah",
+              "the Apocrypha",
+              "the Koran",
+              "the Ten Commandments",
+              "the Vulgate",
+              "the Talmud"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "4.20",
+      "title": "Deities",
+      "content": {
+        "rules": [
+          {
+            "letter": "a",
+            "title": "Names of deities",
+            "text": "Capitalize names, synonyms and personifications of deities and other supernatural beings:",
+            "examples": [
+              "God",
+              "Siva",
+              "the Creator",
+              "Minerva",
+              "the Almighty",
+              "Moloch",
+              "Mother Nature",
+              "Allah",
+              "Jehovah",
+              "Manitou"
+            ]
+          },
+          {
+            "letter": "b",
+            "title": "Common noun usage",
+            "text": "Do not capitalize such words used as common nouns:",
+            "examples": [
+              "The child was an angel.",
+              "The adoring public regarded the film star as a god."
+            ]
+          },
+          {
+            "letter": "c",
+            "title": "Derivatives",
+            "text": "Derivatives of these terms are normally lower-cased, as are similar terms used metaphorically:",
+            "examples": [
+              "christen",
+              "messianic",
+              "a saviour"
+            ]
+          },
+          {
+            "letter": "d",
+            "title": "Pronouns referring to deities",
+            "text": "Capitalize personal pronouns that refer to deities when they are used as proper nouns, but do not capitalize relative pronouns:",
+            "examples": [
+              "Trust in Him whose strength will uphold you."
+            ]
+          },
+          {
+            "letter": "e",
+            "title": "Pagan deities",
+            "text": "Do not capitalize the words god and goddess when they refer to pagan deities, but capitalize the names of the deities themselves (Baal, Woden, Zeus)."
+          },
+          {
+            "letter": "f",
+            "title": "Heaven, hell, etc.",
+            "text": "Do not capitalize words such as heaven, paradise, purgatory, nirvana, happy hunting ground, devil and angel when used in a non-religious sense:",
+            "lowercase": [
+              "After his wife died he went through purgatory.",
+              "War is hell."
+            ],
+            "capitalized": [
+              "God is in Heaven.",
+              "Many Buddhists seek to attain Nirvana."
+            ]
+          }
+        ]
+      }
     }
   ]
 }
