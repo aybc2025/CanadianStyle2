@@ -1,5 +1,6 @@
 /* ===================================
    Chapter Page Styles
+   FIXED: Chapter badge number visibility
    =================================== */
 
 .chapter-page {
@@ -37,9 +38,10 @@
     gap: var(--spacing-lg);
 }
 
+/* FIXED: Ensure chapter badge number is always visible with explicit colors and shadow */
 .chapter-badge {
-    background-color: white;
-    color: var(--primary-red);
+    background-color: #FFFFFF !important;
+    color: #D52B1E !important;
     font-family: var(--font-sans);
     font-weight: 700;
     font-size: 2rem;
@@ -50,6 +52,14 @@
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Additional specificity to ensure the number is visible */
+#chapterBadge {
+    background-color: #FFFFFF !important;
+    color: #D52B1E !important;
 }
 
 .chapter-title-area h1 {
