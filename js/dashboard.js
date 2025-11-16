@@ -37,8 +37,8 @@ const chapters = [
         title: "Capitalization",
         category: "basics",
         description: "Rules for proper capitalization in Canadian English.",
-        sections: 14,
-        available: false
+        sections: 38,
+        available: true
     },
     {
         id: 5,
