@@ -3,6 +3,7 @@
 // Updated to load content from JSON files
 // FIXED: Handles complex abbreviations and examples correctly
 // FIXED: Added handlers for Chapter 4 structures (mainRule, mainRules, personifications, abstractions, verbs, warning)
+// FIXED: Properly handles sections 4.21-4.30 with rules array
 // ===================================
 
 // Chapter data - will be loaded from JSON
@@ -362,6 +363,8 @@ function buildSectionHTML(section) {
         `;
     }
     
+    // === CRITICAL FIX: Process rules array BEFORE mainRule ===
+    // This fixes sections 4.21-4.30 which use rules, not mainRule
     // Rules - can be array of strings or array of objects
     if (content.rules && Array.isArray(content.rules) && content.rules.length > 0) {
         // Check if first rule is a string (simple array) or object
@@ -373,7 +376,7 @@ function buildSectionHTML(section) {
             });
             html += `</ul>`;
         } else {
-            // Array of rule objects
+            // Array of rule objects (used in sections 4.21-4.30)
             content.rules.forEach(rule => {
                 html += `
                     <div class="rule-section">
@@ -386,6 +389,218 @@ function buildSectionHTML(section) {
                         ${rule.warningExample ? `<p class="example-text"><em>${rule.warningExample}</em></p>` : ''}
                         ${rule.capitalized && typeof rule.capitalized === 'string' ? `<p><strong>Capitalized:</strong> ${rule.capitalized}</p>` : ''}
                         ${rule.lowercase && typeof rule.lowercase === 'string' ? `<p><strong>Lowercase:</strong> ${rule.lowercase}</p>` : ''}
+                        ${rule.reference && typeof rule.reference === 'string' ? `<p class="reference-text"><em>${rule.reference}</em></p>` : ''}
+                        ${rule.referenceNote && typeof rule.referenceNote === 'string' ? `<p class="note"><em>${rule.referenceNote}</em></p>` : ''}
+                        ${rule.italicsReference && typeof rule.italicsReference === 'string' ? `<p class="note"><em>${rule.italicsReference}</em></p>` : ''}
+                        ${rule.mainRule && typeof rule.mainRule === 'object' ? `
+                            <div class="main-rule-subsection">
+                                ${rule.mainRule.text ? `<p>${rule.mainRule.text}</p>` : ''}
+                                ${rule.mainRule.examples && Array.isArray(rule.mainRule.examples) ? `
+                                    <ul>
+                                        ${rule.mainRule.examples.map(ex => `<li>${ex}</li>`).join('')}
+                                    </ul>
+                                ` : ''}
+                            </div>
+                        ` : ''}
+                        ${rule.genericUse && typeof rule.genericUse === 'object' ? `
+                            <div class="generic-use-section">
+                                ${rule.genericUse.text ? `<p>${rule.genericUse.text}</p>` : ''}
+                                ${rule.genericUse.examples && Array.isArray(rule.genericUse.examples) ? `
+                                    <ul>
+                                        ${rule.genericUse.examples.map(ex => `<li>${ex}</li>`).join('')}
+                                    </ul>
+                                ` : ''}
+                            </div>
+                        ` : ''}
+                        ${rule.scientificNames && typeof rule.scientificNames === 'object' ? `
+                            <div class="scientific-names-section">
+                                ${rule.scientificNames.text ? `<p>${rule.scientificNames.text}</p>` : ''}
+                                ${rule.scientificNames.examples && Array.isArray(rule.scientificNames.examples) ? `
+                                    <ul>
+                                        ${rule.scientificNames.examples.map(ex => `<li>${ex}</li>`).join('')}
+                                    </ul>
+                                ` : ''}
+                                ${rule.scientificNames.note ? `<p class="note"><em>${rule.scientificNames.note}</em></p>` : ''}
+                            </div>
+                        ` : ''}
+                        ${rule.commonNames && typeof rule.commonNames === 'object' ? `
+                            <div class="common-names-section">
+                                ${rule.commonNames.text ? `<p>${rule.commonNames.text}</p>` : ''}
+                                ${rule.commonNames.capitalized && Array.isArray(rule.commonNames.capitalized) ? `
+                                    <div class="capitalized-common">
+                                        <h5>Capitalized:</h5>
+                                        <ul>
+                                            ${rule.commonNames.capitalized.map(ex => `<li>${ex}</li>`).join('')}
+                                        </ul>
+                                    </div>
+                                ` : ''}
+                                ${rule.commonNames.lowercase && Array.isArray(rule.commonNames.lowercase) ? `
+                                    <div class="lowercase-common">
+                                        <h5>Lowercase:</h5>
+                                        <ul>
+                                            ${rule.commonNames.lowercase.map(ex => `<li>${ex}</li>`).join('')}
+                                        </ul>
+                                    </div>
+                                ` : ''}
+                            </div>
+                        ` : ''}
+                        ${rule.chemicalElements && typeof rule.chemicalElements === 'object' ? `
+                            <div class="chemical-elements-section">
+                                <h5>${rule.chemicalElements.title || 'Chemical elements and compounds'}</h5>
+                                ${rule.chemicalElements.text ? `<p>${rule.chemicalElements.text}</p>` : ''}
+                                ${rule.chemicalElements.examples && Array.isArray(rule.chemicalElements.examples) ? `
+                                    <ul>
+                                        ${rule.chemicalElements.examples.map(ex => `<li>${ex}</li>`).join('')}
+                                    </ul>
+                                ` : ''}
+                                ${rule.chemicalElements.note ? `<p class="note"><em>${rule.chemicalElements.note}</em></p>` : ''}
+                                ${rule.chemicalElements.symbolExamples && Array.isArray(rule.chemicalElements.symbolExamples) ? `
+                                    <div class="symbol-examples">
+                                        <p><strong>Chemical symbols:</strong></p>
+                                        <ul>
+                                            ${rule.chemicalElements.symbolExamples.map(ex => `<li>${ex}</li>`).join('')}
+                                        </ul>
+                                    </div>
+                                ` : ''}
+                            </div>
+                        ` : ''}
+                        ${rule.medicalTerms && typeof rule.medicalTerms === 'object' ? `
+                            <div class="medical-terms-section">
+                                <h5>${rule.medicalTerms.title || 'Medical conditions and syndromes'}</h5>
+                                ${rule.medicalTerms.text ? `<p>${rule.medicalTerms.text}</p>` : ''}
+                                ${rule.medicalTerms.examples && Array.isArray(rule.medicalTerms.examples) ? `
+                                    <ul>
+                                        ${rule.medicalTerms.examples.map(ex => `<li>${ex}</li>`).join('')}
+                                    </ul>
+                                ` : ''}
+                            </div>
+                        ` : ''}
+                        ${rule.infectiousOrganisms && typeof rule.infectiousOrganisms === 'object' ? `
+                            <div class="infectious-section">
+                                <h5>${rule.infectiousOrganisms.title || 'Infectious organisms'}</h5>
+                                ${rule.infectiousOrganisms.text ? `<p>${rule.infectiousOrganisms.text}</p>` : ''}
+                                ${rule.infectiousOrganisms.example ? `<p class="example-text"><em>${rule.infectiousOrganisms.example}</em></p>` : ''}
+                            </div>
+                        ` : ''}
+                        ${rule.drugNames && typeof rule.drugNames === 'object' ? `
+                            <div class="drug-names-section">
+                                <h5>${rule.drugNames.title || 'Generic drug names'}</h5>
+                                ${rule.drugNames.text ? `<p>${rule.drugNames.text}</p>` : ''}
+                                ${rule.drugNames.examples && Array.isArray(rule.drugNames.examples) ? `
+                                    <ul>
+                                        ${rule.drugNames.examples.map(ex => `<li>${ex}</li>`).join('')}
+                                    </ul>
+                                ` : ''}
+                            </div>
+                        ` : ''}
+                        ${rule.shortForms && typeof rule.shortForms === 'object' ? `
+                            <div class="short-forms-section">
+                                ${rule.shortForms.text ? `<p>${rule.shortForms.text}</p>` : ''}
+                                ${rule.shortForms.examples && Array.isArray(rule.shortForms.examples) ? `
+                                    <ul>
+                                        ${rule.shortForms.examples.map(ex => `<li>${ex}</li>`).join('')}
+                                    </ul>
+                                ` : ''}
+                                ${rule.shortForms.exception ? `<p class="exception"><strong>Exception:</strong> ${rule.shortForms.exception}</p>` : ''}
+                                ${rule.shortForms.exceptionExample ? `<p class="example-text"><em>${rule.shortForms.exceptionExample}</em></p>` : ''}
+                            </div>
+                        ` : ''}
+                        ${rule.tradeNames && typeof rule.tradeNames === 'object' ? `
+                            <div class="trade-names-section">
+                                ${rule.tradeNames.text ? `<p>${rule.tradeNames.text}</p>` : ''}
+                                ${rule.tradeNames.capitalized && Array.isArray(rule.tradeNames.capitalized) ? `
+                                    <div class="capitalized-trades">
+                                        <h5>Capitalized:</h5>
+                                        <ul>
+                                            ${rule.tradeNames.capitalized.map(ex => `<li>${ex}</li>`).join('')}
+                                        </ul>
+                                    </div>
+                                ` : ''}
+                                ${rule.tradeNames.lowercase && Array.isArray(rule.tradeNames.lowercase) ? `
+                                    <div class="lowercase-trades">
+                                        <h5>Lowercase:</h5>
+                                        <ul>
+                                            ${rule.tradeNames.lowercase.map(ex => `<li>${ex}</li>`).join('')}
+                                        </ul>
+                                    </div>
+                                ` : ''}
+                                ${rule.tradeNames.note ? `<p class="note"><em>${rule.tradeNames.note}</em></p>` : ''}
+                            </div>
+                        ` : ''}
+                        ${rule.highTechProducts && typeof rule.highTechProducts === 'object' ? `
+                            <div class="hightech-section">
+                                ${rule.highTechProducts.text ? `<p>${rule.highTechProducts.text}</p>` : ''}
+                                ${rule.highTechProducts.examples && Array.isArray(rule.highTechProducts.examples) ? `
+                                    <ul>
+                                        ${rule.highTechProducts.examples.map(ex => `<li>${ex}</li>`).join('')}
+                                    </ul>
+                                ` : ''}
+                            </div>
+                        ` : ''}
+                        ${rule.genericUseNote && typeof rule.genericUseNote === 'object' ? `
+                            <div class="generic-use-note">
+                                ${rule.genericUseNote.text ? `<p>${rule.genericUseNote.text}</p>` : ''}
+                            </div>
+                        ` : ''}
+                        ${rule.prefixes && typeof rule.prefixes === 'object' ? `
+                            <div class="prefixes-section">
+                                ${rule.prefixes.text ? `<p>${rule.prefixes.text}</p>` : ''}
+                                ${rule.prefixes.examples && Array.isArray(rule.prefixes.examples) ? `
+                                    <ul>
+                                        ${rule.prefixes.examples.map(ex => `<li>${ex}</li>`).join('')}
+                                    </ul>
+                                ` : ''}
+                                ${rule.prefixes.reference ? `<p class="reference-text"><em>${rule.prefixes.reference}</em></p>` : ''}
+                            </div>
+                        ` : ''}
+                        ${rule.prepositionsAsOtherParts && typeof rule.prepositionsAsOtherParts === 'object' ? `
+                            <div class="prepositions-section">
+                                ${rule.prepositionsAsOtherParts.text ? `<p>${rule.prepositionsAsOtherParts.text}</p>` : ''}
+                                ${rule.prepositionsAsOtherParts.examples && Array.isArray(rule.prepositionsAsOtherParts.examples) ? `
+                                    <ul>
+                                        ${rule.prepositionsAsOtherParts.examples.map(ex => `<li>${ex}</li>`).join('')}
+                                    </ul>
+                                ` : ''}
+                            </div>
+                        ` : ''}
+                        ${rule.shortTitles && typeof rule.shortTitles === 'object' ? `
+                            <div class="short-titles-section">
+                                ${rule.shortTitles.text ? `<p>${rule.shortTitles.text}</p>` : ''}
+                                ${rule.shortTitles.example && typeof rule.shortTitles.example === 'object' ? `
+                                    <div class="title-example">
+                                        <p><strong>Full:</strong> ${rule.shortTitles.example.full || ''}</p>
+                                        <p><strong>Short:</strong> ${rule.shortTitles.example.short || ''}</p>
+                                    </div>
+                                ` : ''}
+                                ${rule.shortTitles.additionalExample ? `<p class="example-text"><em>${rule.shortTitles.additionalExample}</em></p>` : ''}
+                            </div>
+                        ` : ''}
+                        ${rule.allCapsOnTitlePage && typeof rule.allCapsOnTitlePage === 'object' ? `
+                            <div class="allcaps-section">
+                                ${rule.allCapsOnTitlePage.text ? `<p>${rule.allCapsOnTitlePage.text}</p>` : ''}
+                            </div>
+                        ` : ''}
+                        ${rule.ancientManuscripts && typeof rule.ancientManuscripts === 'object' ? `
+                            <div class="ancient-manuscripts-section">
+                                ${rule.ancientManuscripts.text ? `<p>${rule.ancientManuscripts.text}</p>` : ''}
+                                ${rule.ancientManuscripts.examples && Array.isArray(rule.ancientManuscripts.examples) ? `
+                                    <ul>
+                                        ${rule.ancientManuscripts.examples.map(ex => `<li>${ex}</li>`).join('')}
+                                    </ul>
+                                ` : ''}
+                                ${rule.ancientManuscripts.note ? `<p class="note"><em>${rule.ancientManuscripts.note}</em></p>` : ''}
+                            </div>
+                        ` : ''}
+                        ${rule.hyphenatedCompounds && typeof rule.hyphenatedCompounds === 'object' ? `
+                            <div class="hyphenated-section">
+                                ${rule.hyphenatedCompounds.text ? `<p>${rule.hyphenatedCompounds.text}</p>` : ''}
+                                ${rule.hyphenatedCompounds.examples && Array.isArray(rule.hyphenatedCompounds.examples) ? `
+                                    <ul>
+                                        ${rule.hyphenatedCompounds.examples.map(ex => `<li>${ex}</li>`).join('')}
+                                    </ul>
+                                ` : ''}
+                            </div>
+                        ` : ''}
                         ${rule.but && Array.isArray(rule.but) ? `
                             <div class="but-section">
                                 <p><strong>But:</strong></p>
@@ -401,6 +616,12 @@ function buildSectionHTML(section) {
                                     if (typeof ex === 'object' && ex !== null) {
                                         if (ex.base && ex.derived) {
                                             exText = `<strong>${ex.base}</strong> → ${ex.derived}`;
+                                        } else if (ex.type && ex.title) {
+                                            exText = `<strong>${ex.type}:</strong> ${ex.title}`;
+                                        } else if (ex.specific && ex.general) {
+                                            exText = `<strong>Specific:</strong> ${ex.specific}<br><strong>General:</strong> ${ex.general}`;
+                                        } else if (ex.capitalized && ex.lowercase) {
+                                            exText = `<strong>Capitalized:</strong> ${ex.capitalized}<br><strong>Lowercase:</strong> ${ex.lowercase}`;
                                         } else if (ex.text) {
                                             exText = ex.text;
                                         } else {
@@ -1236,6 +1457,107 @@ function buildSectionHTML(section) {
         }
         
         html += `</div>`;
+    }
+    
+    // Time zones reference (for Chapter 4.17)
+    if (content.timeZonesReference && typeof content.timeZonesReference === 'object') {
+        html += `
+            <div class="reference-section">
+                ${content.timeZonesReference.text ? `<p>${content.timeZonesReference.text}</p>` : ''}
+            </div>
+        `;
+    }
+    
+    // Seas and Centuries (Chapter 4.17)
+    if (content.seasonsAndCenturies && typeof content.seasonsAndCenturies === 'object') {
+        html += `
+            <div class="seasons-section">
+                ${content.seasonsAndCenturies.text ? `<p>${content.seasonsAndCenturies.text}</p>` : ''}
+                ${content.seasonsAndCenturies.lowercase && Array.isArray(content.seasonsAndCenturies.lowercase) ? `
+                    <div class="lowercase-seasons">
+                        <h5>Lowercase:</h5>
+                        <ul>
+                            ${content.seasonsAndCenturies.lowercase.map(ex => `<li>${ex}</li>`).join('')}
+                        </ul>
+                    </div>
+                ` : ''}
+                ${content.seasonsAndCenturies.capitalized && Array.isArray(content.seasonsAndCenturies.capitalized) ? `
+                    <div class="capitalized-seasons">
+                        <h5>Capitalized:</h5>
+                        <ul>
+                            ${content.seasonsAndCenturies.capitalized.map(ex => `<li>${ex}</li>`).join('')}
+                        </ul>
+                    </div>
+                ` : ''}
+            </div>
+        `;
+    }
+    
+    // Religious Events (Chapter 4.17)
+    if (content.religiousEvents && typeof content.religiousEvents === 'object') {
+        html += `
+            <div class="religious-events-section">
+                ${content.religiousEvents.text ? `<p>${content.religiousEvents.text}</p>` : ''}
+                ${content.religiousEvents.examples && Array.isArray(content.religiousEvents.examples) ? `
+                    <ul>
+                        ${content.religiousEvents.examples.map(ex => `<li>${ex}</li>`).join('')}
+                    </ul>
+                ` : ''}
+            </div>
+        `;
+    }
+    
+    // Specific vs General (Chapter 4.17)
+    if (content.specificVsGeneral && typeof content.specificVsGeneral === 'object') {
+        html += `
+            <div class="specific-vs-general-section">
+                ${content.specificVsGeneral.text ? `<p>${content.specificVsGeneral.text}</p>` : ''}
+                ${content.specificVsGeneral.examples && Array.isArray(content.specificVsGeneral.examples) ? `
+                    <ul>
+                        ${content.specificVsGeneral.examples.map(ex => {
+                            if (typeof ex === 'object' && ex.specific && ex.general) {
+                                return `<li><strong>Specific:</strong> ${ex.specific}<br><strong>General:</strong> ${ex.general}</li>`;
+                            }
+                            return `<li>${ex}</li>`;
+                        }).join('')}
+                    </ul>
+                ` : ''}
+            </div>
+        `;
+    }
+    
+    // General Principle (Chapter 4.18)
+    if (content.generalPrinciple && typeof content.generalPrinciple === 'object') {
+        html += `
+            <div class="general-principle-section">
+                ${content.generalPrinciple.text ? `<p>${content.generalPrinciple.text}</p>` : ''}
+            </div>
+        `;
+    }
+    
+    // Lowercase Rule (Chapter 4.18)
+    if (content.lowercaseRule && typeof content.lowercaseRule === 'object') {
+        html += `
+            <div class="lowercase-rule-section">
+                ${content.lowercaseRule.text ? `<p>${content.lowercaseRule.text}</p>` : ''}
+                ${content.lowercaseRule.lowercase && Array.isArray(content.lowercaseRule.lowercase) ? `
+                    <div class="lowercase-items">
+                        <h5>Lowercase:</h5>
+                        <ul>
+                            ${content.lowercaseRule.lowercase.map(ex => `<li>${ex}</li>`).join('')}
+                        </ul>
+                    </div>
+                ` : ''}
+                ${content.lowercaseRule.capitalized && Array.isArray(content.lowercaseRule.capitalized) ? `
+                    <div class="capitalized-items">
+                        <h5>Capitalized:</h5>
+                        <ul>
+                            ${content.lowercaseRule.capitalized.map(ex => `<li>${ex}</li>`).join('')}
+                        </ul>
+                    </div>
+                ` : ''}
+            </div>
+        `;
     }
     
     return html;
