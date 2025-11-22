@@ -142,230 +142,11 @@ function buildSectionHTML(section) {
     const content = section.content;
     let html = '';
     
-    // Main text
-    if (content.text) {
-        html += `<p>${content.text}</p>`;
-    }
-    
-    // === NEW: mainText (Chapter 4 style) ===
-    if (content.mainText) {
-        html += `<p>${content.mainText}</p>`;
-    }
-    
-    // === NEW: explanation (Chapter 4 style) ===
-    if (content.explanation) {
-        html += `<p>${content.explanation}</p>`;
-    }
-    
-    // Key Principle box
-    if (content.keyPrinciple) {
-        html += `
-            <div class="key-principle">
-                <h4>${content.keyPrinciple.title}</h4>
-                <p>${content.keyPrinciple.content}</p>
-            </div>
-        `;
-    }
-    
-    // Warning/Avoid box
-    if (content.warningBox) {
-        html += `
-            <div class="warning-box">
-                <h4>⚠ ${content.warningBox.title}</h4>
-                ${content.warningBox.content ? `<p>${content.warningBox.content}</p>` : ''}
-                ${content.warningBox.items ? `
-                    <ul>
-                        ${content.warningBox.items.map(item => `<li>${item}</li>`).join('')}
-                    </ul>
-                ` : ''}
-            </div>
-        `;
-    }
-    
-    // Info/Use box  
-    if (content.useBox) {
-        html += `
-            <div class="info-box">
-                <h4>${content.useBox.title}</h4>
-                ${content.useBox.content ? `<p>${content.useBox.content}</p>` : ''}
-                ${content.useBox.items ? `
-                    <ul>
-                        ${content.useBox.items.map(item => `<li>${item}</li>`).join('')}
-                    </ul>
-                ` : ''}
-            </div>
-        `;
-    }
-    
-    // === FIXED: Abbreviations (handles complex objects like Latin terms) ===
-    if (content.abbreviations && Array.isArray(content.abbreviations)) {
-        const firstItem = content.abbreviations[0];
-        
-        // Check if this is a complex abbreviation structure (like 1.13 Latin Terms)
-        if (typeof firstItem === 'object' && firstItem !== null && 
-            (firstItem.abbr || firstItem.quantity || firstItem.symbol)) {
-            
-            // Complex abbreviations - render as table
-            html += `
-                <div class="abbreviations-section">
-                    <h4>Abbreviations</h4>
-                    <table class="abbreviations-table">
-                        <thead>
-                            <tr>
-            `;
-            
-            // Determine table headers based on structure
-            if (firstItem.abbr) {
-                // Latin terms style
-                html += `
-                    <th>Abbreviation</th>
-                    <th>Full Form</th>
-                    <th>Meaning</th>
-                    <th>Usage</th>
-                `;
-            } else if (firstItem.quantity) {
-                // SI units style
-                html += `
-                    <th>Quantity</th>
-                    <th>Unit</th>
-                    <th>Symbol</th>
-                `;
-            }
-            
-            html += `
-                            </tr>
-                        </thead>
-                        <tbody>
-            `;
-            
-            content.abbreviations.forEach(abbr => {
-                html += `<tr>`;
-                
-                if (abbr.abbr) {
-                    // Latin terms format
-                    html += `
-                        <td><strong>${abbr.abbr}</strong></td>
-                        <td>${abbr.full || ''}</td>
-                        <td>${abbr.meaning || ''}</td>
-                        <td class="usage-text">${abbr.usage || ''}</td>
-                    `;
-                } else if (abbr.quantity) {
-                    // SI units format
-                    html += `
-                        <td>${abbr.quantity || ''}</td>
-                        <td>${abbr.unit || ''}</td>
-                        <td><strong>${abbr.symbol || ''}</strong></td>
-                    `;
-                }
-                
-                html += `</tr>`;
-            });
-            
-            html += `
-                        </tbody>
-                    </table>
-                </div>
-            `;
-        } else {
-            // Simple string abbreviations - render as list
-            html += `<ul>`;
-            content.abbreviations.forEach(abbr => {
-                html += `<li>${abbr}</li>`;
-            });
-            html += `</ul>`;
-        }
-    }
-
-    // === Words list (for frequently misspelled words - Section 3.03) ===
-    if (content.words && Array.isArray(content.words)) {
-        html += `
-            <div class="words-section">
-                <div class="words-grid">
-        `;
-        
-        content.words.forEach(word => {
-            html += `<div class="word-item">${word}</div>`;
-        });
-        
-        html += `
-                </div>
-            </div>
-        `;
-    }
-    
-    // === FIXED: Examples list (handles complex objects with base/derived) ===
-    if (content.examples && Array.isArray(content.examples)) {
-        html += `
-            <div class="examples-section">
-                <h4>Examples</h4>
-                <ul class="examples-list">
-        `;
-        
-        content.examples.forEach(example => {
-            // Handle both string and object formats
-            if (typeof example === 'object' && example !== null) {
-                let exampleText = '';
-                let exampleType = example.type;
-                
-                // === FIXED: Handle different example object structures ===
-                if (example.base && example.derived) {
-                    // Pattern: base → derived (e.g., spelling rules in Chapter 3)
-                    exampleText = `<strong>${example.base}</strong> → ${example.derived}`;
-                } else if (example.base && example.suffix) {
-                    // Pattern: base + suffix
-                    exampleText = `<strong>${example.base}</strong> → ${example.suffix}`;
-                } else if (example.base && example.derivatives) {
-                    // Pattern: base with multiple derivatives
-                    exampleText = `<strong>${example.base}</strong> → ${example.derivatives}`;
-                } else if (example.separate && example.combined) {
-                    // Pattern: separate vs combined (like "all together" → "altogether")
-                    exampleText = `${example.separate} → <strong>${example.combined}</strong>`;
-                } else if (example.root && example.derived) {
-                    // Pattern: root → derived (for able/ible examples)
-                    exampleText = `<strong>${example.root}</strong> → ${example.derived}`;
-                } else if (example.text) {
-                    // Has explicit text field
-                    exampleText = example.text;
-                } else {
-                    // Fallback: convert to string
-                    exampleText = String(example);
-                }
-                
-                // Handle both 'type' and 'correct' properties for correct/incorrect examples
-                if (!exampleType && example.correct !== undefined) {
-                    exampleType = example.correct ? 'correct' : 'incorrect';
-                }
-                exampleType = exampleType || 'example';
-                
-                if (exampleType === 'correct' || exampleType === 'incorrect') {
-                    // Use example-box for typed examples
-                    html += `
-                        <li class="example-list-item">
-                            <div class="example-box ${exampleType === 'correct' ? 'example-correct' : 'example-incorrect'}">
-                                <div class="example-label">${exampleType === 'correct' ? '✓ Correct' : '✗ Incorrect'}</div>
-                                <div>${exampleText}</div>
-                            </div>
-                        </li>
-                    `;
-                } else {
-                    // Regular example object without type
-                    html += `<li>${exampleText}</li>`;
-                }
-            } else {
-                // Simple string example
-                html += `<li>${example}</li>`;
-            }
-        });
-        
-        html += `
-                </ul>
-            </div>
-        `;
-    }
-    
-    // === CRITICAL FIX: Process rules array BEFORE mainRule ===
-    // This fixes sections 4.21-4.30 which use rules, not mainRule
-    // Rules - can be array of strings or array of objects
+    // ===================================================================
+    // CRITICAL FIX: Process rules array FIRST (sections 4.21-4.30)
+    // These sections ONLY have a rules array, no text/mainText fields
+    // Must check this BEFORE any other content to prevent undefined errors
+    // ===================================================================
     if (content.rules && Array.isArray(content.rules) && content.rules.length > 0) {
         // Check if first rule is a string (simple array) or object
         if (typeof content.rules[0] === 'string') {
@@ -704,6 +485,235 @@ function buildSectionHTML(section) {
                 `;
             });
         }
+        
+        // IMPORTANT: Return early - sections with rules array don't have other content types
+        return html;
+    }
+    
+    // ===================================================================
+    // Below this point: Process other content types
+    // Only reached if content.rules was not present or empty
+    // ===================================================================
+    
+    // Main text
+    if (content.text) {
+        html += `<p>${content.text}</p>`;
+    }
+    
+    // === NEW: mainText (Chapter 4 style) ===
+    if (content.mainText) {
+        html += `<p>${content.mainText}</p>`;
+    }
+    
+    // === NEW: explanation (Chapter 4 style) ===
+    if (content.explanation) {
+        html += `<p>${content.explanation}</p>`;
+    }
+    
+    // Key Principle box
+    if (content.keyPrinciple) {
+        html += `
+            <div class="key-principle">
+                <h4>${content.keyPrinciple.title}</h4>
+                <p>${content.keyPrinciple.content}</p>
+            </div>
+        `;
+    }
+    
+    // Warning/Avoid box
+    if (content.warningBox) {
+        html += `
+            <div class="warning-box">
+                <h4>⚠ ${content.warningBox.title}</h4>
+                ${content.warningBox.content ? `<p>${content.warningBox.content}</p>` : ''}
+                ${content.warningBox.items ? `
+                    <ul>
+                        ${content.warningBox.items.map(item => `<li>${item}</li>`).join('')}
+                    </ul>
+                ` : ''}
+            </div>
+        `;
+    }
+    
+    // Info/Use box  
+    if (content.useBox) {
+        html += `
+            <div class="info-box">
+                <h4>${content.useBox.title}</h4>
+                ${content.useBox.content ? `<p>${content.useBox.content}</p>` : ''}
+                ${content.useBox.items ? `
+                    <ul>
+                        ${content.useBox.items.map(item => `<li>${item}</li>`).join('')}
+                    </ul>
+                ` : ''}
+            </div>
+        `;
+    }
+    
+    // === FIXED: Abbreviations (handles complex objects like Latin terms) ===
+    if (content.abbreviations && Array.isArray(content.abbreviations)) {
+        const firstItem = content.abbreviations[0];
+        
+        // Check if this is a complex abbreviation structure (like 1.13 Latin Terms)
+        if (typeof firstItem === 'object' && firstItem !== null && 
+            (firstItem.abbr || firstItem.quantity || firstItem.symbol)) {
+            
+            // Complex abbreviations - render as table
+            html += `
+                <div class="abbreviations-section">
+                    <h4>Abbreviations</h4>
+                    <table class="abbreviations-table">
+                        <thead>
+                            <tr>
+            `;
+            
+            // Determine table headers based on structure
+            if (firstItem.abbr) {
+                // Latin terms style
+                html += `
+                    <th>Abbreviation</th>
+                    <th>Full Form</th>
+                    <th>Meaning</th>
+                    <th>Usage</th>
+                `;
+            } else if (firstItem.quantity) {
+                // SI units style
+                html += `
+                    <th>Quantity</th>
+                    <th>Unit</th>
+                    <th>Symbol</th>
+                `;
+            }
+            
+            html += `
+                            </tr>
+                        </thead>
+                        <tbody>
+            `;
+            
+            content.abbreviations.forEach(abbr => {
+                html += `<tr>`;
+                
+                if (abbr.abbr) {
+                    // Latin terms format
+                    html += `
+                        <td><strong>${abbr.abbr}</strong></td>
+                        <td>${abbr.full || ''}</td>
+                        <td>${abbr.meaning || ''}</td>
+                        <td class="usage-text">${abbr.usage || ''}</td>
+                    `;
+                } else if (abbr.quantity) {
+                    // SI units format
+                    html += `
+                        <td>${abbr.quantity || ''}</td>
+                        <td>${abbr.unit || ''}</td>
+                        <td><strong>${abbr.symbol || ''}</strong></td>
+                    `;
+                }
+                
+                html += `</tr>`;
+            });
+            
+            html += `
+                        </tbody>
+                    </table>
+                </div>
+            `;
+        } else {
+            // Simple string abbreviations - render as list
+            html += `<ul>`;
+            content.abbreviations.forEach(abbr => {
+                html += `<li>${abbr}</li>`;
+            });
+            html += `</ul>`;
+        }
+    }
+
+    // === Words list (for frequently misspelled words - Section 3.03) ===
+    if (content.words && Array.isArray(content.words)) {
+        html += `
+            <div class="words-section">
+                <div class="words-grid">
+        `;
+        
+        content.words.forEach(word => {
+            html += `<div class="word-item">${word}</div>`;
+        });
+        
+        html += `
+                </div>
+            </div>
+        `;
+    }
+    
+    // === FIXED: Examples list (handles complex objects with base/derived) ===
+    if (content.examples && Array.isArray(content.examples)) {
+        html += `
+            <div class="examples-section">
+                <h4>Examples</h4>
+                <ul class="examples-list">
+        `;
+        
+        content.examples.forEach(example => {
+            // Handle both string and object formats
+            if (typeof example === 'object' && example !== null) {
+                let exampleText = '';
+                let exampleType = example.type;
+                
+                // === FIXED: Handle different example object structures ===
+                if (example.base && example.derived) {
+                    // Pattern: base → derived (e.g., spelling rules in Chapter 3)
+                    exampleText = `<strong>${example.base}</strong> → ${example.derived}`;
+                } else if (example.base && example.suffix) {
+                    // Pattern: base + suffix
+                    exampleText = `<strong>${example.base}</strong> → ${example.suffix}`;
+                } else if (example.base && example.derivatives) {
+                    // Pattern: base with multiple derivatives
+                    exampleText = `<strong>${example.base}</strong> → ${example.derivatives}`;
+                } else if (example.separate && example.combined) {
+                    // Pattern: separate vs combined (like "all together" → "altogether")
+                    exampleText = `${example.separate} → <strong>${example.combined}</strong>`;
+                } else if (example.root && example.derived) {
+                    // Pattern: root → derived (for able/ible examples)
+                    exampleText = `<strong>${example.root}</strong> → ${example.derived}`;
+                } else if (example.text) {
+                    // Has explicit text field
+                    exampleText = example.text;
+                } else {
+                    // Fallback: convert to string
+                    exampleText = String(example);
+                }
+                
+                // Handle both 'type' and 'correct' properties for correct/incorrect examples
+                if (!exampleType && example.correct !== undefined) {
+                    exampleType = example.correct ? 'correct' : 'incorrect';
+                }
+                exampleType = exampleType || 'example';
+                
+                if (exampleType === 'correct' || exampleType === 'incorrect') {
+                    // Use example-box for typed examples
+                    html += `
+                        <li class="example-list-item">
+                            <div class="example-box ${exampleType === 'correct' ? 'example-correct' : 'example-incorrect'}">
+                                <div class="example-label">${exampleType === 'correct' ? '✓ Correct' : '✗ Incorrect'}</div>
+                                <div>${exampleText}</div>
+                            </div>
+                        </li>
+                    `;
+                } else {
+                    // Regular example object without type
+                    html += `<li>${exampleText}</li>`;
+                }
+            } else {
+                // Simple string example
+                html += `<li>${example}</li>`;
+            }
+        });
+        
+        html += `
+                </ul>
+            </div>
+        `;
     }
     
     // === NEW: mainRule (Chapter 4.04, 4.10 style - object with text and examples) ===
@@ -854,6 +864,157 @@ function buildSectionHTML(section) {
                         </ul>
                     </div>
                 ` : ''}
+            </div>
+        `;
+    }
+    
+    // === NEW: allophoneRule (Chapter 4.11 style) ===
+    if (content.allophoneRule && typeof content.allophoneRule === 'object') {
+        html += `
+            <div class="allophone-rule-section">
+                ${content.allophoneRule.text ? `<p>${content.allophoneRule.text}</p>` : ''}
+            </div>
+        `;
+    }
+    
+    // === NEW: wordVariations (Chapter 4.11 style) ===
+    if (content.wordVariations && typeof content.wordVariations === 'object') {
+        html += `
+            <div class="word-variations-section">
+                ${content.wordVariations.title ? `<h4>${content.wordVariations.title}</h4>` : ''}
+                ${content.wordVariations.text ? `<p>${content.wordVariations.text}</p>` : ''}
+                ${content.wordVariations.examples && Array.isArray(content.wordVariations.examples) ? `
+                    <ul>
+                        ${content.wordVariations.examples.map(ex => {
+                            if (typeof ex === 'object' && ex.capitalized && ex.lowercase) {
+                                return `<li><strong>Capitalized:</strong> ${ex.capitalized}<br><strong>Lowercase:</strong> ${ex.lowercase}</li>`;
+                            }
+                            return `<li>${ex}</li>`;
+                        }).join('')}
+                    </ul>
+                ` : ''}
+            </div>
+        `;
+    }
+    
+    // === NEW: indigenousPeoples (Chapter 4.11 style) ===
+    if (content.indigenousPeoples && typeof content.indigenousPeoples === 'object') {
+        html += `
+            <div class="indigenous-peoples-section">
+                ${content.indigenousPeoples.title ? `<h4>${content.indigenousPeoples.title}</h4>` : ''}
+                ${content.indigenousPeoples.text ? `<p>${content.indigenousPeoples.text}</p>` : ''}
+                ${content.indigenousPeoples.note ? `<p class="note"><em>Note: ${content.indigenousPeoples.note}</em></p>` : ''}
+                ${content.indigenousPeoples.examples && Array.isArray(content.indigenousPeoples.examples) ? `
+                    <ul>
+                        ${content.indigenousPeoples.examples.map(ex => `<li>${ex}</li>`).join('')}
+                    </ul>
+                ` : ''}
+                ${content.indigenousPeoples.referenceNote ? `<p class="note"><em>${content.indigenousPeoples.referenceNote}</em></p>` : ''}
+            </div>
+        `;
+    }
+    
+    // === NEW: languagesRule (Chapter 4.12 style) ===
+    if (content.languagesRule && typeof content.languagesRule === 'object') {
+        html += `
+            <div class="languages-rule-section">
+                ${content.languagesRule.text ? `<p>${content.languagesRule.text}</p>` : ''}
+                ${content.languagesRule.examples && Array.isArray(content.languagesRule.examples) ? `
+                    <ul>
+                        ${content.languagesRule.examples.map(ex => `<li>${ex}</li>`).join('')}
+                    </ul>
+                ` : ''}
+                ${content.languagesRule.but && Array.isArray(content.languagesRule.but) ? `
+                    <div class="but-section">
+                        <p><strong>But:</strong></p>
+                        <ul>
+                            ${content.languagesRule.but.map(item => `<li>${item}</li>`).join('')}
+                        </ul>
+                    </div>
+                ` : ''}
+            </div>
+        `;
+    }
+    
+    // === NEW: degreesRule (Chapter 4.12 style) ===
+    if (content.degreesRule && typeof content.degreesRule === 'object') {
+        html += `
+            <div class="degrees-rule-section">
+                ${content.degreesRule.text ? `<p>${content.degreesRule.text}</p>` : ''}
+                ${content.degreesRule.examples && Array.isArray(content.degreesRule.examples) ? `
+                    <ul>
+                        ${content.degreesRule.examples.map(ex => `<li>${ex}</li>`).join('')}
+                    </ul>
+                ` : ''}
+            </div>
+        `;
+    }
+    
+    // === NEW: academicYears (Chapter 4.12 style) ===
+    if (content.academicYears && typeof content.academicYears === 'object') {
+        html += `
+            <div class="academic-years-section">
+                ${content.academicYears.text ? `<p>${content.academicYears.text}</p>` : ''}
+                ${content.academicYears.examples && Array.isArray(content.academicYears.examples) ? `
+                    <ul>
+                        ${content.academicYears.examples.map(ex => `<li>${ex}</li>`).join('')}
+                    </ul>
+                ` : ''}
+            </div>
+        `;
+    }
+    
+    // === NEW: gradeRule (Chapter 4.12 style) ===
+    if (content.gradeRule && typeof content.gradeRule === 'object') {
+        html += `
+            <div class="grade-rule-section">
+                ${content.gradeRule.text ? `<p>${content.gradeRule.text}</p>` : ''}
+                ${content.gradeRule.examples && Array.isArray(content.gradeRule.examples) ? `
+                    <ul>
+                        ${content.gradeRule.examples.map(ex => `<li>${ex}</li>`).join('')}
+                    </ul>
+                ` : ''}
+            </div>
+        `;
+    }
+    
+    // === NEW: dndNote (Chapter 4.13 style) ===
+    if (content.dndNote && typeof content.dndNote === 'object') {
+        html += `
+            <div class="dnd-note-section">
+                ${content.dndNote.title ? `<h4>${content.dndNote.title}</h4>` : ''}
+                ${content.dndNote.text ? `<p>${content.dndNote.text}</p>` : ''}
+            </div>
+        `;
+    }
+    
+    // === NEW: generalReferences (Chapter 4.13 style) ===
+    if (content.generalReferences && typeof content.generalReferences === 'object') {
+        html += `
+            <div class="general-references-section">
+                ${content.generalReferences.text ? `<p>${content.generalReferences.text}</p>` : ''}
+                ${content.generalReferences.examples && Array.isArray(content.generalReferences.examples) ? `
+                    <ul>
+                        ${content.generalReferences.examples.map(ex => `<li>${ex}</li>`).join('')}
+                    </ul>
+                ` : ''}
+                ${content.generalReferences.but && Array.isArray(content.generalReferences.but) ? `
+                    <div class="but-section">
+                        <p><strong>But:</strong></p>
+                        <ul>
+                            ${content.generalReferences.but.map(item => `<li>${item}</li>`).join('')}
+                        </ul>
+                    </div>
+                ` : ''}
+            </div>
+        `;
+    }
+    
+    // === NEW: italicsReference (Chapter 4.14 style) ===
+    if (content.italicsReference && typeof content.italicsReference === 'object') {
+        html += `
+            <div class="italics-reference-section">
+                ${content.italicsReference.text ? `<p class="note"><em>${content.italicsReference.text}</em></p>` : ''}
             </div>
         `;
     }
@@ -1468,7 +1629,7 @@ function buildSectionHTML(section) {
         `;
     }
     
-    // Seas and Centuries (Chapter 4.17)
+    // Seasons and Centuries (Chapter 4.17)
     if (content.seasonsAndCenturies && typeof content.seasonsAndCenturies === 'object') {
         html += `
             <div class="seasons-section">
