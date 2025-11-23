@@ -1068,6 +1068,472 @@
           }
         ]
       }
+    },
+    {
+  "chapterId": "04",
+  "chapterTitle": "Capitalization",
+  "sections": [
+    {
+      "id": "4.21",
+      "title": "Geographical terms",
+      "content": {
+        "rules": [
+          {
+            "letter": "a",
+            "title": "Official geographical names",
+            "text": "Capitalize the names of countries, regions, counties, cities and other official and specified political, administrative and geographical divisions and topographical features:",
+            "examples": [
+              "El Salvador",
+              "the Grassy Narrows Reserve",
+              "the Northern Hemisphere",
+              "the Pacific",
+              "the International Boundary",
+              "Lanark County",
+              "the Prairies",
+              "Sherbrooke",
+              "the Canadian Shield",
+              "Pickle Lake",
+              "the Maritimes",
+              "Elm Street West",
+              "the Atlantic provinces",
+              "the Okanagan Valley",
+              "the Ontario Region (sector of the government department)",
+              "the South Saskatchewan River",
+              "the Crow's Nest Pass",
+              "the Northwest Territories"
+            ]
+          },
+          {
+            "letter": "b",
+            "title": "Generic terms as short forms",
+            "text": "Capitalize a generic term when it is an accepted short form of the proper noun:",
+            "examples": [
+              "the Continent",
+              "the States"
+            ]
+          },
+          {
+            "letter": "c",
+            "title": "Generic terms in general sense",
+            "text": "Do not capitalize a generic term such as city, county, state or province when it precedes the proper noun or stands alone, unless it is used in a corporate sense:",
+            "lowercase": [
+              "She lives in the city of Regina. (place)",
+              "I have travelled all over the province of Ontario. (place)",
+              "The states of Switzerland are called cantons.",
+              "the newly created state of Palestine"
+            ],
+            "capitalized": [
+              "Buy Province of Ontario bonds. (provincial government)",
+              "The City of Regina took him to court. (municipal government)",
+              "The State of New York has revamped its social assistance programs. (state government)"
+            ]
+          },
+          {
+            "letter": "d",
+            "title": "Plural generic terms",
+            "text": "Do not capitalize a generic term used in the plural unless it is part of a geographical name:",
+            "lowercase": [
+              "lakes Huron and Ontario",
+              "the Thompson and Fraser rivers"
+            ],
+            "capitalized": [
+              "the Rocky Mountains",
+              "the South Seas"
+            ]
+          },
+          {
+            "letter": "e",
+            "title": "Compass points",
+            "text": "In general, do not capitalize the names of compass points or similar descriptive terms unless they have taken on political or other connotations or form the titles of administrative regions:",
+            "lowercase": [
+              "northern New Brunswick",
+              "the west of Saskatchewan"
+            ],
+            "capitalized": [
+              "the West",
+              "Western values",
+              "the Far North",
+              "the Eastern Townships",
+              "Northern Ireland"
+            ]
+          },
+          {
+            "letter": "f",
+            "title": "Variable terms",
+            "text": "Some terms are capitalized when they refer to specific regions and lower-cased when used descriptively:",
+            "examples": [
+              "the East Coast but the east coast of Nova Scotia",
+              "Arctic Ocean but arctic conditions"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "4.22",
+      "title": "Buildings, monuments and public places",
+      "content": {
+        "mainRule": {
+          "text": "Capitalize the official names of specific buildings, monuments, squares, parks, etc.:",
+          "examples": [
+            "the National Gallery",
+            "Robson Square",
+            "the Peace Bridge",
+            "the O'Keefe Centre",
+            "the Plains of Abraham",
+            "the Brock Monument",
+            "the Toronto Public Library",
+            "St. Andrew's Church",
+            "the Vancouver International Airport",
+            "the Temple of Cheops"
+          ]
+        },
+        "genericUse": {
+          "text": "Do not capitalize words describing these features when they are used generically, in names that are not official, or in plural forms:",
+          "examples": [
+            "the city's war memorial",
+            "the international bridge",
+            "an Anglican church",
+            "an Egyptian temple",
+            "Yonge and Bay streets",
+            "the Vancouver airport"
+          ]
+        }
+      }
+    },
+    {
+      "id": "4.23",
+      "title": "Astronomical terms",
+      "content": {
+        "mainRule": {
+          "text": "Capitalize the names of planets and other astronomical bodies and configurations. Capitalize earth, sun and moon only when they are mentioned in relation to other planets or heavenly bodies:",
+          "examples": [
+            "Venus",
+            "the Great Bear",
+            "The sun shines brightly.",
+            "Mercury is closer than the Earth to the Sun."
+          ]
+        },
+        "genericParts": {
+          "text": "Do not capitalize generic words forming part of the name of a celestial object:",
+          "examples": [
+            "Halley's comet",
+            "the rings of Saturn"
+          ]
+        }
+      }
+    },
+    {
+      "id": "4.24",
+      "title": "Biological terms",
+      "content": {
+        "mainRule": {
+          "text": "Capitalize the scientific name of a phylum, order, class, family or genus, but not common names or the epithets referring to a species or subspecies, even if they are derived from proper names:",
+          "examples": [
+            "the phylum Arthropoda",
+            "the order Rosales",
+            "the genus Sporotrichum",
+            "the species Sporotrichum schenkii (second word denotes species)",
+            "The jaguar and the lion are members of the family Felidae."
+          ]
+        },
+        "properNounsInCommonNames": {
+          "text": "Capitalize proper nouns modifying a common name, except where usage has established the lower case:",
+          "capitalized": [
+            "Grayson lily",
+            "Cupid's-delight",
+            "Queen Anne's lace",
+            "Judas tree",
+            "Canada goose",
+            "Dutch elm"
+          ],
+          "lowercase": [
+            "malpeque oyster",
+            "timothy grass"
+          ]
+        },
+        "reference": {
+          "text": "See 6.11 for rules governing the italicization of biological classifications."
+        }
+      }
+    },
+    {
+      "id": "4.25",
+      "title": "Chemical, medical and pharmacological terms",
+      "content": {
+        "chemicalElements": {
+          "title": "Chemical elements and compounds",
+          "text": "In text, do not capitalize the names of chemical elements and compounds:",
+          "examples": [
+            "krypton",
+            "sodium bicarbonate",
+            "hydrogen peroxide"
+          ]
+        },
+        "chemicalSymbols": {
+          "title": "Chemical symbols",
+          "text": "The capitalization of chemical symbols should follow standard practice:",
+          "examples": [
+            "H2O",
+            "NaHCO3"
+          ]
+        },
+        "medicalConditions": {
+          "title": "Medical conditions and syndromes",
+          "text": "Do not capitalize the names of conditions, syndromes and the like, but capitalize a personal name that forms part of such a term:",
+          "lowercase": [
+            "diabetes insipidus"
+          ],
+          "capitalized": [
+            "Down syndrome",
+            "Huntington's chorea"
+          ]
+        },
+        "infectiousOrganisms": {
+          "title": "Infectious organisms",
+          "text": "Capitalize the names of infectious organisms but not the names of conditions based upon such names:",
+          "examples": [
+            "People attacked by Salmonella are likely to suffer from salmonellosis."
+          ]
+        },
+        "drugNames": {
+          "title": "Generic drug names",
+          "text": "Do not capitalize the generic names of drugs:",
+          "examples": [
+            "phenobarbital",
+            "sulfasalazine"
+          ]
+        }
+      }
+    },
+    {
+      "id": "4.26",
+      "title": "Scientific names with eponyms",
+      "content": {
+        "mainRule": {
+          "text": "In scientific terms composed of a common noun preceded by a proper noun, an adjective derived from a proper noun, or a proper noun with an apostrophe s, capitalize the adjective or proper noun but not the common noun. Do not capitalize the names of laws or theories or the names of minerals, particles or elements derived from personal names:",
+          "capitalized": [
+            "Hodgkin's disease",
+            "Reiter's syndrome",
+            "Bohr radius",
+            "Becquerel rays",
+            "Gaussian curve",
+            "Ohm's law"
+          ],
+          "lowercase": [
+            "the general theory of relativity",
+            "the second law of thermodynamics",
+            "forsterite",
+            "boson",
+            "germanium"
+          ]
+        },
+        "specialCase": {
+          "text": "Note that certain personal names begin with a small letter:",
+          "examples": [
+            "van't Hoff equation",
+            "van Willebrand disease"
+          ]
+        }
+      }
+    },
+    {
+      "id": "4.27",
+      "title": "Copyrighted names",
+      "content": {
+        "tradeNames": {
+          "title": "Trade names",
+          "text": "Capitalize trade names of drugs and any other manufactured products unless they have become established as common nouns:",
+          "capitalized": [
+            "Plexiglas",
+            "Tylenol",
+            "Valium",
+            "Prozac"
+          ],
+          "lowercase": [
+            "styrofoam",
+            "nylon"
+          ]
+        },
+        "referenceNote": {
+          "text": "To determine proper usage, check the Canadian Drug Index or your dictionary."
+        },
+        "highTechProducts": {
+          "title": "High-technology products",
+          "text": "Some industries, especially in the high-technology field, use capital letters within the name of a product. The names of all such terms and products, including those of computer languages, should be capitalized according to the manufacturer's preference:",
+          "examples": [
+            "WordPerfect",
+            "VisiCalc",
+            "Pascal",
+            "COBOL",
+            "BASIC"
+          ]
+        },
+        "genericUsage": {
+          "title": "Generic usage of trade names",
+          "text": "Wherever possible, do not use trade names as generic nouns or adjectives. For example, write adhesive tape, not Scotch tape. Some words, such as frisbee and realtor, are commonly used as generic terms, but they are in fact copyrighted. The word Aspirin is trademarked (and capitalized) in Canada, but not in the United States."
+        }
+      }
+    },
+    {
+      "id": "4.28",
+      "title": "SI/metric units",
+      "content": {
+        "mainRule": {
+          "text": "Capitalize only the word Celsius when writing the names of SI/metric units in full. When using symbols, capitalize all those based on personal names and the letter L for litre:",
+          "examples": [
+            "30 m (metres)",
+            "475 g (grams)",
+            "12 V (volts)",
+            "30 L (litres)",
+            "mg (milligram)",
+            "pm (picometre)",
+            "Mg (megagram)",
+            "Pm (petametre)"
+          ]
+        },
+        "prefixes": {
+          "text": "Capitalize the symbols for the prefixes from mega to exa. The symbols for the others remain in lower case. Consistency is important here because the letters m and p are both used in symbols for two different prefixes."
+        },
+        "reference": {
+          "text": "See also 1.23."
+        }
+      }
+    },
+    {
+      "id": "4.29",
+      "title": "Publications and works of art",
+      "content": {
+        "mainRule": {
+          "title": "Capitalization in titles",
+          "text": "In English titles of books, articles, periodicals, newspapers, plays, operas and long musical compositions and recordings, poems, paintings, sculptures and motion pictures, capitalize all words except articles, conjunctions of fewer than four letters, and prepositions of fewer than four letters. These exceptions are also capitalized when they immediately follow a period, colon or dash within a title and when they are the first or last word in a title:",
+          "examples": [
+            "Virginia Woolf: A Biography (book)",
+            "Under the Volcano (book)",
+            "To Kill a Mockingbird (book)",
+            "How to Succeed in Business Without Really Trying (book)",
+            "Rain in the North Country (painting)",
+            "Goin' Down the Road (film)",
+            "The Magic Flute (opera)"
+          ]
+        },
+        "prepositionsAsOtherParts": {
+          "text": "Words that are normally prepositions are capitalized when they help form another part of speech:",
+          "examples": [
+            "Getting By While Getting On",
+            "Guide to On-Reserve Housing"
+          ]
+        },
+        "shortTitles": {
+          "title": "Short titles",
+          "text": "In short titles, capitalize words that would be capitalized in full titles:",
+          "examples": [
+            "Appleton's General Guide to the United States and Canada, Illustrated With Railway Maps, Plans of Cities, and Table of Railway and Steamboat Fares, for the Year 1891 (full title)",
+            "Appleton's Guide for 1891 (short form)",
+            "I read about it in the News."
+          ]
+        },
+        "originalTypography": {
+          "text": "Even if some words appear in all capital letters on the title page, capitalize only initial letters, except in specialized bibliographies that must reflect the original typography."
+        },
+        "ancientManuscripts": {
+          "title": "Ancient manuscripts",
+          "text": "Titles of ancient manuscripts are capitalized, even if the titles were assigned in modern times:",
+          "examples": [
+            "the Dead Sea Scrolls",
+            "Codex Alexandrinus"
+          ]
+        },
+        "frenchTitles": {
+          "text": "See the Appendix for capitalization of titles in French."
+        },
+        "hyphenatedCompounds": {
+          "title": "Hyphenated compounds in titles",
+          "text": "In titles containing hyphenated compounds, always capitalize the first element. Capitalize the second element if it is a proper noun or proper adjective or if it is as important as the first element:",
+          "examples": [
+            "A History of Eighteenth-Century Literature",
+            "Anti-Americanism in Latin America"
+          ]
+        }
+      }
+    },
+    {
+      "id": "4.30",
+      "title": "Parts of a book or document",
+      "content": {
+        "rules": [
+          {
+            "letter": "a",
+            "title": "Major divisions",
+            "text": "Capitalize references to specific parts of a document. These include certain common nouns in the singular when they are used in text references with numbers or letters indicating place, position or major division in a sequence. Capitalize a letter following such a term:",
+            "examples": [
+              "Act II",
+              "Figure 7",
+              "Appendix B",
+              "Plate 4",
+              "Chapter 3",
+              "Scene iii",
+              "Chart 2",
+              "Table 3",
+              "Corollary 1",
+              "Theorem 3",
+              "Exhibit A",
+              "Volume 13"
+            ]
+          },
+          {
+            "letter": "b",
+            "title": "Minor subdivisions",
+            "text": "Do not capitalize minor subdivisions such as page, note, line, paragraph and verse:",
+            "examples": [
+              "See page 6, line 48."
+            ]
+          },
+          {
+            "letter": "c",
+            "title": "Sections in laws",
+            "text": "Do not capitalize section when used for part of a law or set of regulations, but capitalize it if it refers to a large subdivision of a report, book or other document:",
+            "lowercase": [
+              "under section 23 of the Act"
+            ],
+            "capitalized": [
+              "Volume 10, Section 5"
+            ]
+          },
+          {
+            "letter": "d",
+            "title": "General references",
+            "text": "Do not capitalize words referring to parts of a book when they are used in a general sense, are preceded by modifiers, or are in plural forms:",
+            "examples": [
+              "The theory will be discussed in the next chapter.",
+              "The appendixes outline other migration patterns.",
+              "Even Miller's extensive bibliography is not complete."
+            ]
+          },
+          {
+            "letter": "e",
+            "title": "Cross-references",
+            "text": "Capitalize cross-references within a book when they refer to a particular section:",
+            "examples": [
+              "Further readings are listed in the Bibliography.",
+              "See the Appendix for urban statistics."
+            ]
+          },
+          {
+            "letter": "f",
+            "title": "Informal references",
+            "text": "Informal references to chapter and topic titles may be capitalized and written without italics or quotation marks:",
+            "examples": [
+              "His topics included Northern Travel, Survival on the Road, and Basic Maintenance."
+            ]
+          }
+        ],
+        "reference": {
+          "text": "See also 1.12."
+        }
+      }
     }
+  ]
+}
      ]
 }
