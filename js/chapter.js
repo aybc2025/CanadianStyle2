@@ -3,6 +3,7 @@
 // Updated to load content from JSON files
 // FIXED: Handles complex abbreviations and examples correctly
 // FIXED: Added handlers for Chapter 4 structures (mainRule, mainRules, personifications, abstractions, verbs, warning)
+// FIXED: Sections 4.25 and 4.27 now display correctly
 // ===================================
 
 // Chapter data - will be loaded from JSON
@@ -487,35 +488,35 @@ function buildSectionHTML(section) {
     
     // === NEW: mainRule (Chapter 4.04, 4.10 style - object with text and examples) ===
     if (content.mainRule && typeof content.mainRule === 'object') {
-    html += `
-        <div class="main-rule-section">
-            ${content.mainRule.text ? `<p>${content.mainRule.text}</p>` : ''}
-            ${content.mainRule.explanation ? `<p class="explanation">${content.mainRule.explanation}</p>` : ''}
-            ${content.mainRule.examples && Array.isArray(content.mainRule.examples) ? `
-                <div class="examples-section">
-                    <h4>Examples</h4>
-                    <ul>
-                        ${content.mainRule.examples.map(ex => `<li>${ex}</li>`).join('')}
-                    </ul>
-                </div>
-            ` : ''}
-            ${content.mainRule.capitalized && Array.isArray(content.mainRule.capitalized) ? `
-                <div class="capitalized-section">
-                    <h4>Capitalized:</h4>
-                    <ul>
-                        ${content.mainRule.capitalized.map(ex => `<li>${ex}</li>`).join('')}
-                    </ul>
-                </div>
-            ` : ''}
-            ${content.mainRule.lowercase && Array.isArray(content.mainRule.lowercase) ? `
-                <div class="lowercase-section">
-                    <h4>Lowercase:</h4>
-                    <ul>
-                        ${content.mainRule.lowercase.map(ex => `<li>${ex}</li>`).join('')}
-                    </ul>
-                </div>
-            ` : ''}
-        </div>
+        html += `
+            <div class="main-rule-section">
+                ${content.mainRule.text ? `<p>${content.mainRule.text}</p>` : ''}
+                ${content.mainRule.explanation ? `<p class="explanation">${content.mainRule.explanation}</p>` : ''}
+                ${content.mainRule.examples && Array.isArray(content.mainRule.examples) ? `
+                    <div class="examples-section">
+                        <h4>Examples</h4>
+                        <ul>
+                            ${content.mainRule.examples.map(ex => `<li>${ex}</li>`).join('')}
+                        </ul>
+                    </div>
+                ` : ''}
+                ${content.mainRule.capitalized && Array.isArray(content.mainRule.capitalized) ? `
+                    <div class="capitalized-section">
+                        <h4>Capitalized:</h4>
+                        <ul>
+                            ${content.mainRule.capitalized.map(ex => `<li>${ex}</li>`).join('')}
+                        </ul>
+                    </div>
+                ` : ''}
+                ${content.mainRule.lowercase && Array.isArray(content.mainRule.lowercase) ? `
+                    <div class="lowercase-section">
+                        <h4>Lowercase:</h4>
+                        <ul>
+                            ${content.mainRule.lowercase.map(ex => `<li>${ex}</li>`).join('')}
+                        </ul>
+                    </div>
+                ` : ''}
+            </div>
         `;
     }
     
@@ -633,6 +634,154 @@ function buildSectionHTML(section) {
                         </ul>
                     </div>
                 ` : ''}
+            </div>
+        `;
+    }
+    
+    // === NEW HANDLERS FOR CHAPTER 4 SECTIONS (4.25 and 4.27) ===
+    
+    // === chemicalElements (4.25a) ===
+    if (content.chemicalElements && typeof content.chemicalElements === 'object') {
+        html += `
+            <div class="chemical-elements-section">
+                <h4>${content.chemicalElements.title || 'Chemical elements and compounds'}</h4>
+                ${content.chemicalElements.text ? `<p>${content.chemicalElements.text}</p>` : ''}
+                ${content.chemicalElements.examples && Array.isArray(content.chemicalElements.examples) ? `
+                    <ul>
+                        ${content.chemicalElements.examples.map(ex => `<li>${ex}</li>`).join('')}
+                    </ul>
+                ` : ''}
+            </div>
+        `;
+    }
+
+    // === chemicalSymbols (4.25b) ===
+    if (content.chemicalSymbols && typeof content.chemicalSymbols === 'object') {
+        html += `
+            <div class="chemical-symbols-section">
+                <h4>${content.chemicalSymbols.title || 'Chemical symbols'}</h4>
+                ${content.chemicalSymbols.text ? `<p>${content.chemicalSymbols.text}</p>` : ''}
+                ${content.chemicalSymbols.examples && Array.isArray(content.chemicalSymbols.examples) ? `
+                    <ul>
+                        ${content.chemicalSymbols.examples.map(ex => `<li>${ex}</li>`).join('')}
+                    </ul>
+                ` : ''}
+            </div>
+        `;
+    }
+
+    // === medicalConditions (4.25c) ===
+    if (content.medicalConditions && typeof content.medicalConditions === 'object') {
+        html += `
+            <div class="medical-conditions-section">
+                <h4>${content.medicalConditions.title || 'Medical conditions'}</h4>
+                ${content.medicalConditions.text ? `<p>${content.medicalConditions.text}</p>` : ''}
+                ${content.medicalConditions.lowercase && Array.isArray(content.medicalConditions.lowercase) ? `
+                    <div class="lowercase-examples">
+                        <h5>Lowercase:</h5>
+                        <ul>
+                            ${content.medicalConditions.lowercase.map(ex => `<li>${ex}</li>`).join('')}
+                        </ul>
+                    </div>
+                ` : ''}
+                ${content.medicalConditions.capitalized && Array.isArray(content.medicalConditions.capitalized) ? `
+                    <div class="capitalized-examples">
+                        <h5>Capitalized:</h5>
+                        <ul>
+                            ${content.medicalConditions.capitalized.map(ex => `<li>${ex}</li>`).join('')}
+                        </ul>
+                    </div>
+                ` : ''}
+            </div>
+        `;
+    }
+
+    // === infectiousOrganisms (4.25d) ===
+    if (content.infectiousOrganisms && typeof content.infectiousOrganisms === 'object') {
+        html += `
+            <div class="infectious-organisms-section">
+                <h4>${content.infectiousOrganisms.title || 'Infectious organisms'}</h4>
+                ${content.infectiousOrganisms.text ? `<p>${content.infectiousOrganisms.text}</p>` : ''}
+                ${content.infectiousOrganisms.examples && Array.isArray(content.infectiousOrganisms.examples) ? `
+                    <ul>
+                        ${content.infectiousOrganisms.examples.map(ex => `<li>${ex}</li>`).join('')}
+                    </ul>
+                ` : ''}
+            </div>
+        `;
+    }
+
+    // === drugNames (4.25e) ===
+    if (content.drugNames && typeof content.drugNames === 'object') {
+        html += `
+            <div class="drug-names-section">
+                <h4>${content.drugNames.title || 'Generic drug names'}</h4>
+                ${content.drugNames.text ? `<p>${content.drugNames.text}</p>` : ''}
+                ${content.drugNames.examples && Array.isArray(content.drugNames.examples) ? `
+                    <ul>
+                        ${content.drugNames.examples.map(ex => `<li>${ex}</li>`).join('')}
+                    </ul>
+                ` : ''}
+            </div>
+        `;
+    }
+
+    // === tradeNames (4.27a) ===
+    if (content.tradeNames && typeof content.tradeNames === 'object') {
+        html += `
+            <div class="trade-names-section">
+                <h4>${content.tradeNames.title || 'Trade names'}</h4>
+                ${content.tradeNames.text ? `<p>${content.tradeNames.text}</p>` : ''}
+                ${content.tradeNames.capitalized && Array.isArray(content.tradeNames.capitalized) ? `
+                    <div class="capitalized-examples">
+                        <h5>Capitalized:</h5>
+                        <ul>
+                            ${content.tradeNames.capitalized.map(ex => `<li>${ex}</li>`).join('')}
+                        </ul>
+                    </div>
+                ` : ''}
+                ${content.tradeNames.lowercase && Array.isArray(content.tradeNames.lowercase) ? `
+                    <div class="lowercase-examples">
+                        <h5>Lowercase:</h5>
+                        <ul>
+                            ${content.tradeNames.lowercase.map(ex => `<li>${ex}</li>`).join('')}
+                        </ul>
+                    </div>
+                ` : ''}
+            </div>
+        `;
+    }
+
+    // === referenceNote (4.27b) - FIXED: handle object with text property ===
+    if (content.referenceNote) {
+        if (typeof content.referenceNote === 'string') {
+            html += `<p class="note"><strong>Reference:</strong> ${content.referenceNote}</p>`;
+        } else if (typeof content.referenceNote === 'object' && content.referenceNote.text) {
+            html += `<p class="note"><strong>Reference:</strong> ${content.referenceNote.text}</p>`;
+        }
+    }
+
+    // === highTechProducts (4.27c) ===
+    if (content.highTechProducts && typeof content.highTechProducts === 'object') {
+        html += `
+            <div class="high-tech-products-section">
+                <h4>${content.highTechProducts.title || 'High-technology products'}</h4>
+                ${content.highTechProducts.text ? `<p>${content.highTechProducts.text}</p>` : ''}
+                ${content.highTechProducts.examples && Array.isArray(content.highTechProducts.examples) ? `
+                    <ul>
+                        ${content.highTechProducts.examples.map(ex => `<li>${ex}</li>`).join('')}
+                    </ul>
+                ` : ''}
+            </div>
+        `;
+    }
+
+    // === genericUsage (4.27d) ===
+    if (content.genericUsage && typeof content.genericUsage === 'object') {
+        html += `
+            <div class="generic-usage-section">
+                <h4>${content.genericUsage.title || 'Generic usage'}</h4>
+                ${content.genericUsage.text ? `<p>${content.genericUsage.text}</p>` : ''}
             </div>
         `;
     }
@@ -1234,8 +1383,11 @@ function buildSectionHTML(section) {
                 `;
             });
         }
+        
+        html += `</div>`;
+    }
 
-        // === genericUse (4.22 - Buildings, monuments) ===
+    // === genericUse (4.22 - Buildings, monuments) ===
     if (content.genericUse && typeof content.genericUse === 'object') {
         html += `
             <div class="generic-use-section">
@@ -1249,7 +1401,7 @@ function buildSectionHTML(section) {
         `;
     }
 
-        // === genericParts (4.23 - Astronomical terms) ===
+    // === genericParts (4.23 - Astronomical terms) ===
     if (content.genericParts && typeof content.genericParts === 'object') {
         html += `
             <div class="generic-parts-section">
@@ -1263,7 +1415,7 @@ function buildSectionHTML(section) {
         `;
     }
 
-         // === properNounsInCommonNames (4.24 - Biological terms) ===
+    // === properNounsInCommonNames (4.24 - Biological terms) ===
     if (content.properNounsInCommonNames && typeof content.properNounsInCommonNames === 'object') {
         html += `
             <div class="proper-nouns-section">
@@ -1288,93 +1440,7 @@ function buildSectionHTML(section) {
         `;
     }
 
-        // === chemicalElements (4.25a) ===
-    if (content.chemicalElements && typeof content.chemicalElements === 'object') {
-        html += `
-            <div class="chemical-elements-section">
-                <h4>${content.chemicalElements.title || 'Chemical elements and compounds'}</h4>
-                ${content.chemicalElements.text ? `<p>${content.chemicalElements.text}</p>` : ''}
-                ${content.chemicalElements.examples && Array.isArray(content.chemicalElements.examples) ? `
-                    <ul>
-                        ${content.chemicalElements.examples.map(ex => `<li>${ex}</li>`).join('')}
-                    </ul>
-                ` : ''}
-            </div>
-        `;
-    }
-
-    // === chemicalSymbols (4.25b) ===
-    if (content.chemicalSymbols && typeof content.chemicalSymbols === 'object') {
-        html += `
-            <div class="chemical-symbols-section">
-                <h4>${content.chemicalSymbols.title || 'Chemical symbols'}</h4>
-                ${content.chemicalSymbols.text ? `<p>${content.chemicalSymbols.text}</p>` : ''}
-                ${content.chemicalSymbols.examples && Array.isArray(content.chemicalSymbols.examples) ? `
-                    <ul>
-                        ${content.chemicalSymbols.examples.map(ex => `<li>${ex}</li>`).join('')}
-                    </ul>
-                ` : ''}
-            </div>
-        `;
-    }
-
-    // === medicalConditions (4.25c) ===
-    if (content.medicalConditions && typeof content.medicalConditions === 'object') {
-        html += `
-            <div class="medical-conditions-section">
-                <h4>${content.medicalConditions.title || 'Medical conditions'}</h4>
-                ${content.medicalConditions.text ? `<p>${content.medicalConditions.text}</p>` : ''}
-                ${content.medicalConditions.lowercase && Array.isArray(content.medicalConditions.lowercase) ? `
-                    <div class="lowercase-examples">
-                        <h5>Lowercase:</h5>
-                        <ul>
-                            ${content.medicalConditions.lowercase.map(ex => `<li>${ex}</li>`).join('')}
-                        </ul>
-                    </div>
-                ` : ''}
-                ${content.medicalConditions.capitalized && Array.isArray(content.medicalConditions.capitalized) ? `
-                    <div class="capitalized-examples">
-                        <h5>Capitalized:</h5>
-                        <ul>
-                            ${content.medicalConditions.capitalized.map(ex => `<li>${ex}</li>`).join('')}
-                        </ul>
-                    </div>
-                ` : ''}
-            </div>
-        `;
-    }
-
-    // === infectiousOrganisms (4.25d) ===
-    if (content.infectiousOrganisms && typeof content.infectiousOrganisms === 'object') {
-        html += `
-            <div class="infectious-organisms-section">
-                <h4>${content.infectiousOrganisms.title || 'Infectious organisms'}</h4>
-                ${content.infectiousOrganisms.text ? `<p>${content.infectiousOrganisms.text}</p>` : ''}
-                ${content.infectiousOrganisms.examples && Array.isArray(content.infectiousOrganisms.examples) ? `
-                    <ul>
-                        ${content.infectiousOrganisms.examples.map(ex => `<li>${ex}</li>`).join('')}
-                    </ul>
-                ` : ''}
-            </div>
-        `;
-    }
-
-    // === drugNames (4.25e) ===
-    if (content.drugNames && typeof content.drugNames === 'object') {
-        html += `
-            <div class="drug-names-section">
-                <h4>${content.drugNames.title || 'Generic drug names'}</h4>
-                ${content.drugNames.text ? `<p>${content.drugNames.text}</p>` : ''}
-                ${content.drugNames.examples && Array.isArray(content.drugNames.examples) ? `
-                    <ul>
-                        ${content.drugNames.examples.map(ex => `<li>${ex}</li>`).join('')}
-                    </ul>
-                ` : ''}
-            </div>
-        `;
-    }
-
-        // === specialCase (4.26 - Eponyms) ===
+    // === specialCase (4.26 - Eponyms) ===
     if (content.specialCase && typeof content.specialCase === 'object') {
         html += `
             <div class="special-case-section">
@@ -1388,63 +1454,7 @@ function buildSectionHTML(section) {
         `;
     }
 
-        // === tradeNames (4.27a) ===
-    if (content.tradeNames && typeof content.tradeNames === 'object') {
-        html += `
-            <div class="trade-names-section">
-                <h4>${content.tradeNames.title || 'Trade names'}</h4>
-                ${content.tradeNames.text ? `<p>${content.tradeNames.text}</p>` : ''}
-                ${content.tradeNames.capitalized && Array.isArray(content.tradeNames.capitalized) ? `
-                    <div class="capitalized-examples">
-                        <h5>Capitalized:</h5>
-                        <ul>
-                            ${content.tradeNames.capitalized.map(ex => `<li>${ex}</li>`).join('')}
-                        </ul>
-                    </div>
-                ` : ''}
-                ${content.tradeNames.lowercase && Array.isArray(content.tradeNames.lowercase) ? `
-                    <div class="lowercase-examples">
-                        <h5>Lowercase:</h5>
-                        <ul>
-                            ${content.tradeNames.lowercase.map(ex => `<li>${ex}</li>`).join('')}
-                        </ul>
-                    </div>
-                ` : ''}
-            </div>
-        `;
-    }
-
-    // === referenceNote (4.27b) ===
-    if (content.referenceNote && typeof content.referenceNote === 'string') {
-        html += `<p class="note"><strong>Reference:</strong> ${content.referenceNote}</p>`;
-    }
-
-    // === highTechProducts (4.27c) ===
-    if (content.highTechProducts && typeof content.highTechProducts === 'object') {
-        html += `
-            <div class="high-tech-products-section">
-                <h4>${content.highTechProducts.title || 'High-technology products'}</h4>
-                ${content.highTechProducts.text ? `<p>${content.highTechProducts.text}</p>` : ''}
-                ${content.highTechProducts.examples && Array.isArray(content.highTechProducts.examples) ? `
-                    <ul>
-                        ${content.highTechProducts.examples.map(ex => `<li>${ex}</li>`).join('')}
-                    </ul>
-                ` : ''}
-            </div>
-        `;
-    }
-
-    // === genericUsage (4.27d) ===
-    if (content.genericUsage && typeof content.genericUsage === 'object') {
-        html += `
-            <div class="generic-usage-section">
-                <h4>${content.genericUsage.title || 'Generic usage'}</h4>
-                ${content.genericUsage.text ? `<p>${content.genericUsage.text}</p>` : ''}
-            </div>
-        `;
-    }
-
-        // === prefixes (4.28 - SI/metric units) ===
+    // === prefixes (4.28 - SI/metric units) ===
     if (content.prefixes) {
         if (typeof content.prefixes === 'string') {
             html += `<p>${content.prefixes}</p>`;
@@ -1457,7 +1467,7 @@ function buildSectionHTML(section) {
         }
     }
 
-        // === reference (Used in 4.24, 4.28, 4.30) ===
+    // === reference (Used in 4.24, 4.28, 4.30) ===
     if (content.reference) {
         if (typeof content.reference === 'string') {
             html += `<p class="reference-note">${content.reference}</p>`;
@@ -1466,7 +1476,7 @@ function buildSectionHTML(section) {
         }
     }
 
-        // === prepositionsAsOtherParts (4.29d) ===
+    // === prepositionsAsOtherParts (4.29d) ===
     if (content.prepositionsAsOtherParts && typeof content.prepositionsAsOtherParts === 'object') {
         html += `
             <div class="prepositions-section">
@@ -1533,11 +1543,6 @@ function buildSectionHTML(section) {
                 ` : ''}
             </div>
         `;
-    }
-
-        
-        
-        html += `</div>`;
     }
     
     return html;
