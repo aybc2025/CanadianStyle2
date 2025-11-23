@@ -678,3 +678,40 @@
     color: var(--dark-gray);
     margin-bottom: var(--spacing-md);
 }
+
+.generic-use-section,
+.generic-parts-section,
+.proper-nouns-section,
+.chemical-elements-section,
+.chemical-symbols-section,
+.medical-conditions-section,
+.infectious-organisms-section,
+.drug-names-section,
+.special-case-section,
+.trade-names-section,
+.high-tech-products-section,
+.generic-usage-section,
+.prefixes-section,
+.prepositions-section,
+.short-titles-section,
+.ancient-manuscripts-section,
+.hyphenated-compounds-section {
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-left: 4px solid #dc3545;
+    border-radius: 4px;
+}
+
+.capitalized-examples,
+.lowercase-examples {
+    margin: 15px 0;
+}
+
+.reference-note {
+    font-style: italic;
+    color: #6c757d;
+    border-left: 3px solid #ffc107;
+    padding-left: 15px;
+    margin: 15px 0;
+}
