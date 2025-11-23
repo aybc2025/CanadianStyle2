@@ -1070,10 +1070,6 @@
       }
     },
     {
-  "chapterId": "04",
-  "chapterTitle": "Capitalization",
-  "sections": [
-    {
       "id": "4.21",
       "title": "Geographical terms",
       "content": {
@@ -1534,6 +1530,4 @@
       }
     }
   ]
-}
-     ]
 }
