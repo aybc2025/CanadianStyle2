@@ -1234,6 +1234,308 @@ function buildSectionHTML(section) {
                 `;
             });
         }
+
+        // === genericUse (4.22 - Buildings, monuments) ===
+    if (content.genericUse && typeof content.genericUse === 'object') {
+        html += `
+            <div class="generic-use-section">
+                ${content.genericUse.text ? `<p>${content.genericUse.text}</p>` : ''}
+                ${content.genericUse.examples && Array.isArray(content.genericUse.examples) ? `
+                    <ul>
+                        ${content.genericUse.examples.map(ex => `<li>${ex}</li>`).join('')}
+                    </ul>
+                ` : ''}
+            </div>
+        `;
+    }
+
+        // === genericParts (4.23 - Astronomical terms) ===
+    if (content.genericParts && typeof content.genericParts === 'object') {
+        html += `
+            <div class="generic-parts-section">
+                ${content.genericParts.text ? `<p>${content.genericParts.text}</p>` : ''}
+                ${content.genericParts.examples && Array.isArray(content.genericParts.examples) ? `
+                    <ul>
+                        ${content.genericParts.examples.map(ex => `<li>${ex}</li>`).join('')}
+                    </ul>
+                ` : ''}
+            </div>
+        `;
+    }
+
+         // === properNounsInCommonNames (4.24 - Biological terms) ===
+    if (content.properNounsInCommonNames && typeof content.properNounsInCommonNames === 'object') {
+        html += `
+            <div class="proper-nouns-section">
+                ${content.properNounsInCommonNames.text ? `<p>${content.properNounsInCommonNames.text}</p>` : ''}
+                ${content.properNounsInCommonNames.capitalized && Array.isArray(content.properNounsInCommonNames.capitalized) ? `
+                    <div class="capitalized-examples">
+                        <h4>Capitalized:</h4>
+                        <ul>
+                            ${content.properNounsInCommonNames.capitalized.map(ex => `<li>${ex}</li>`).join('')}
+                        </ul>
+                    </div>
+                ` : ''}
+                ${content.properNounsInCommonNames.lowercase && Array.isArray(content.properNounsInCommonNames.lowercase) ? `
+                    <div class="lowercase-examples">
+                        <h4>Lowercase:</h4>
+                        <ul>
+                            ${content.properNounsInCommonNames.lowercase.map(ex => `<li>${ex}</li>`).join('')}
+                        </ul>
+                    </div>
+                ` : ''}
+            </div>
+        `;
+    }
+
+        // === chemicalElements (4.25a) ===
+    if (content.chemicalElements && typeof content.chemicalElements === 'object') {
+        html += `
+            <div class="chemical-elements-section">
+                <h4>${content.chemicalElements.title || 'Chemical elements and compounds'}</h4>
+                ${content.chemicalElements.text ? `<p>${content.chemicalElements.text}</p>` : ''}
+                ${content.chemicalElements.examples && Array.isArray(content.chemicalElements.examples) ? `
+                    <ul>
+                        ${content.chemicalElements.examples.map(ex => `<li>${ex}</li>`).join('')}
+                    </ul>
+                ` : ''}
+            </div>
+        `;
+    }
+
+    // === chemicalSymbols (4.25b) ===
+    if (content.chemicalSymbols && typeof content.chemicalSymbols === 'object') {
+        html += `
+            <div class="chemical-symbols-section">
+                <h4>${content.chemicalSymbols.title || 'Chemical symbols'}</h4>
+                ${content.chemicalSymbols.text ? `<p>${content.chemicalSymbols.text}</p>` : ''}
+                ${content.chemicalSymbols.examples && Array.isArray(content.chemicalSymbols.examples) ? `
+                    <ul>
+                        ${content.chemicalSymbols.examples.map(ex => `<li>${ex}</li>`).join('')}
+                    </ul>
+                ` : ''}
+            </div>
+        `;
+    }
+
+    // === medicalConditions (4.25c) ===
+    if (content.medicalConditions && typeof content.medicalConditions === 'object') {
+        html += `
+            <div class="medical-conditions-section">
+                <h4>${content.medicalConditions.title || 'Medical conditions'}</h4>
+                ${content.medicalConditions.text ? `<p>${content.medicalConditions.text}</p>` : ''}
+                ${content.medicalConditions.lowercase && Array.isArray(content.medicalConditions.lowercase) ? `
+                    <div class="lowercase-examples">
+                        <h5>Lowercase:</h5>
+                        <ul>
+                            ${content.medicalConditions.lowercase.map(ex => `<li>${ex}</li>`).join('')}
+                        </ul>
+                    </div>
+                ` : ''}
+                ${content.medicalConditions.capitalized && Array.isArray(content.medicalConditions.capitalized) ? `
+                    <div class="capitalized-examples">
+                        <h5>Capitalized:</h5>
+                        <ul>
+                            ${content.medicalConditions.capitalized.map(ex => `<li>${ex}</li>`).join('')}
+                        </ul>
+                    </div>
+                ` : ''}
+            </div>
+        `;
+    }
+
+    // === infectiousOrganisms (4.25d) ===
+    if (content.infectiousOrganisms && typeof content.infectiousOrganisms === 'object') {
+        html += `
+            <div class="infectious-organisms-section">
+                <h4>${content.infectiousOrganisms.title || 'Infectious organisms'}</h4>
+                ${content.infectiousOrganisms.text ? `<p>${content.infectiousOrganisms.text}</p>` : ''}
+                ${content.infectiousOrganisms.examples && Array.isArray(content.infectiousOrganisms.examples) ? `
+                    <ul>
+                        ${content.infectiousOrganisms.examples.map(ex => `<li>${ex}</li>`).join('')}
+                    </ul>
+                ` : ''}
+            </div>
+        `;
+    }
+
+    // === drugNames (4.25e) ===
+    if (content.drugNames && typeof content.drugNames === 'object') {
+        html += `
+            <div class="drug-names-section">
+                <h4>${content.drugNames.title || 'Generic drug names'}</h4>
+                ${content.drugNames.text ? `<p>${content.drugNames.text}</p>` : ''}
+                ${content.drugNames.examples && Array.isArray(content.drugNames.examples) ? `
+                    <ul>
+                        ${content.drugNames.examples.map(ex => `<li>${ex}</li>`).join('')}
+                    </ul>
+                ` : ''}
+            </div>
+        `;
+    }
+
+        // === specialCase (4.26 - Eponyms) ===
+    if (content.specialCase && typeof content.specialCase === 'object') {
+        html += `
+            <div class="special-case-section">
+                ${content.specialCase.text ? `<p class="note"><strong>Note:</strong> ${content.specialCase.text}</p>` : ''}
+                ${content.specialCase.examples && Array.isArray(content.specialCase.examples) ? `
+                    <ul>
+                        ${content.specialCase.examples.map(ex => `<li>${ex}</li>`).join('')}
+                    </ul>
+                ` : ''}
+            </div>
+        `;
+    }
+
+        // === tradeNames (4.27a) ===
+    if (content.tradeNames && typeof content.tradeNames === 'object') {
+        html += `
+            <div class="trade-names-section">
+                <h4>${content.tradeNames.title || 'Trade names'}</h4>
+                ${content.tradeNames.text ? `<p>${content.tradeNames.text}</p>` : ''}
+                ${content.tradeNames.capitalized && Array.isArray(content.tradeNames.capitalized) ? `
+                    <div class="capitalized-examples">
+                        <h5>Capitalized:</h5>
+                        <ul>
+                            ${content.tradeNames.capitalized.map(ex => `<li>${ex}</li>`).join('')}
+                        </ul>
+                    </div>
+                ` : ''}
+                ${content.tradeNames.lowercase && Array.isArray(content.tradeNames.lowercase) ? `
+                    <div class="lowercase-examples">
+                        <h5>Lowercase:</h5>
+                        <ul>
+                            ${content.tradeNames.lowercase.map(ex => `<li>${ex}</li>`).join('')}
+                        </ul>
+                    </div>
+                ` : ''}
+            </div>
+        `;
+    }
+
+    // === referenceNote (4.27b) ===
+    if (content.referenceNote && typeof content.referenceNote === 'string') {
+        html += `<p class="note"><strong>Reference:</strong> ${content.referenceNote}</p>`;
+    }
+
+    // === highTechProducts (4.27c) ===
+    if (content.highTechProducts && typeof content.highTechProducts === 'object') {
+        html += `
+            <div class="high-tech-products-section">
+                <h4>${content.highTechProducts.title || 'High-technology products'}</h4>
+                ${content.highTechProducts.text ? `<p>${content.highTechProducts.text}</p>` : ''}
+                ${content.highTechProducts.examples && Array.isArray(content.highTechProducts.examples) ? `
+                    <ul>
+                        ${content.highTechProducts.examples.map(ex => `<li>${ex}</li>`).join('')}
+                    </ul>
+                ` : ''}
+            </div>
+        `;
+    }
+
+    // === genericUsage (4.27d) ===
+    if (content.genericUsage && typeof content.genericUsage === 'object') {
+        html += `
+            <div class="generic-usage-section">
+                <h4>${content.genericUsage.title || 'Generic usage'}</h4>
+                ${content.genericUsage.text ? `<p>${content.genericUsage.text}</p>` : ''}
+            </div>
+        `;
+    }
+
+        // === prefixes (4.28 - SI/metric units) ===
+    if (content.prefixes) {
+        if (typeof content.prefixes === 'string') {
+            html += `<p>${content.prefixes}</p>`;
+        } else if (typeof content.prefixes === 'object') {
+            html += `
+                <div class="prefixes-section">
+                    ${content.prefixes.text ? `<p>${content.prefixes.text}</p>` : ''}
+                </div>
+            `;
+        }
+    }
+
+        // === reference (Used in 4.24, 4.28, 4.30) ===
+    if (content.reference) {
+        if (typeof content.reference === 'string') {
+            html += `<p class="reference-note">${content.reference}</p>`;
+        } else if (typeof content.reference === 'object' && content.reference.text) {
+            html += `<p class="reference-note">${content.reference.text}</p>`;
+        }
+    }
+
+        // === prepositionsAsOtherParts (4.29d) ===
+    if (content.prepositionsAsOtherParts && typeof content.prepositionsAsOtherParts === 'object') {
+        html += `
+            <div class="prepositions-section">
+                ${content.prepositionsAsOtherParts.text ? `<p>${content.prepositionsAsOtherParts.text}</p>` : ''}
+                ${content.prepositionsAsOtherParts.examples && Array.isArray(content.prepositionsAsOtherParts.examples) ? `
+                    <ul>
+                        ${content.prepositionsAsOtherParts.examples.map(ex => `<li>${ex}</li>`).join('')}
+                    </ul>
+                ` : ''}
+            </div>
+        `;
+    }
+
+    // === shortTitles (4.29e) ===
+    if (content.shortTitles && typeof content.shortTitles === 'object') {
+        html += `
+            <div class="short-titles-section">
+                <h4>${content.shortTitles.title || 'Short titles'}</h4>
+                ${content.shortTitles.text ? `<p>${content.shortTitles.text}</p>` : ''}
+                ${content.shortTitles.examples && Array.isArray(content.shortTitles.examples) ? `
+                    <ul>
+                        ${content.shortTitles.examples.map(ex => `<li>${ex}</li>`).join('')}
+                    </ul>
+                ` : ''}
+            </div>
+        `;
+    }
+
+    // === originalTypography (4.29e) ===
+    if (content.originalTypography && typeof content.originalTypography === 'string') {
+        html += `<p>${content.originalTypography}</p>`;
+    }
+
+    // === ancientManuscripts (4.29f) ===
+    if (content.ancientManuscripts && typeof content.ancientManuscripts === 'object') {
+        html += `
+            <div class="ancient-manuscripts-section">
+                <h4>${content.ancientManuscripts.title || 'Ancient manuscripts'}</h4>
+                ${content.ancientManuscripts.text ? `<p>${content.ancientManuscripts.text}</p>` : ''}
+                ${content.ancientManuscripts.examples && Array.isArray(content.ancientManuscripts.examples) ? `
+                    <ul>
+                        ${content.ancientManuscripts.examples.map(ex => `<li>${ex}</li>`).join('')}
+                    </ul>
+                ` : ''}
+            </div>
+        `;
+    }
+
+    // === frenchTitles (4.29f) ===
+    if (content.frenchTitles && typeof content.frenchTitles === 'string') {
+        html += `<p>${content.frenchTitles}</p>`;
+    }
+
+    // === hyphenatedCompounds (4.29g) ===
+    if (content.hyphenatedCompounds && typeof content.hyphenatedCompounds === 'object') {
+        html += `
+            <div class="hyphenated-compounds-section">
+                <h4>${content.hyphenatedCompounds.title || 'Hyphenated compounds'}</h4>
+                ${content.hyphenatedCompounds.text ? `<p>${content.hyphenatedCompounds.text}</p>` : ''}
+                ${content.hyphenatedCompounds.examples && Array.isArray(content.hyphenatedCompounds.examples) ? `
+                    <ul>
+                        ${content.hyphenatedCompounds.examples.map(ex => `<li>${ex}</li>`).join('')}
+                    </ul>
+                ` : ''}
+            </div>
+        `;
+    }
+
+        
         
         html += `</div>`;
     }
